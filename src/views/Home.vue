@@ -1,6 +1,6 @@
 <template>
   <v-row no-gutters>
-    <v-col cols="12" class="primary px-4">
+    <v-col cols="12" class="primary pl-3">
       <v-row no-gutters class="mx-auto my-2" style="max-width: 1200px;">
         <div class="text-center white--text">
           <span class="title">58</span><br />
@@ -124,7 +124,7 @@
           <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
             ABOUT JOY FORUM 2019
           </v-col>
-          <v-col cols="9" class="pa-3 body-1">
+          <v-col cols="12" sm="9" class="pa-3 body-1">
             In a Kingdom surprising the world everyday with its remarkable mega
             projects and outstanding accomplishments aligned with its Vision
             2030, allow us on behalf of GEA to invite you to be part of JOY
@@ -141,7 +141,7 @@
             the Kingdom. All, through acting as a catalyst of the entertainment
             culture.
           </v-col>
-          <v-col cols="3" class="pa-3">
+          <v-col cols="12" sm="3" class="pa-3 text-center headline">
             Missing vector art
           </v-col>
         </v-row>
@@ -203,10 +203,12 @@
             <v-img height="200px" :src="topic.bgImageUrl">
               <div
                 style="height: 100%; width: 100%; background: rgba(0,0,0,0.5);"
-                class="pt-3 px-1"
+                class="pt-1 px-1"
               >
-                <v-card-text class="white--text title pt-12">
-                  {{ topic.title }}
+                <v-card-text
+                  class="white--text subtitle-1 pt-12"
+                  v-html="topic.title"
+                >
                 </v-card-text>
               </div>
             </v-img>
@@ -227,14 +229,46 @@
             v-for="(topic, index) in workshopTopics"
             :key="index"
           >
-            <div class="border-radius pa-3" style="border: 2px #ff0026 solid">
+            <v-card
+              flat
+              class="border-radius pa-3"
+              style="border: 2px #ff0026 solid"
+              @click="dialog = true"
+            >
               <span class="black--text subtitle-2 px-2">
                 {{ index + 1 }}. {{ topic.title }}
                 <!--                 <v-icon right>
                   mdi-chevron-right
                 </v-icon> -->
               </span>
-            </div>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-col>
+    <v-col cols="12" class="white">
+      <v-container class="my-3">
+        <v-row no-gutters class="justify-center">
+          <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
+            HIGHLIGHTS
+          </v-col>
+          <v-col cols="12" class="pa-3 subtitle-2">
+            SPEAKERS AT JOY CONFERENCE
+          </v-col>
+          <v-col cols="12" class="pa-3">
+            carousel
+          </v-col>
+          <v-col cols="12" class="pa-3 subtitle-2">
+            CELEBRITIES AT JOY SPECIAL EVENTS
+          </v-col>
+          <v-col cols="12" class="pa-3">
+            carousel
+          </v-col>
+          <v-col cols="12" class="pa-3 subtitle-2">
+            GLOBAL EXHIBITORS AT JOY EXPO
+          </v-col>
+          <v-col cols="12" class="pa-3">
+            carousel
           </v-col>
         </v-row>
       </v-container>
@@ -298,7 +332,7 @@ export default {
           bgImageUrl: `/images/topics-entertainment.jpg`
         },
         {
-          title: "Making Impact (Tech Talk Global Experiences)",
+          title: "Making Impact<br> (Tech Talk Global Experiences)",
           bgImageUrl: `/images/topics-makingimpact.jpg`
         },
         {
