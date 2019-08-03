@@ -1,31 +1,35 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <!-- Main header, breadcrumbs & router for page contents -->
+    <HeaderComponent />
+    <v-container fluid class="pa-0">
+      <v-content class="grey lighten-3">
+        <v-row no-gutters>
+          <v-col cols="12">
+            <router-view :key="$route.fullPath"></router-view>
+          </v-col>
+          <v-col cols="12">
+            <FooterComponent />
+          </v-col>
+        </v-row>
+      </v-content>
+    </v-container>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<script>
+import HeaderComponent from "./components/HeaderComponent";
+import FooterComponent from "./components/FooterComponent";
+export default {
+  name: "App",
+  components: {
+    HeaderComponent,
+    FooterComponent
+  },
+  data() {
+    return {
+      //
+    };
+  }
+};
+</script>
