@@ -5,11 +5,7 @@
         v-show="$vuetify.breakpoint.smAndDown"
         @click="navDrawer = true"
       ></v-app-bar-nav-icon>
-      <span
-        class="px-4 headline primary--text pa-2 font-weight-black font-italic"
-      >
-        Joy Forum
-      </span>
+      <img height="115px" src="/images/header-logo.png" class="pl-2" />
       <v-spacer></v-spacer>
       <v-btn
         text

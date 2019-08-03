@@ -118,7 +118,10 @@
     <v-col cols="12">
       <v-container>
         <v-row no-gutters class="justify-center">
-          <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
+          <v-col
+            cols="12"
+            class="pa-3 primary--text font-weight-bold headline volte-font"
+          >
             CHAIRMAN'S MESSAGE
           </v-col>
           <v-col cols="3" class="pa-3">
@@ -148,7 +151,10 @@
           <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
             ABOUT JOY FORUM 2019
           </v-col>
-          <v-col cols="12" sm="9" class="pa-3 body-1">
+          <v-col cols="12" v-show="$vuetify.breakpoint.xsOnly">
+            <v-img contain src="/images/about.png"></v-img>
+          </v-col>
+          <v-col cols="12" sm="8" class="pa-3 body-1 text-justify">
             In a Kingdom surprising the world everyday with its remarkable mega
             projects and outstanding accomplishments aligned with its Vision
             2030, allow us on behalf of GEA to invite you to be part of JOY
@@ -165,8 +171,8 @@
             the Kingdom. All, through acting as a catalyst of the entertainment
             culture.
           </v-col>
-          <v-col cols="12" sm="3" class="pa-3 text-center headline">
-            Missing vector art
+          <v-col cols="4" v-show="$vuetify.breakpoint.smAndUp">
+            <v-img contain src="/images/about.png"></v-img>
           </v-col>
         </v-row>
       </v-container>
@@ -177,68 +183,68 @@
           <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
             PURPOSE
           </v-col>
-          <v-col cols="12" class="pa-3 body-1">
+          <v-col
+            cols="12"
+            class="pa-3 headline text-uppercase font-weight-bold font-weight-bold grey--text text--darken-2"
+          >
             Developing and fortifying the entertainment ecosystem in the Kingdom
-            of Saudi Arabia, <br />
-            creating a global entertainment hub.
+            of Saudi Arabia, thus creating a global entertainment hub.
           </v-col>
         </v-row>
       </v-container>
     </v-col>
     <v-col cols="12">
-      <v-row no-gutters class="justify-center my-6">
-        <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
-          <v-container>
+      <v-container>
+        <v-row no-gutters class="justify-center my-6">
+          <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
             THE JOY FORUM PILLARS
-          </v-container>
-        </v-col>
-        <v-col
-          cols="6"
-          md="3"
-          v-for="pillar in pillarsArray"
-          :key="pillar.title"
-          class="pa-3"
-        >
-          <v-card class="text-center border-radius" @click="dialog = true">
-            <v-img height="200px" :src="pillar.bgImageUrl" class="pt-3">
-              <v-card-text class="white--text title mt-12">
-                {{ pillar.title }}
-              </v-card-text>
-            </v-img>
-          </v-card>
-        </v-col>
-      </v-row>
+          </v-col>
+          <v-col
+            cols="6"
+            v-for="pillar in pillarsArray"
+            :key="pillar.title"
+            class="pa-3"
+          >
+            <v-card class="text-center border-radius" @click="dialog = true">
+              <v-img height="200px" :src="pillar.bgImageUrl" class="pt-3">
+                <v-card-text class="white--text title mt-12">
+                  {{ pillar.title }}
+                </v-card-text>
+              </v-img>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-col>
     <v-col cols="12" class="white">
-      <v-row no-gutters class="justify-center my-6">
-        <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
-          <v-container>
+      <v-container>
+        <v-row no-gutters class="justify-center my-6">
+          <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
             CONFERENCE TOPICS
-          </v-container>
-        </v-col>
-        <v-col
-          cols="6"
-          md="3"
-          v-for="topic in topicsArray"
-          :key="topic.title"
-          class="pa-3"
-        >
-          <v-card class="text-center border-radius" @click="dialog = true">
-            <v-img height="200px" :src="topic.bgImageUrl">
-              <div
-                style="height: 100%; width: 100%; background: rgba(0,0,0,0.5);"
-                class="pt-1 px-1"
-              >
-                <v-card-text
-                  class="white--text subtitle-1 pt-12"
-                  v-html="topic.title"
+          </v-col>
+          <v-col
+            cols="6"
+            v-for="topic in topicsArray"
+            :key="topic.title"
+            class="pa-3"
+          >
+            <v-card class="text-center border-radius" @click="dialog = true">
+              <v-img height="200px" :src="topic.bgImageUrl">
+                <div
+                  style="height: 100%; width: 100%; background: rgba(100,0,0,0.7);"
+                  class="pt-1 px-1"
                 >
-                </v-card-text>
-              </div>
-            </v-img>
-          </v-card>
-        </v-col>
-      </v-row>
+                  <v-card-text
+                    class="white--text title pt-12"
+                    v-html="topic.title"
+                  >
+                  </v-card-text>
+                </div>
+              </v-img>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-col>
     <v-col cols="12">
       <v-container class="my-3">
@@ -372,7 +378,7 @@ export default {
           title: "Start your event management business"
         },
         {
-          title: "Establing your company"
+          title: "Establishing your company"
         },
         {
           title: "Valuation & Pitching Methods for new projects"
