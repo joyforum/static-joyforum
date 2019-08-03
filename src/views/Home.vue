@@ -420,7 +420,7 @@ export default {
   border-radius: 10px;
 }
 .border-primary {
-  border: 2px #ff0026 solid !important;
+  border: 2px#DE194A solid !important;
 }
 </style>
 
