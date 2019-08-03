@@ -53,38 +53,62 @@
       <v-container>
         <v-row no-gutters>
           <v-col cols="4" md="2" class="my-1">
-            <v-card outlined class="pa-4 mx-2 border-radius" height="100%">
-              <div class="primary--text title">10+</div>
+            <v-card
+              outlined
+              class="pa-4 mx-2 border-radius border-primary"
+              height="100%"
+            >
+              <div class="primary--text title">10<sup>+</sup></div>
               <div class="caption">International Speakers</div>
             </v-card>
           </v-col>
           <v-col cols="4" md="2" class="my-1">
-            <v-card outlined class="pa-4 mx-2 border-radius" height="100%">
+            <v-card
+              outlined
+              class="pa-4 mx-2 border-radius border-primary"
+              height="100%"
+            >
               <div class="primary--text title">2</div>
               <div class="caption">Special Events</div>
             </v-card>
           </v-col>
           <v-col cols="4" md="2" class="my-1">
-            <v-card outlined class="pa-4 mx-2 border-radius" height="100%">
-              <div class="primary--text title">15+</div>
+            <v-card
+              outlined
+              class="pa-4 mx-2 border-radius border-primary"
+              height="100%"
+            >
+              <div class="primary--text title">15<sup>+</sup></div>
               <div class="caption">International Celebrities</div>
             </v-card>
           </v-col>
           <v-col cols="4" md="2" class="my-1">
-            <v-card outlined class="pa-4 mx-2 border-radius" height="100%">
+            <v-card
+              outlined
+              class="pa-4 mx-2 border-radius border-primary"
+              height="100%"
+            >
               <div class="primary--text title">16</div>
               <div class="caption">Workshops</div>
             </v-card>
           </v-col>
           <v-col cols="4" md="2" class="my-1">
-            <v-card outlined class="pa-4 mx-2 border-radius" height="100%">
-              <div class="primary--text title">60+</div>
+            <v-card
+              outlined
+              class="pa-4 mx-2 border-radius border-primary"
+              height="100%"
+            >
+              <div class="primary--text title">60<sup>+</sup></div>
               <div class="caption">International Exhibitors</div>
             </v-card>
           </v-col>
           <v-col cols="4" md="2" class="my-1">
-            <v-card outlined class="pa-4 mx-2 border-radius" height="100%">
-              <div class="primary--text title">100+</div>
+            <v-card
+              outlined
+              class="pa-4 mx-2 border-radius border-primary"
+              height="100%"
+            >
+              <div class="primary--text title">100<sup>+</sup></div>
               <div class="caption">Investors</div>
             </v-card>
           </v-col>
@@ -231,8 +255,7 @@
           >
             <v-card
               flat
-              class="border-radius pa-3"
-              style="border: 2px #ff0026 solid"
+              class="border-radius pa-3 border-primary"
               @click="dialog = true"
             >
               <span class="black--text subtitle-2 px-2">
@@ -395,6 +418,9 @@ export default {
 }
 .border-radius {
   border-radius: 10px;
+}
+.border-primary {
+  border: 2px #ff0026 solid !important;
 }
 </style>
 
