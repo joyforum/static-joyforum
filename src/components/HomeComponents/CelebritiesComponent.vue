@@ -20,15 +20,18 @@
         </v-col>
         <v-col cols="10">
           <swiper :options="swiperOption" class="px-12">
-            <swiper-slide v-for="speaker in speakers" :key="speaker.title">
+            <swiper-slide
+              v-for="celebrity in celebrities"
+              :key="celebrity.title"
+            >
               <v-card class="border-circle" flat color="#00000000">
-                <v-img contain :src="speaker.imgSrc"> </v-img>
+                <v-img contain :src="celebrity.imgSrc"> </v-img>
               </v-card>
               <div class="body-2 font-weight-bold text-center pt-2">
-                {{ speaker.title }}
+                {{ celebrity.name }}
               </div>
               <div class="caption text-center">
-                {{ speaker.title }}
+                {{ celebrity.title }}
               </div>
             </swiper-slide>
           </swiper>
@@ -47,25 +50,30 @@
 export default {
   data() {
     return {
-      speakers: [
+      celebrities: [
         {
-          title: "Start",
+          name: "Celebrity Name",
+          title: "Celebrity Type",
           imgSrc: "/images/workshops-start.jpg"
         },
         {
-          title: "Establishing",
+          name: "Celebrity Name",
+          title: "Celebrity Type",
           imgSrc: "/images/workshops-establishing.jpg"
         },
         {
-          title: "Valuations",
+          name: "Celebrity Name",
+          title: "Celebrity Type",
           imgSrc: "/images/workshops-valuation.jpg"
         },
         {
-          title: "Customer",
+          name: "Celebrity Name",
+          title: "Celebrity Type",
           imgSrc: "/images/workshops-customerjourney.jpg"
         },
         {
-          title: "Content",
+          name: "Celebrity Name",
+          title: "Celebrity Type",
           imgSrc: "/images/workshops-contentcuration.jpg"
         }
       ],

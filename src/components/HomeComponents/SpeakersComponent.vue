@@ -28,7 +28,7 @@
                 <v-img contain :src="speaker.imgSrc"> </v-img>
               </v-card>
               <div class="body-2 font-weight-bold text-center pt-2">
-                {{ speaker.title }}
+                {{ speaker.name }}
               </div>
               <div class="caption text-center">
                 {{ speaker.title }}
@@ -52,23 +52,28 @@ export default {
     return {
       speakers: [
         {
-          title: "Start",
+          name: "Speaker Name",
+          title: "Speaker Title",
           imgSrc: "/images/workshops-start.jpg"
         },
         {
-          title: "Establishing",
+          name: "Speaker Name",
+          title: "Speaker Title",
           imgSrc: "/images/workshops-establishing.jpg"
         },
         {
-          title: "Valuations",
+          name: "Speaker Name",
+          title: "Speaker Title",
           imgSrc: "/images/workshops-valuation.jpg"
         },
         {
-          title: "Customer",
+          name: "Speaker Name",
+          title: "Speaker Title",
           imgSrc: "/images/workshops-customerjourney.jpg"
         },
         {
-          title: "Content",
+          name: "Speaker Name",
+          title: "Speaker Title",
           imgSrc: "/images/workshops-contentcuration.jpg"
         }
       ],

@@ -10,22 +10,46 @@
       </div>
     </v-col>
     <v-col cols="3" class="text-center">
-      <div>Sponsor Img</div>
-      <div>Sponsor Name</div>
+      <v-card flat tile height="100px">
+        <v-img
+          max-height="80px"
+          max-width="150px"
+          contain
+          class="mx-auto pt-6"
+          src="/images/exhibitors/6.png"
+        ></v-img>
+      </v-card>
+      <div>Strategic Sponsor</div>
     </v-col>
     <v-col cols="1" class="text-center">
       <v-divider vertical />
     </v-col>
     <v-col cols="3" class="text-center">
-      <div>Sponsor Img</div>
-      <div>Sponsor Name</div>
+      <v-card flat tile height="100px">
+        <v-img
+          max-height="80px"
+          max-width="150px"
+          contain
+          class="mx-auto pt-6"
+          src="/images/exhibitors/3.png"
+        ></v-img>
+      </v-card>
+      <div>Diamond Sponsor</div>
     </v-col>
     <v-col cols="1" class="text-center">
       <v-divider vertical />
     </v-col>
     <v-col cols="3" class="text-center">
-      <div>Sponsor Img</div>
-      <div>Sponsor Name</div>
+      <v-card flat tile height="100px">
+        <v-img
+          max-height="80px"
+          max-width="150px"
+          contain
+          class="mx-auto pt-6"
+          src="/images/exhibitors/2.png"
+        ></v-img>
+      </v-card>
+      <div>Gold Sponsor</div>
     </v-col>
   </v-row>
 </template>
