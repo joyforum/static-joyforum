@@ -64,6 +64,21 @@
     <v-col cols="12" style="background-color: #58a9ad;">
       <WorkshopTopicsComponent />
     </v-col>
+    <v-col cols="12" class="white">
+      <SpeakersComponent />
+    </v-col>
+    <v-col cols="12">
+      <CelebritiesComponent />
+    </v-col>
+    <v-col cols="12" class="white">
+      <ExhibitorsComponent />
+    </v-col>
+    <v-col cols="12">
+      <JoyForumComponent />
+    </v-col>
+    <v-col cols="12" class="white">
+      <SponsorsComponent />
+    </v-col>
   </v-row>
 </template>
 
@@ -75,6 +90,11 @@ import AboutComponent from "@/components/HomeComponents/AboutComponent.vue";
 import PillarsComponent from "@/components/HomeComponents/PillarsComponent.vue";
 import ConferenceTopicsComponent from "@/components/HomeComponents/ConferenceTopicsComponent.vue";
 import WorkshopTopicsComponent from "@/components/HomeComponents/WorkshopTopicsComponent.vue";
+import SpeakersComponent from "@/components/HomeComponents/SpeakersComponent.vue";
+import CelebritiesComponent from "@/components/HomeComponents/CelebritiesComponent.vue";
+import ExhibitorsComponent from "@/components/HomeComponents/ExhibitorsComponent.vue";
+import JoyForumComponent from "@/components/HomeComponents/JoyForumComponent.vue";
+import SponsorsComponent from "@/components/HomeComponents/SponsorsComponent.vue";
 
 export default {
   components: {
@@ -84,7 +104,12 @@ export default {
     AboutComponent,
     PillarsComponent,
     ConferenceTopicsComponent,
-    WorkshopTopicsComponent
+    WorkshopTopicsComponent,
+    SpeakersComponent,
+    CelebritiesComponent,
+    ExhibitorsComponent,
+    JoyForumComponent,
+    SponsorsComponent
   },
   data() {
     return {
@@ -103,6 +128,9 @@ export default {
 }
 .border-radius {
   border-radius: 10px;
+}
+.border-circle {
+  border-radius: 50%;
 }
 </style>
 

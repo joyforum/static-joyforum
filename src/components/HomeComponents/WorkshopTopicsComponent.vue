@@ -26,7 +26,6 @@
                 </v-img>
               </v-card>
             </swiper-slide>
-            <div class="swiper-pagination" slot="pagination"></div>
           </swiper>
         </v-col>
       </v-row>
