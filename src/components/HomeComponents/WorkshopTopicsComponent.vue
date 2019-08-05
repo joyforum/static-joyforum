@@ -18,7 +18,7 @@
               <v-card tile flat color="#58a9ad">
                 <v-img contain :src="topic.imgSrc">
                   <div
-                    class="white--text subtitle-2 text-center px-8"
+                    class="white--text body-2 font-weight-bold text-center px-6"
                     style="padding-top: 40%;"
                   >
                     {{ topic.title }}
@@ -84,10 +84,15 @@ export default {
         slidesPerView: 5,
         spaceBetween: 3,
         centeredSlides: true,
-        reverseDirection: true,
         autoplay: {
           delay: 2000,
           disableOnInteraction: false
+        },
+        breakpoints: {
+          800: {
+            slidesPerView: 2,
+            spaceBetween: 3
+          }
         }
       }
     };
