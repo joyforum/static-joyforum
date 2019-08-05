@@ -7,7 +7,7 @@
       cols="6"
       v-for="topic in topicsArray"
       :key="topic.title"
-      class="pa-3"
+      class="pa-1"
     >
       <v-img contain :src="topic.bgImageUrl">
         <v-card
@@ -17,8 +17,13 @@
           color="rgba(0,0,0,0.2)"
         >
           <div
-            class="white--text text-center title"
+            class="white--text text-center title hidden-xs-only"
             style="padding-top: 20%;"
+            v-html="topic.title"
+          ></div>
+          <div
+            class="white--text text-center subtitle-2 hidden-sm-and-up"
+            style="padding-top: 15%;"
             v-html="topic.title"
           ></div>
         </v-card>
