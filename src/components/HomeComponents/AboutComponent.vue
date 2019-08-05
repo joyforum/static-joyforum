@@ -3,7 +3,7 @@
     <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
       ABOUT JOY FORUM 2019
     </v-col>
-    <v-col cols="12" v-show="$vuetify.breakpoint.xsOnly">
+    <v-col cols="12" class="hidden-sm-and-up">
       <v-img contain src="/images/about.png"></v-img>
     </v-col>
     <v-col cols="12" sm="8" class="pa-3 body-1 text-justify">
@@ -22,8 +22,8 @@
       culture, create a new economy while spreading joy in the Kingdom. All,
       through acting as a catalyst of the entertainment culture.
     </v-col>
-    <v-col cols="4" v-show="$vuetify.breakpoint.smAndUp">
-      <v-img contain src="/images/about.png"></v-img>
+    <v-col cols="4" class="hidden-xs-only mt-n3">
+      <v-img contain max-height="300px" src="/images/about.png"></v-img>
     </v-col>
   </v-row>
 </template>
