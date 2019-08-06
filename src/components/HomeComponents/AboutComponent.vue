@@ -1,26 +1,34 @@
 <template>
   <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
     <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
-      ABOUT JOY FORUM 2019
+      <span class="volte">
+        ABOUT JOY FORUM 2019
+      </span>
     </v-col>
     <v-col cols="12" class="hidden-sm-and-up">
       <v-img contain src="/images/about.png"></v-img>
     </v-col>
     <v-col cols="12" sm="8" class="pa-3 body-1 text-justify">
-      In a Kingdom surprising the world everyday with its remarkable mega
-      projects and outstanding accomplishments aligned with its Vision 2030,
-      allow us on behalf of GEA to invite you to be part of JOY ENTERTAINMENT
-      FORUM 2019. <br /><br />
-      JOY FORUM is a GEA Sector Development Initiative designed to be the first
-      step in building the entertainment Industry in the Kingdom, creating
-      unparalleled investment opportunities and growth. <br />
-      <br />
-      Through an Exhibition gathering high level global companies in the
-      entertainment sector, pivotal conference topics with inspiring speakers,
-      talent development workshops, awards, challenges and other events, the
-      two-day JOY Forum aspires to build a vibrant society, foster a joyful
-      culture, create a new economy while spreading joy in the Kingdom. All,
-      through acting as a catalyst of the entertainment culture.
+      <span class="mont">
+        Centered around the evolving entertainment sector in the Kingdom and
+        empowered by the GEA Sector Development Initiative, JOY ENTERTAINMENT
+        FORUM 2019 will build and develop the Saudi entertainment industry in
+        line with its Vision 2030.
+        <br /><br />
+        The progressive two-day JOY Forum aspires to build a vibrant society,
+        foster a joyful entertainment culture and create a sustainable new
+        economy while spreading joy in the Kingdom.
+        <br /><br />
+        JOY amasses industry leading, global entertainment pioneers in one
+        location, creating unparalleled investment and growth opportunities
+        through an exhibition encompassing pivotal conference topics, inspiring
+        speakers, talent development workshops, awards, challenges and other
+        events.
+        <br /><br />
+        Welcome to the future of Saudi Entertainment…
+        <br /><br />
+        Welcome to JOY!
+      </span>
     </v-col>
     <v-col cols="4" class="hidden-xs-only mt-n3">
       <v-img contain max-height="300px" src="/images/about.png"></v-img>
@@ -34,7 +42,7 @@ export default {};
 
 <style>
 .dots-pattern-bg {
-  background-image: url("/images/dots-pattern.png");
+  background-image: url("/images/dots-pattern.jpg");
   background-repeat: repeat;
 }
 </style>

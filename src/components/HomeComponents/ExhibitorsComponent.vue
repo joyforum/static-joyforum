@@ -13,13 +13,13 @@
         >
           GLOBAL EXHIBITORS AT JOY EXPO
         </v-col>
-        <v-col cols="1" class="my-auto text-right">
-          <v-btn icon>
+        <v-col cols="1" class="my-auto text-right hidden-xs-only">
+          <v-btn icon @click="thisSwiper.slidePrev()">
             <v-icon x-large color="primary">mdi-chevron-left</v-icon>
           </v-btn>
         </v-col>
-        <v-col cols="10">
-          <swiper :options="swiperOption" class="px-12">
+        <v-col cols="12" sm="10">
+          <swiper ref="exhibitorsSwiper" :options="swiperOption" class="px-12">
             <swiper-slide v-for="exhibitor in exhibitors" :key="exhibitor">
               <v-card tile flat color="#00000000" class="my-auto">
                 <v-img
@@ -33,8 +33,8 @@
             </swiper-slide>
           </swiper>
         </v-col>
-        <v-col cols="1" class="my-auto">
-          <v-btn icon>
+        <v-col cols="1" class="my-auto hidden-xs-only">
+          <v-btn icon @click="thisSwiper.slideNext()">
             <v-icon x-large color="primary">mdi-chevron-right</v-icon>
           </v-btn>
         </v-col>
@@ -96,6 +96,11 @@ export default {
         }
       }
     };
+  },
+  computed: {
+    thisSwiper() {
+      return this.$refs.exhibitorsSwiper.swiper;
+    }
   }
 };
 </script>

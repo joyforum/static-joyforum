@@ -4,11 +4,18 @@
       <CountDownComponent />
     </v-col>
     <v-col cols="12">
-      <v-card tile flat height="600px" class="home-head-background">
+      <v-card
+        tile
+        flat
+        max-height="600px"
+        min-height="400px"
+        height="60vw"
+        class="home-head-background"
+      >
         <v-card
           tile
           flat
-          height="600px"
+          height="100%"
           color="rgba(0,0,0,0.2)"
           class="home-bridge-overlay"
         >
@@ -43,15 +50,19 @@
       </v-icon>
       <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
         <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
-          PURPOSE
+          <span class="volte">
+            PURPOSE
+          </span>
         </v-col>
         <v-col
           style="z-index: 1;"
           cols="12"
-          class="pa-3 headline text-uppercase font-weight-bold white--text"
+          class="pa-3 headline font-weight-bold white--text"
         >
-          Developing and fortifying the entertainment ecosystem in the Kingdom
-          of Saudi Arabia, thus creating a global entertainment hub.
+          <span class="mont">
+            FOUNDING, DEVELOPING AND SUSTAINING THE ENTERTAINMENT ECOSYSTEM IN
+            THE KINGDOM, GIVING BIRTH TO A GLOBAL ENTERTAINMENT HUB.
+          </span>
         </v-col>
       </v-row>
     </v-col>

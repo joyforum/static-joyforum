@@ -13,13 +13,13 @@
         >
           CELEBRITIES AT JOY EVENTS
         </v-col>
-        <v-col cols="1" class="my-auto text-right">
-          <v-btn icon>
+        <v-col cols="1" class="my-auto text-right hidden-xs-only">
+          <v-btn icon @click="thisSwiper.slidePrev()">
             <v-icon x-large color="primary">mdi-chevron-left</v-icon>
           </v-btn>
         </v-col>
-        <v-col cols="10">
-          <swiper :options="swiperOption" class="px-12">
+        <v-col cols="12" sm="10">
+          <swiper ref="celebritiesSwiper" :options="swiperOption" class="px-12">
             <swiper-slide
               v-for="celebrity in celebrities"
               :key="celebrity.title"
@@ -28,16 +28,20 @@
                 <v-img contain :src="celebrity.imgSrc"> </v-img>
               </v-card>
               <div class="body-2 font-weight-bold text-center pt-2">
-                {{ celebrity.name }}
+                <span class="mont">
+                  {{ celebrity.name }}
+                </span>
               </div>
               <div class="caption text-center">
-                {{ celebrity.title }}
+                <span class="mont">
+                  {{ celebrity.title }}
+                </span>
               </div>
             </swiper-slide>
           </swiper>
         </v-col>
-        <v-col cols="1" class="my-auto">
-          <v-btn icon>
+        <v-col cols="1" class="my-auto hidden-xs-only">
+          <v-btn icon @click="thisSwiper.slideNext()">
             <v-icon x-large color="primary">mdi-chevron-right</v-icon>
           </v-btn>
         </v-col>
@@ -53,27 +57,27 @@ export default {
       celebrities: [
         {
           name: "Celebrity Name",
-          title: "Celebrity Type",
+          title: "Type 1",
           imgSrc: "/images/workshops-start.jpg"
         },
         {
           name: "Celebrity Name",
-          title: "Celebrity Type",
+          title: "Type 2",
           imgSrc: "/images/workshops-establishing.jpg"
         },
         {
           name: "Celebrity Name",
-          title: "Celebrity Type",
+          title: "Type 3",
           imgSrc: "/images/workshops-valuation.jpg"
         },
         {
           name: "Celebrity Name",
-          title: "Celebrity Type",
+          title: "Type 4",
           imgSrc: "/images/workshops-customerjourney.jpg"
         },
         {
           name: "Celebrity Name",
-          title: "Celebrity Type",
+          title: "Type 5",
           imgSrc: "/images/workshops-contentcuration.jpg"
         }
       ],
@@ -92,6 +96,11 @@ export default {
         }
       }
     };
+  },
+  computed: {
+    thisSwiper() {
+      return this.$refs.celebritiesSwiper.swiper;
+    }
   }
 };
 </script>

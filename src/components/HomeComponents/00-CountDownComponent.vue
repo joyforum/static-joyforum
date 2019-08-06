@@ -1,7 +1,7 @@
 <template>
   <v-row no-gutters class="mx-auto my-2 pl-2" style="max-width: 1280px;">
     <div class="text-center white--text">
-      <span class="title">
+      <span class="title mont">
         <number
           ref="number1"
           :from="0"
@@ -10,11 +10,11 @@
           :delay="2"
           easing="Power1.easeOut"/></span
       ><br />
-      <span class="caption">Days</span>
+      <span class="caption mont">Days</span>
     </div>
     <v-divider vertical class="grey lighten-1 my-2 mx-3"></v-divider>
     <div class="text-center white--text">
-      <span class="title">
+      <span class="title mont">
         <number
           ref="number1"
           :from="0"
@@ -23,11 +23,11 @@
           :delay="2"
           easing="Power1.easeOut"/></span
       ><br />
-      <span class="caption">Hours</span>
+      <span class="caption mont">Hours</span>
     </div>
     <v-divider vertical class="grey lighten-1 my-2 mx-3"></v-divider>
     <div class="text-center white--text">
-      <span class="title">
+      <span class="title mont">
         <number
           ref="number1"
           :from="0"
@@ -36,17 +36,19 @@
           :delay="2"
           easing="Power1.easeOut"/></span
       ><br />
-      <span class="caption">Mins</span>
+      <span class="caption mont">Mins</span>
     </div>
     <v-divider vertical class="white my-1 mx-4"></v-divider>
     <div class="white--text">
-      <span class="subtitle-1">13 - 14 October 2019</span><br />
-      <span class="subtitle-1">Riyadh - KSA, Ritz Carlton</span>
+      <span class="subtitle-1 mont">13 - 14 October 2019</span><br />
+      <span class="subtitle-1 mont">Riyadh - KSA, Ritz Carlton</span>
     </div>
     <v-spacer />
     <div class="white--text subtitle-1 my-auto mx-6 text-right hidden-xs-only">
-      <span class="font-weight-bold"> Produced by<br /> </span>
-      MAESTRO
+      <span class="font-weight-bold mont"> Produced by<br /> </span>
+      <span class="mont">
+        MAESTRO
+      </span>
     </div>
   </v-row>
 </template>

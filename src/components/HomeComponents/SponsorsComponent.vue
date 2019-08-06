@@ -6,7 +6,9 @@
   >
     <v-col cols="12" class="pa-6">
       <div class="primary--text font-weight-black text-center headline">
-        JOY FORUM SPONSORS
+        <span class="volte">
+          JOY FORUM SPONSORS
+        </span>
       </div>
     </v-col>
     <v-col cols="3" class="text-center">
@@ -19,7 +21,9 @@
           src="/images/exhibitors/6.png"
         ></v-img>
       </v-card>
-      <div>Strategic Sponsor</div>
+      <span class="mont">
+        Strategic Sponsor
+      </span>
     </v-col>
     <v-col cols="1" class="text-center">
       <v-divider vertical />
@@ -34,7 +38,9 @@
           src="/images/exhibitors/3.png"
         ></v-img>
       </v-card>
-      <div>Diamond Sponsor</div>
+      <span class="mont">
+        Diamond Sponsor
+      </span>
     </v-col>
     <v-col cols="1" class="text-center">
       <v-divider vertical />
@@ -49,7 +55,9 @@
           src="/images/exhibitors/2.png"
         ></v-img>
       </v-card>
-      <div>Gold Sponsor</div>
+      <span class="mont">
+        Gold Sponsor
+      </span>
     </v-col>
   </v-row>
 </template>

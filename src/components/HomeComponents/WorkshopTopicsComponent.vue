@@ -6,7 +6,9 @@
           cols="12"
           class="pl-3 py-6 white--text font-weight-bold headline"
         >
-          WORKSHOP TOPICS
+          <span class="volte">
+            WORKSHOP TOPICS
+          </span>
         </v-col>
       </v-row>
     </v-col>
@@ -15,16 +17,26 @@
         <v-col cols="12">
           <swiper :options="swiperOption">
             <swiper-slide v-for="topic in workshopTopics" :key="topic.title">
-              <v-card tile flat color="#58a9ad">
-                <v-img contain :src="topic.imgSrc">
-                  <div
-                    class="white--text body-2 font-weight-bold text-center px-6"
-                    style="padding-top: 40%;"
-                  >
-                    {{ topic.title }}
-                  </div>
-                </v-img>
-              </v-card>
+              <v-hover v-slot:default="{ hover }">
+                <v-card
+                  tile
+                  flat
+                  color="#58a9ad"
+                  :raised="hover"
+                  @click.stop="null"
+                >
+                  <v-img contain :src="topic.imgSrc">
+                    <div
+                      class="white--text body-2 font-weight-bold text-center px-6"
+                      style="padding-top: 40%;"
+                    >
+                      <span class="mont">
+                        {{ topic.title }}
+                      </span>
+                    </div>
+                  </v-img>
+                </v-card>
+              </v-hover>
             </swiper-slide>
           </swiper>
         </v-col>

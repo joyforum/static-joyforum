@@ -1,15 +1,19 @@
 <template>
   <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
-    <v-col cols="9" class="pa-3">
+    <v-col cols="9">
       <v-card-title class="primary--text font-weight-black">
-        JOY FORUM
+        <span class="volte">
+          JOY FORUM
+        </span>
       </v-card-title>
       <v-card-text class="body-1">
-        KSA, Riyadh, Ritz-Carlton Hotel<br />
-        13 - 14 October 2019
+        <span class="mont">
+          KSA, Riyadh, Ritz-Carlton Hotel<br />
+          13 - 14 October 2019
+        </span>
       </v-card-text>
-      <v-btn rounded color="primary" class="mx-3 px-6">Exhibit</v-btn>
-      <v-btn rounded color="primary" class="mx-3 px-6">Attend</v-btn>
+      <v-btn rounded color="primary" class="ml-3 px-6">Exhibit</v-btn>
+      <v-btn rounded color="primary" class="ml-3 px-6">Attend</v-btn>
     </v-col>
     <v-col cols="3" class="pt-12 pr-12">
       <v-img

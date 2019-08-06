@@ -60,7 +60,9 @@
           Special Events
         </v-btn>
         <v-btn rounded small class="px-4 mx-1 my-auto" color="primary">
-          Attend
+          <span class="mont">
+            Attend
+          </span>
         </v-btn>
       </v-row>
     </v-app-bar>

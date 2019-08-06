@@ -35,5 +35,23 @@ export default {
 </script>
 
 <style>
+.mont {
+  font-family: "Montserrat", sans-serif !important;
+}
+@font-face {
+  font-family: "VolteRounded";
+  src: url("/fonts/VolteRounded-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "VolteRounded";
+  src: url("/fonts/VolteRounded-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+.volte {
+  font-family: "VolteRounded", sans-serif !important;
+}
 </style>
 
