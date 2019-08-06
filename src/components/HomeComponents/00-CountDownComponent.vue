@@ -38,10 +38,10 @@
       ><br />
       <span class="caption mont">Mins</span>
     </div>
-    <v-divider vertical class="white my-1 mx-4"></v-divider>
-    <div class="white--text">
-      <span class="subtitle-1 mont">13 - 14 October 2019</span><br />
-      <span class="subtitle-1 mont">Riyadh - KSA, Ritz Carlton</span>
+    <v-divider vertical class="white my-1 mx-3"></v-divider>
+    <div class="white--text my-auto">
+      <span class="caption mont">13 - 14 October 2019</span><br />
+      <span class="caption mont">Riyadh, KSA, Ritz Carlton</span>
     </div>
     <v-spacer />
     <div class="white--text subtitle-1 my-auto mx-6 text-right hidden-xs-only">

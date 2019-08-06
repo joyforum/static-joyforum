@@ -13,25 +13,26 @@
     >
       <v-hover v-slot:default="{ hover }">
         <v-card
-          height="100%"
           flat
-          style="border-radius: 42px;"
-          color="rgba(0,0,0,0.2)"
+          class="border-radius-topics"
           :raised="hover"
-          @click.stop="null"
+          :height="$vuetify.breakpoint.smAndDown ? `150px` : `250px`"
+          :style="
+            `background-image: url('${topic.bgImageUrl}'); background-size: cover; background-position: center center;`
+          "
         >
-          <v-img contain :src="topic.bgImageUrl">
+          <div style="background-color: rgba(0,0,0,0.5); height: 100%;">
             <v-fade-transition hide-on-leave>
               <div v-if="!hover">
                 <div
                   class="white--text text-center title hidden-sm-and-down"
-                  style="padding-top: 20%;"
+                  style="padding-top: 80px;"
                 >
                   <span class="mont" v-html="topic.title"></span>
                 </div>
                 <div
                   class="white--text text-center subtitle-2 hidden-md-and-up"
-                  style="padding-top: 15%;"
+                  style="padding-top: 40px;"
                 >
                   <span class="mont" v-html="topic.titleShort"></span>
                 </div>
@@ -48,7 +49,7 @@
                 >
                   {{ topic.hoverTitle }}
                 </div>
-                <ul>
+                <ul class="hidden-xs-only">
                   <li
                     v-for="(point, index) in topic.bulletPoints"
                     :key="point"
@@ -65,9 +66,14 @@
                     </div>
                   </li>
                 </ul>
+                <div class="hidden-sm-and-up text-center">
+                  <v-btn small outlined color="white" class="mt-6">
+                    <span class="caption">Discover</span>
+                  </v-btn>
+                </div>
               </div>
             </v-fade-transition>
-          </v-img>
+          </div>
         </v-card>
       </v-hover>
     </v-col>
@@ -82,7 +88,7 @@ export default {
         {
           title: "Entertainment<br>& Economy Building",
           titleShort: "Entertainment<br>& Economy Building",
-          bgImageUrl: `/images/topics-entertainment.png`,
+          bgImageUrl: `/images/topics-entertainment.jpg`,
           hoverTitle: "ENTERTAINMENT & ECONOMY BUILDING:",
           bulletPoints: [
             "Entertainment & Saudi Vision 2030 ",
@@ -94,7 +100,7 @@ export default {
         {
           title: "Making Impact<br> (Tech Talk Global Experiences)",
           titleShort: "Making Impact<br> (Tech Talk)",
-          bgImageUrl: `/images/topics-makingimpact.png`,
+          bgImageUrl: `/images/topics-makingimpact.jpg`,
           hoverTitle: "MAKING IMPACT (TECH TALK – GLOBAL EXPERIENCES):",
           bulletPoints: [
             "Technology Impact on Entertainment",
@@ -107,8 +113,8 @@ export default {
         {
           title: "The Joy Makers",
           titleShort: "The Joy Makers",
-          bgImageUrl: `/images/topics-joymakers.png`,
-          hoverTitle: "Hover Title Here:",
+          bgImageUrl: `/images/topics-joymakers.jpg`,
+          hoverTitle: "THE JOY MAKERS:",
           bulletPoints: [
             "Seizing Joy",
             "The Joy Makers of Films",
@@ -121,7 +127,7 @@ export default {
         {
           title: "Mega Ventures",
           titleShort: "Mega Ventures",
-          bgImageUrl: `/images/topics-mega.png`,
+          bgImageUrl: `/images/topics-mega.jpg`,
           hoverTitle: "MEGA VENTURES:",
           bulletPoints: [
             "An Expanding Infrastructure",
@@ -136,4 +142,7 @@ export default {
 </script>
 
 <style>
+.border-radius-topics {
+  border-radius: 42px;
+}
 </style>

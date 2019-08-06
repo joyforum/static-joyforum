@@ -35,12 +35,12 @@
                 <span class="hidden-sm-and-down">
                   {{ pillar.hoverText }}
                   <br />
-                  <v-btn small outlined color="white" class="mt-3">
+                  <v-btn small outlined color="white" class="mt-1">
                     <span class="caption">Discover</span>
                   </v-btn>
                 </span>
                 <div class="hidden-md-and-up">
-                  <v-btn small outlined color="white" class="mt-3">
+                  <v-btn small outlined color="white" class="mt-4">
                     <span class="caption">Discover</span>
                   </v-btn>
                 </div>
