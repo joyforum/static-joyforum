@@ -113,9 +113,6 @@
           <v-btn rounded color="#263475" class="ml-3 px-6 white--text">
             Attend
           </v-btn>
-          <v-btn rounded color="#263475" class="ml-3 px-6 white--text">
-            Contact Us
-          </v-btn>
         </v-col>
         <v-col cols="12" md="4" class="pa-3 my-auto">
           <v-card outlined flat class="border-radius pa-3">
