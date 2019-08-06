@@ -25,9 +25,9 @@
         <v-row
           no-gutters
           style="position: absolute; bottom: 0; width: 100%;"
-          class="px-12 mt-12 justify-space-around hidden-sm-and-down"
+          class="px-12 mt-12 justify-space-around"
         >
-          <v-col cols="4" md="1" class="pa-3">
+          <v-col cols="4" sm="1" class="pa-3">
             <div class="primary--text title">
               <span class="volte font-weight-bold">
                 <number
