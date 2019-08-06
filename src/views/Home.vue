@@ -8,7 +8,7 @@
         tile
         flat
         max-height="600px"
-        min-height="400px"
+        min-height="500px"
         height="60vw"
         class="home-head-background"
       >

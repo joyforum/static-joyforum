@@ -3,7 +3,7 @@
     <v-col cols="12">
       <v-card
         max-height="600px"
-        min-height="400px"
+        min-height="500px"
         height="60vw"
         tile
         flat
@@ -25,7 +25,7 @@
         <v-row
           no-gutters
           style="position: absolute; bottom: 0; width: 100%;"
-          class="px-12 mt-12 justify-space-around"
+          class="mt-12 justify-space-around"
         >
           <v-col cols="4" sm="1" class="pa-3">
             <div class="primary--text title">
@@ -41,7 +41,7 @@
               </span>
               <sup class="white--text">+</sup>
             </div>
-            <div class="caption mont text-uppercase white--text">
+            <div class="overline mont text-uppercase white--text">
               International<br />Speakers
             </div>
           </v-col>
@@ -59,7 +59,7 @@
               </span>
             </div>
             <div
-              class="caption mont text-uppercase font-weight-bold white--text"
+              class="overline mont text-uppercase font-weight-bold white--text"
             >
               Special<br />Events
             </div>
@@ -79,7 +79,7 @@
               <sup class="white--text">+</sup>
             </div>
             <div
-              class="caption mont text-uppercase font-weight-bold white--text"
+              class="overline mont text-uppercase font-weight-bold white--text"
             >
               International<br />Celebrities
             </div>
@@ -98,7 +98,7 @@
               </span>
             </div>
             <div
-              class="caption mont text-uppercase font-weight-bold white--text"
+              class="overline mont text-uppercase font-weight-bold white--text"
             >
               Workshops
             </div>
@@ -118,7 +118,7 @@
               <sup class="white--text">+</sup>
             </div>
             <div
-              class="caption mont text-uppercase font-weight-bold white--text"
+              class="overline mont text-uppercase font-weight-bold white--text"
             >
               International<br />Exhibitors
             </div>
@@ -138,7 +138,7 @@
               <sup class="white--text">+</sup>
             </div>
             <div
-              class="caption mont text-uppercase font-weight-bold white--text"
+              class="overline mont text-uppercase font-weight-bold white--text"
             >
               Investors
             </div>
