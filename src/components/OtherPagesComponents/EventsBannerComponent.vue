@@ -1,0 +1,54 @@
+<template>
+  <v-row no-gutters class="mx-auto" style="max-width: 1280px;">
+    <v-col cols="12" class="px-6">
+      <div class="display-2 white--text pt-6">
+        <span class="volte font-weight-bold">
+          JOY SPECIAL EVENTS 2019
+        </span>
+      </div>
+      <div class="white--text title pt-3">
+        <span class="mont">
+          AWARDING THE BEST<br />
+          JOY MAKERS
+        </span>
+      </div>
+      <div class="white--text display-2 border-left-white pl-3 mt-3">
+        <span class="volte font-weight-bold">
+          <number
+            ref="number1"
+            :from="0"
+            :to="15"
+            :duration="2"
+            :delay="1"
+            easing="Power1.easeOut"
+          />
+        </span>
+        <div class="mont title">
+          International Celebrities
+        </div>
+      </div>
+      <div class="py-4">
+        <v-btn rounded color="white" class="mx-3">
+          <span class="eventsyellow-text">
+            Exhibit
+          </span>
+        </v-btn>
+        <v-btn rounded color="white" class="mx-3">
+          <span class="eventsyellow-text">
+            Attend
+          </span>
+        </v-btn>
+      </div>
+    </v-col>
+  </v-row>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style>
+.border-left-white {
+  border-left: 2px white solid;
+}
+</style>

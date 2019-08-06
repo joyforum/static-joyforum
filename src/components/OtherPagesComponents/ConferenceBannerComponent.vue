@@ -1,36 +1,45 @@
 <template>
   <v-row no-gutters class="mx-auto" style="max-width: 1280px;">
-    <v-col cols="12" class="pl-6">
+    <v-col cols="12" class="px-6">
       <div class="display-2 white--text pt-6">
         <span class="volte font-weight-bold">
-          JOIN JOY EXPO 2019
+          JOY CONFERENCE 2019
         </span>
       </div>
       <div class="white--text title pt-3">
         <span class="mont">
-          BE PART OF THE FUTURE OF<br />
-          ENTERTAINMENT IN THE KINGDOM
+          INTERNATIONAL LEADERS OF<br />
+          THE JOY MAKING
         </span>
       </div>
-      <div class="white--text display-2 border-left-white pl-3">
+      <div class="white--text display-2 border-left-white pl-3 mt-3">
         <span class="volte font-weight-bold">
           <number
             ref="number1"
             :from="0"
-            :to="60"
+            :to="10"
             :duration="2"
             :delay="1"
             easing="Power1.easeOut"
           />
         </span>
-        <sup class="white--text">+</sup>
         <div class="mont title">
-          International Exhibitors
+          International
+          <br />
+          Speakers
         </div>
       </div>
       <div class="py-4">
-        <v-btn rounded color="white" class="mx-3">Exhibit</v-btn>
-        <v-btn rounded color="white" class="mx-3">Attend</v-btn>
+        <v-btn rounded color="white" class="mx-3">
+          <span class="primary--text">
+            Exhibit
+          </span>
+        </v-btn>
+        <v-btn rounded color="white" class="mx-3">
+          <span class="primary--text">
+            Attend
+          </span>
+        </v-btn>
       </div>
     </v-col>
   </v-row>

@@ -7,9 +7,9 @@
       <v-card
         tile
         flat
-        min-height="300px"
+        min-height="400px"
         height="40vw"
-        max-height="400px"
+        max-height="450px"
         class="expo-head-background"
       >
         <ExpoBannerComponent />
@@ -143,8 +143,8 @@
 
 <script>
 import CountDownComponent from "@/components/HomeComponents/00-CountDownComponent.vue";
-import ExpoBannerComponent from "@/components/ExpoComponents/ExpoBannerComponent.vue";
-import ExpoAboutComponent from "@/components/ExpoComponents/ExpoAboutComponent.vue";
+import ExpoBannerComponent from "@/components/OtherPagesComponents/ExpoBannerComponent.vue";
+import ExpoAboutComponent from "@/components/OtherPagesComponents/ExpoAboutComponent.vue";
 import ExhibitorsComponent from "@/components/HomeComponents/ExhibitorsComponent.vue";
 
 export default {
