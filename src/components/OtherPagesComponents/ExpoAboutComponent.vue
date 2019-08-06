@@ -5,9 +5,6 @@
         ABOUT JOY EXPO
       </span>
     </v-col>
-    <v-col cols="12" class="hidden-sm-and-up">
-      <v-img contain src="/images/about.png"></v-img>
-    </v-col>
     <v-col cols="12" class="pa-3 grey--text text--darken-1">
       <div class="mont title font-weight-bold py-3">
         JOY EXPO 2019 BRINGS OUT THE BEST OF WHAT THE INDUSTRY HAS TO OFFER FROM
