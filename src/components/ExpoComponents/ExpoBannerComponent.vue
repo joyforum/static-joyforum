@@ -1,0 +1,47 @@
+<template>
+  <v-row no-gutters class="mx-auto" style="max-width: 1280px;">
+    <v-col cols="12" class="pl-6">
+      <div class="display-2 white--text pt-6">
+        <span class="volte font-weight-bold">
+          JOIN JOY EXPO 2019
+        </span>
+      </div>
+      <div class="white--text title pt-3">
+        <span class="mont">
+          BE PART OF THE FUTURE OF<br />
+          ENTERTAINMENT IN THE KINGDOM
+        </span>
+      </div>
+      <div class="white--text display-2 border-left-white pl-3">
+        <span class="volte font-weight-bold">
+          <number
+            ref="number1"
+            :from="0"
+            :to="60"
+            :duration="2"
+            :delay="1"
+            easing="Power1.easeOut"
+          />
+        </span>
+        <sup class="white--text">+</sup>
+        <div class="mont title">
+          International Exhibitors
+        </div>
+      </div>
+      <div class="py-4">
+        <v-btn rounded color="white" class="mx-3">Exhibit</v-btn>
+        <v-btn rounded color="white" class="mx-3">Attend</v-btn>
+      </div>
+    </v-col>
+  </v-row>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style>
+.border-left-white {
+  border-left: 2px white solid;
+}
+</style>

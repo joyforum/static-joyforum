@@ -154,14 +154,4 @@ export default {};
 </script>
 
 <style>
-.home-head-background {
-  background-image: url("/images/home-background.jpg");
-  background-size: cover;
-  background-position: center center;
-}
-.home-bridge-overlay {
-  background-image: url("/images/home-bridge-overlay.png");
-  background-size: contain;
-  background-position: center bottom;
-}
 </style>
