@@ -1,10 +1,21 @@
 <template>
   <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
     <v-col cols="3" class="pa-3">
-      <v-img contain src="/images/turki.png"></v-img>
+      <v-card
+        flat
+        color="primary"
+        class="border-circle"
+        style="padding-top: 100%;"
+      >
+        <v-img
+          src="/images/Turki2.png"
+          contain
+          style="position: absolute; bottom: 0;"
+        ></v-img>
+      </v-card>
     </v-col>
     <v-col cols="9" class="pa-3">
-      <v-card-title class="primary--text font-weight-black">
+      <v-card-title class="primary--text font-weight-black display-1">
         <span class="volte">
           CHAIRMAN'S MESSAGE
         </span>

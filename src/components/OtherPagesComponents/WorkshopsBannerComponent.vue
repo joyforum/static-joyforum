@@ -8,8 +8,7 @@
       </div>
       <div class="white--text title pt-3">
         <span class="mont">
-          Learn From Global<br />
-          Industry Experts
+          Learn from Leading Industry Experts
         </span>
       </div>
       <div class="white--text display-2 border-left-white pl-3 mt-3">
@@ -23,17 +22,11 @@
             easing="Power1.easeOut"
           />
         </span>
-        <sup class="white--text">+</sup>
         <div class="mont title">
           Workshops
         </div>
       </div>
       <div class="py-4">
-        <v-btn rounded color="white" class="mx-3">
-          <span class="workshopcyan-text">
-            Exhibit
-          </span>
-        </v-btn>
         <v-btn rounded color="white" class="mx-3">
           <span class="workshopcyan-text">
             Attend

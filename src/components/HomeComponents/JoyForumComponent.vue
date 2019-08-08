@@ -1,7 +1,7 @@
 <template>
   <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
     <v-col cols="9">
-      <v-card-title class="primary--text font-weight-black">
+      <v-card-title class="primary--text font-weight-black display-1">
         <span class="volte">
           JOY FORUM
         </span>

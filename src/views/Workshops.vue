@@ -7,7 +7,7 @@
       <v-card
         tile
         flat
-        min-height="400px"
+        min-height="450px"
         height="40vw"
         max-height="450px"
         class="workshops-head-background"
@@ -23,17 +23,25 @@
       >
         <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
           <span class="volte workshopcyan-text">
-            ABOUT JOY EXPO
+            ABOUT JOY WORKSHOPS
           </span>
         </v-col>
         <v-col cols="12" class="pa-3 grey--text text--darken-1">
           <div class="mont body-1">
-            The workshops aim to bring together researchers, designers,
-            developers and entrepreneurs interested in the design, development,
-            evaluation, commercialization and development of event &
-            entertainment for the Saudi local market.
+            Taking place over the course of two days during JOY Forum 2019 and
+            delivered by international industry leaders and subject matter
+            experts, JOY workshops aim to spread and enrich the entertainment
+            culture in the kingdom on a highly professional level.
             <br /><br />
-            Workshops are taking place two days during Joy Forum 2019
+            Covering a multitude of topics ranging from game development to film
+            making the JOY workshops span the stages of business starting with
+            idea development across multidisciplined business models, to
+            business sustenance and growth.
+            <br /><br />
+            JOY workshops bring together researchers, designers, developers and
+            entrepreneurs interested in the design, development, evaluation,
+            commercialization and development of event & entertainment for the
+            Saudi local market.
           </div>
         </v-col>
         <v-col cols="8" class="py-6 mt-6 text-center">

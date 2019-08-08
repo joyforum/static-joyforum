@@ -7,35 +7,34 @@
     </v-col>
     <v-col cols="12" class="pa-3 grey--text text--darken-1">
       <div class="mont title font-weight-bold py-3">
-        JOY EXPO 2019 BRINGS OUT THE BEST OF WHAT THE INDUSTRY HAS TO OFFER FROM
+        JOY EXPO 2019 BRINGS YOU THE BEST OF WHAT THE INDUSTRY HAS TO OFFER FROM
         AROUND THE GLOBE
       </div>
       <div class="mont subtitle-1 font-weight-bold">
-        Discover the Endless Opportunities
+        Discover Endless Opportunities
       </div>
       <div class="mont body-1">
-        The Saudi market is a treasure chest of opportunities for entertainment
-        professionals JOY EXPO 2019 is the sparkling gem that adds luster,
-        attracting the attention of decision-makers that are all ready to give
-        their business the digital edge that will engage and excite their
-        audiences.
+        JOY EXPO 2019 will nurture the fertile entertainment field in Saudi
+        Arabia, attracting the attention of decision-makers that are all ready
+        to plant their business seeds and gain the digital edge that will engage
+        and excite your audiences.
       </div>
       <div class="mont subtitle-1 font-weight-bold pt-3">
-        Bringing together leading Joy Makers in the entertainment industry from
-        around the globe,
+        Uniting leading Joy Makers in the entertainment industry from around the
+        globe
       </div>
       <div class="mont body-1">
-        The Expo is designed to allow the industry leaders to present themselves
-        professionally and effectively and to generate new business
-        relationships, find reliable and highly professional partners who are
-        acquainted with new trends in Show business, Joy &amp; entertainment,
-        technologies, events, concerts and audiovisuals.
+        JOY Expo is designed to allow industry leaders to present themselves
+        professionally and effectively and aims to generate new business
+        relationships and connect reliable and highly professional partners who
+        are acquainted with new trends in Show business, Joy &amp;
+        entertainment, technologies, events, concerts and audio-visuals.
       </div>
     </v-col>
     <v-col cols="9" class="py-6 mt-6">
       <div class="speech-bubble-blue pa-6">
         <span class="title font-weight-bold mont" style="color: #f8b615;">
-          The perfect opportunity to network with those who also believe in the
+          An unrivaled opportunity to network with those who also believe in the
           importance of delivering Joy to the world.
         </span>
       </div>
@@ -43,7 +42,7 @@
     <v-col cols="3"></v-col>
     <v-col cols="6"></v-col>
     <v-col cols="6" class="py-6 mb-6">
-      <div class="speech-bubble-blue pa-6">
+      <div class="speech-bubble-blue pa-6 text-center">
         <span class="title font-weight-bold mont" style="color: #f8b615;">
           Invest in the future of entertainment in KSA
         </span>

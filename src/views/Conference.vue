@@ -7,7 +7,7 @@
       <v-card
         tile
         flat
-        min-height="400px"
+        min-height="450px"
         height="40vw"
         max-height="450px"
         class="conference-head-background"
@@ -74,8 +74,295 @@
             </div>
           </v-card>
         </v-col>
-        <v-col cols="12">
-          <SpeakersComponent />
+        <v-col cols="12" class="px-4 pt-12" v-if="isDayOne">
+          <v-card color="white" flat class="border-radius">
+            <v-row no-gutters>
+              <v-col cols="12">
+                <v-chip color="primary" class="mx-6 mb-6 pa-6 mt-n6">
+                  <span class="mont body-1 font-weight-bold">
+                    Topic 1: Entertainment & Economy Building
+                  </span>
+                </v-chip>
+              </v-col>
+              <v-col cols="12" md="3">
+                <v-card
+                  height="200px"
+                  class="border-radius mx-auto"
+                  max-width="180px"
+                  style="
+              background-image: url('/images/Conference_presenter-01.png'); background-size: cover; background-position: center center; "
+                >
+                </v-card>
+              </v-col>
+              <v-col cols="12" md="9" class="px-3 my-6">
+                <ul class="body-1 mont grey--text font-weight-bold">
+                  <li>Entertainment & Vision of Saudi Arabia 2030</li>
+                  <li>Enrich People's Lives & Improve Quality of Life</li>
+                  <li>Diversifying Economy</li>
+                  <li>Economic transition and entertainment growth</li>
+                </ul>
+              </v-col>
+              <v-col cols="12" md="3" class="my-6">
+                <v-card
+                  height="200px"
+                  class="border-radius mx-auto"
+                  max-width="180px"
+                  style="
+              background-image: url('/images/Conference_presenter-01.png'); background-size: cover; background-position: center center; "
+                >
+                  <div
+                    class="white--text text-center primary py-2"
+                    style="position: absolute; bottom: 0px; width: 100%; opacity: 0.8;"
+                  >
+                    <div class="px-1">
+                      <div class="mont caption">Nadine Hani</div>
+                      <span class="overline mont">
+                        Senior Business News Presenter - Al Arabiya
+                      </span>
+                    </div>
+                  </div>
+                </v-card>
+              </v-col>
+              <v-col cols="12" md="9" class="px-3 my-6">
+                <span class="caption mont">
+                  With a remarkable track record, Nadine has interviewed some of
+                  the most influential decision makers in the Arab business
+                  world, and internationally, including U.S. treasury secretary
+                  Henry Paulson and Saudi minister of finance Dr. Ibrahim
+                  Abdul-Aziz Al-Assaf, as well as hosting a personal finance
+                  show.
+                </span>
+              </v-col>
+              <v-col cols="12" class="pl-8 pt-3">
+                <span
+                  class="title font-weight-bold mont grey--text text--darken-1"
+                >
+                  Speakers
+                </span>
+              </v-col>
+              <v-col cols="12 py-3">
+                <SpeakersComponent />
+              </v-col>
+            </v-row>
+          </v-card>
+        </v-col>
+        <v-col cols="12" class="px-4 pt-12" v-if="isDayOne">
+          <v-card color="white" flat class="border-radius">
+            <v-row no-gutters>
+              <v-col cols="12">
+                <v-chip color="primary" class="mx-6 mb-6 pa-6 mt-n6">
+                  <span class="mont body-1 font-weight-bold">
+                    Topic 2: Making Impact (Tech Talk – Global Experiences)
+                  </span>
+                </v-chip>
+              </v-col>
+              <v-col cols="12" md="3">
+                <v-card
+                  height="200px"
+                  class="border-radius mx-auto"
+                  max-width="180px"
+                  style="
+              background-image: url('/images/Conference_presenter-01.png'); background-size: cover; background-position: center center; "
+                >
+                </v-card>
+              </v-col>
+              <v-col cols="12" md="9" class="px-3 my-6">
+                <ul class="body-1 mont grey--text font-weight-bold">
+                  <li>Technology Impact on Entertainment</li>
+                  <li>The Future of Digital Games</li>
+                  <li>The Impact of VR – AR – MR (Virtual entertainment)</li>
+                  <li>Digital Transformation (Big data – Blockchain)</li>
+                  <li>Empowering the Entertainment industry</li>
+                </ul>
+              </v-col>
+              <v-col cols="12" md="3" class="my-6">
+                <v-card
+                  height="200px"
+                  class="border-radius mx-auto"
+                  max-width="180px"
+                  style="
+              background-image: url('/images/Conference_presenter-01.png'); background-size: cover; background-position: center center; "
+                >
+                  <div
+                    class="white--text text-center primary py-2"
+                    style="position: absolute; bottom: 0px; width: 100%; opacity: 0.8;"
+                  >
+                    <div class="px-1">
+                      <div class="mont caption">Nadine Hani</div>
+                      <span class="overline mont">
+                        Senior Business News Presenter - Al Arabiya
+                      </span>
+                    </div>
+                  </div>
+                </v-card>
+              </v-col>
+              <v-col cols="12" md="9" class="px-3 my-6">
+                <span class="caption mont">
+                  With a remarkable track record, Nadine has interviewed some of
+                  the most influential decision makers in the Arab business
+                  world, and internationally, including U.S. treasury secretary
+                  Henry Paulson and Saudi minister of finance Dr. Ibrahim
+                  Abdul-Aziz Al-Assaf, as well as hosting a personal finance
+                  show.
+                </span>
+              </v-col>
+              <v-col cols="12" class="pl-8 pt-3">
+                <span
+                  class="title font-weight-bold mont grey--text text--darken-1"
+                >
+                  Speakers
+                </span>
+              </v-col>
+              <v-col cols="12 py-3">
+                <SpeakersComponent />
+              </v-col>
+            </v-row>
+          </v-card>
+        </v-col>
+        <v-col cols="12" class="px-4 pt-12" v-if="!isDayOne">
+          <v-card color="white" flat class="border-radius">
+            <v-row no-gutters>
+              <v-col cols="12">
+                <v-chip color="primary" class="mx-6 mb-6 pa-6 mt-n6">
+                  <span class="mont body-1 font-weight-bold">
+                    Topic 1: The JOY Makers
+                  </span>
+                </v-chip>
+              </v-col>
+              <v-col cols="12" md="3">
+                <v-card
+                  height="200px"
+                  class="border-radius mx-auto"
+                  max-width="180px"
+                  style="
+              background-image: url('/images/Conference_presenter-01.png'); background-size: cover; background-position: center center; "
+                >
+                </v-card>
+              </v-col>
+              <v-col cols="12" md="9" class="px-3 my-6">
+                <ul class="body-1 mont grey--text font-weight-bold">
+                  <li>Seizing Joy</li>
+                  <li>The Joy Makers of Films</li>
+                  <li>The Joy Makers of Theme Park</li>
+                  <li>The Joy Makers of Performing Arts</li>
+                  <li>The Joy Makers of Digital Entertainment</li>
+                  <li>The Joy Makers of Competitive sports</li>
+                </ul>
+              </v-col>
+              <v-col cols="12" md="3" class="my-6">
+                <v-card
+                  height="200px"
+                  class="border-radius mx-auto"
+                  max-width="180px"
+                  style="
+              background-image: url('/images/Conference_presenter-01.png'); background-size: cover; background-position: center center; "
+                >
+                  <div
+                    class="white--text text-center primary py-2"
+                    style="position: absolute; bottom: 0px; width: 100%; opacity: 0.8;"
+                  >
+                    <div class="px-1">
+                      <div class="mont caption">Nadine Hani</div>
+                      <span class="overline mont">
+                        Senior Business News Presenter - Al Arabiya
+                      </span>
+                    </div>
+                  </div>
+                </v-card>
+              </v-col>
+              <v-col cols="12" md="9" class="px-3 my-6">
+                <span class="caption mont">
+                  With a remarkable track record, Nadine has interviewed some of
+                  the most influential decision makers in the Arab business
+                  world, and internationally, including U.S. treasury secretary
+                  Henry Paulson and Saudi minister of finance Dr. Ibrahim
+                  Abdul-Aziz Al-Assaf, as well as hosting a personal finance
+                  show.
+                </span>
+              </v-col>
+              <v-col cols="12" class="pl-8 pt-3">
+                <span
+                  class="title font-weight-bold mont grey--text text--darken-1"
+                >
+                  Speakers
+                </span>
+              </v-col>
+              <v-col cols="12 py-3">
+                <SpeakersComponent />
+              </v-col>
+            </v-row>
+          </v-card>
+        </v-col>
+        <v-col cols="12" class="px-4 pt-12" v-if="!isDayOne">
+          <v-card color="white" flat class="border-radius">
+            <v-row no-gutters>
+              <v-col cols="12">
+                <v-chip color="primary" class="mx-6 mb-6 pa-6 mt-n6">
+                  <span class="mont body-1 font-weight-bold">
+                    Topic 2: Mega Venture
+                  </span>
+                </v-chip>
+              </v-col>
+              <v-col cols="12" md="3">
+                <v-card
+                  height="200px"
+                  class="border-radius mx-auto"
+                  max-width="180px"
+                  style="
+              background-image: url('/images/Conference_presenter-01.png'); background-size: cover; background-position: center center; "
+                >
+                </v-card>
+              </v-col>
+              <v-col cols="12" md="9" class="px-3 my-6">
+                <ul class="body-1 mont grey--text font-weight-bold">
+                  <li>An Expanding Infrastructure</li>
+                  <li>Investment Opportunities in Entertainment Sector</li>
+                  <li>Mega Venture Projects</li>
+                </ul>
+              </v-col>
+              <v-col cols="12" md="3" class="my-6">
+                <v-card
+                  height="200px"
+                  class="border-radius mx-auto"
+                  max-width="180px"
+                  style="
+              background-image: url('/images/Conference_presenter-01.png'); background-size: cover; background-position: center center; "
+                >
+                  <div
+                    class="white--text text-center primary py-2"
+                    style="position: absolute; bottom: 0px; width: 100%; opacity: 0.8;"
+                  >
+                    <div class="px-1">
+                      <div class="mont caption">Nadine Hani</div>
+                      <span class="overline mont">
+                        Senior Business News Presenter - Al Arabiya
+                      </span>
+                    </div>
+                  </div>
+                </v-card>
+              </v-col>
+              <v-col cols="12" md="9" class="px-3 my-6">
+                <span class="caption mont">
+                  With a remarkable track record, Nadine has interviewed some of
+                  the most influential decision makers in the Arab business
+                  world, and internationally, including U.S. treasury secretary
+                  Henry Paulson and Saudi minister of finance Dr. Ibrahim
+                  Abdul-Aziz Al-Assaf, as well as hosting a personal finance
+                  show.
+                </span>
+              </v-col>
+              <v-col cols="12" class="pl-8 pt-3">
+                <span
+                  class="title font-weight-bold mont grey--text text--darken-1"
+                >
+                  Speakers
+                </span>
+              </v-col>
+              <v-col cols="12 py-3">
+                <SpeakersComponent />
+              </v-col>
+            </v-row>
+          </v-card>
         </v-col>
       </v-row>
     </v-col>
@@ -110,6 +397,9 @@ export default {
   background-image: url("/images/Conference.jpg");
   background-size: cover;
   background-position: center center;
+}
+.v-card:before {
+  border-radius: inherit;
 }
 </style>
 

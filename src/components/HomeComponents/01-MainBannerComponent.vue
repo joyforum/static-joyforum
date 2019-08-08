@@ -16,8 +16,9 @@
         </v-card-title>
         <v-card-text class="white--text title pt-3 pl-6">
           <span class="mont">
-            Where Business Opportunities<br />
-            &amp; Entertainment Intertwine
+            Fostering a Joyful Culture, <br />
+            Building a Vibrant Economy, <br />
+            Creating a New Economy
           </span>
         </v-card-text>
         <v-btn rounded small color="primary" class="ml-6">Exhibit</v-btn>
@@ -28,7 +29,7 @@
           class="mt-12 justify-space-around"
         >
           <v-col cols="4" sm="1" class="pa-3">
-            <div class="primary--text title">
+            <div class="primary--text display-1">
               <span class="volte font-weight-bold">
                 <number
                   ref="number1"
@@ -46,7 +47,7 @@
             </div>
           </v-col>
           <v-col cols="4" sm="1" class="pa-3">
-            <div class="primary--text title">
+            <div class="primary--text display-1">
               <span class="volte font-weight-bold">
                 <number
                   ref="number1"
@@ -65,7 +66,7 @@
             </div>
           </v-col>
           <v-col cols="4" sm="1" class="pa-3">
-            <div class="primary--text title">
+            <div class="primary--text display-1">
               <span class="volte font-weight-bold">
                 <number
                   ref="number1"
@@ -85,7 +86,7 @@
             </div>
           </v-col>
           <v-col cols="4" sm="1" class="pa-3">
-            <div class="primary--text title">
+            <div class="primary--text display-1">
               <span class="volte font-weight-bold">
                 <number
                   ref="number1"
@@ -104,7 +105,7 @@
             </div>
           </v-col>
           <v-col cols="4" sm="1" class="pa-3">
-            <div class="primary--text title">
+            <div class="primary--text display-1">
               <span class="volte font-weight-bold">
                 <number
                   ref="number1"
@@ -124,7 +125,7 @@
             </div>
           </v-col>
           <v-col cols="4" sm="1" class="pa-3">
-            <div class="primary--text title">
+            <div class="primary--text display-1">
               <span class="volte font-weight-bold">
                 <number
                   ref="number1"

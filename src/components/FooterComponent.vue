@@ -3,6 +3,11 @@
     <v-col cols="12">
       <v-row no-gutters class="mx-auto py-3" style="max-width: 1280px;">
         <v-col cols="12" sm="3">
+          <v-img
+            class="ma-6 hidden-sm-and-up"
+            contain
+            src="/images/footer-logo.png"
+          ></v-img>
           <v-card-title class="white--text font-weight-medium body-2">
             <span class="mont">
               EXHIBITION
@@ -14,7 +19,11 @@
               Expo Details
             </span>
           </v-card-text>
-          <v-img class="ma-6" contain src="/images/footer-logo.png"></v-img>
+          <v-img
+            class="ma-6 hidden-xs-only"
+            contain
+            src="/images/footer-logo.png"
+          ></v-img>
         </v-col>
         <v-col cols="12" sm="3">
           <v-card-title class="white--text font-weight-medium body-2">
@@ -37,10 +46,16 @@
             </span>
           </v-card-title>
           <v-card-text class="white--text caption">
-            <span class="mont">
+            <a
+              class="mont white--text"
+              href="https://goo.gl/maps/AL5QPG4emK6naFtm8"
+              target="blank"
+              style="text-decoration: none;"
+            >
               Riyadh, Kingdom of Saudi Arabia <br />
               Ritz-Carlton Hotel
-            </span>
+              <v-icon small class="white--text">mdi-open-in-new</v-icon>
+            </a>
           </v-card-text>
         </v-col>
         <v-col cols="12" sm="3">
@@ -57,27 +72,69 @@
               Exhibit@joyforum.com
             </span>
           </v-card-text>
-          <div class="pl-2">
-            <v-card-title
-              class="pl-1 white--text pt-3 font-weight-bold subtitle-1"
-            >
+          <div
+            :class="$vuetify.breakpoint.xsOnly ? `text-center pb-6` : `pl-2`"
+          >
+            <div class="pl-1 white--text pt-3 font-weight-bold subtitle-1">
               <span class="mont">
                 JoyForumKSA
               </span>
-            </v-card-title>
-            <v-btn fab depressed x-small color="white" class="mx-1">
-              <v-icon color="primary">mdi-linkedin</v-icon>
+            </div>
+            <v-btn
+              fab
+              depressed
+              x-small
+              color="white"
+              class="mx-1"
+              href="https://www.linkedin.com/company/joyforumksa"
+              target="blank"
+            >
+              <v-icon color="primary">
+                mdi-linkedin
+              </v-icon>
             </v-btn>
-            <v-btn fab depressed x-small color="white" class="mx-1">
+            <v-btn
+              fab
+              depressed
+              x-small
+              color="white"
+              class="mx-1"
+              href="https://twitter.com/JoyForumKSA"
+              target="blank"
+            >
               <v-icon color="primary">mdi-twitter</v-icon>
             </v-btn>
-            <v-btn fab depressed x-small color="white" class="mx-1">
+            <v-btn
+              fab
+              depressed
+              x-small
+              color="white"
+              class="mx-1"
+              href="https://instagram.com/joyforumksa/"
+              target="blank"
+            >
               <v-icon color="primary">mdi-instagram</v-icon>
             </v-btn>
-            <v-btn fab depressed x-small color="white" class="mx-1">
+            <v-btn
+              fab
+              depressed
+              x-small
+              color="white"
+              class="mx-1"
+              href="https://www.facebook.com/JoyForumKSA/"
+              target="blank"
+            >
               <v-icon color="primary">mdi-facebook</v-icon>
             </v-btn>
-            <v-btn fab depressed x-small color="white" class="mx-1">
+            <v-btn
+              fab
+              depressed
+              x-small
+              color="white"
+              class="mx-1"
+              href="https://www.youtube.com/channel/UCzr5f6ncQGfRkTBzEf-p06A"
+              target="blank"
+            >
               <v-icon color="primary">mdi-youtube</v-icon>
             </v-btn>
           </div>

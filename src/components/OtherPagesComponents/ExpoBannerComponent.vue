@@ -3,13 +3,13 @@
     <v-col cols="12" class="px-6">
       <div class="display-2 white--text pt-6">
         <span class="volte font-weight-bold">
-          JOIN JOY EXPO 2019
+          JOY EXPO 2019
         </span>
       </div>
       <div class="white--text title pt-3">
         <span class="mont">
-          BE PART OF THE FUTURE OF<br />
-          ENTERTAINMENT IN THE KINGDOM
+          Where Business Opportunities <br />
+          & Entertainment Intertwine
         </span>
       </div>
       <div class="white--text display-2 border-left-white pl-3 mt-3">

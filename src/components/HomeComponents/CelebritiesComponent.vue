@@ -11,7 +11,7 @@
           class="pl-3 py-6 font-weight-bold title"
           style="color: #F7B717;"
         >
-          CELEBRITIES AT JOY EVENTS
+          CELEBRITIES AT JOY SPECIAL EVENTS
         </v-col>
         <v-col cols="1" class="my-auto text-right hidden-xs-only">
           <v-btn icon @click="thisSwiper.slidePrev()">

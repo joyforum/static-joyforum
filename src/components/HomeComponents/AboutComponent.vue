@@ -1,6 +1,6 @@
 <template>
   <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
-    <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
+    <v-col cols="12" class="pa-3 primary--text font-weight-bold display-1">
       <span class="volte">
         ABOUT JOY FORUM 2019
       </span>

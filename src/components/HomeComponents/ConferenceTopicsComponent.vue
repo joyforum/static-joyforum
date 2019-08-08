@@ -67,7 +67,13 @@
                   </li>
                 </ul>
                 <div class="hidden-sm-and-up text-center">
-                  <v-btn small outlined color="white" class="mt-6">
+                  <v-btn
+                    small
+                    outlined
+                    color="white"
+                    class="mt-6"
+                    to="/conference"
+                  >
                     <span class="caption">Discover</span>
                   </v-btn>
                 </div>
@@ -76,6 +82,11 @@
           </div>
         </v-card>
       </v-hover>
+    </v-col>
+    <v-col cols="6" class="text-center mb-3 mt-9 mx-auto">
+      <v-btn rounded outlined block color="primary" to="/conference">
+        View All
+      </v-btn>
     </v-col>
   </v-row>
 </template>

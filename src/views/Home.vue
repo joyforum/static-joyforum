@@ -49,7 +49,7 @@
         mdi-circle
       </v-icon>
       <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
-        <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
+        <v-col cols="12" class="pa-3 primary--text font-weight-bold display-1">
           <span class="volte">
             PURPOSE
           </span>
@@ -74,6 +74,21 @@
     </v-col>
     <v-col cols="12" style="background-color: #58a9ad;">
       <WorkshopTopicsComponent />
+    </v-col>
+    <v-col cols="12" class="white">
+      <v-row no-gutters class="mx-auto pt-6 px-3" style="max-width: 1280px;">
+        <v-col
+          cols="12"
+          class="pl-3 py-3 primary--text font-weight-bold display-1"
+        >
+          <span class="volte">
+            HIGHLIGHTS
+          </span>
+        </v-col>
+        <v-col cols="12" class="pl-3 py-3 primary--text font-weight-bold title">
+          SPEAKERS AT JOY CONFERENCE
+        </v-col>
+      </v-row>
     </v-col>
     <v-col cols="12" class="white">
       <SpeakersComponent />

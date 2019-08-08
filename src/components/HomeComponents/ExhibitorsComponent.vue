@@ -23,7 +23,7 @@
             <swiper-slide v-for="exhibitor in exhibitors" :key="exhibitor">
               <v-card tile flat color="#00000000" class="my-auto">
                 <v-img
-                  max-height="80px"
+                  max-height="150px"
                   contain
                   class="my-auto"
                   :src="`/images/exhibitors/${exhibitor}`"
@@ -48,38 +48,40 @@ export default {
   data() {
     return {
       exhibitors: [
-        "1.png",
-        "2.png",
-        "3.png",
-        "4.png",
-        "5.png",
-        "6.png",
-        "7.png",
-        "8.png",
-        "9.png",
-        "10.jpg",
-        "11.png",
-        "12.jpg",
-        "13.png",
-        "14.png",
-        "15.jpg",
-        "16.jpg",
-        "17.jpg",
-        "18.jpg",
-        "19.png",
-        "20.png",
-        "21.jpg",
-        "22.jpg",
-        "23.png",
-        "24.png",
-        "25.gif",
-        "26.png",
-        "27.jpg",
-        "28.png",
-        "29.png",
-        "30.png",
-        "31.jpg",
-        "32.jpg"
+        "Logos-01.jpg",
+        "Logos-02.jpg",
+        "Logos-03.jpg",
+        "Logos-04.jpg",
+        "Logos-05.jpg",
+        "Logos-06.jpg",
+        "Logos-07.jpg",
+        "Logos-08.jpg",
+        "Logos-09.jpg",
+        "Logos-10.jpg",
+        "Logos-11.jpg",
+        "Logos-12.jpg",
+        "Logos-13.jpg",
+        "Logos-14.jpg",
+        "Logos-15.jpg",
+        "Logos-16.jpg",
+        "Logos-17.jpg",
+        "Logos-18.jpg",
+        "Logos-19.jpg",
+        "Logos-20.jpg",
+        "Logos-21.jpg",
+        "Logos-22.jpg",
+        "Logos-23.jpg",
+        "Logos-24.jpg",
+        "Logos-25.jpg",
+        "Logos-26.jpg",
+        "Logos-27.jpg",
+        "Logos-28.jpg",
+        "Logos-29.jpg",
+        "Logos-30.jpg",
+        "Logos-31.jpg",
+        "Logos-32.jpg",
+        "Logos-33.jpg",
+        "Logos-34.jpg"
       ],
       swiperOption: {
         slidesPerView: 5,

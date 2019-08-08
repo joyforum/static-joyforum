@@ -27,18 +27,6 @@
           International Celebrities
         </div>
       </div>
-      <div class="py-4">
-        <v-btn rounded color="white" class="mx-3">
-          <span class="eventsyellow-text">
-            Exhibit
-          </span>
-        </v-btn>
-        <v-btn rounded color="white" class="mx-3">
-          <span class="eventsyellow-text">
-            Attend
-          </span>
-        </v-btn>
-      </div>
     </v-col>
   </v-row>
 </template>

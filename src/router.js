@@ -6,6 +6,8 @@ import Conference from "./views/Conference.vue";
 import Workshops from "./views/Workshops.vue";
 import SpecialEvents from "./views/SpecialEvents.vue";
 
+import goTo from "vuetify/es5/services/goto";
+
 Vue.use(Router);
 
 export default new Router({
@@ -24,7 +26,7 @@ export default new Router({
     },
     {
       path: "/conference",
-      name: "home",
+      name: "conference",
       component: Conference
     },
     {
@@ -37,5 +39,14 @@ export default new Router({
       name: "specialevents",
       component: SpecialEvents
     }
-  ]
+  ],
+  scrollBehavior: (to, from, savedPosition) => {
+    let scrollTo = 0;
+    if (to.hash) {
+      scrollTo = to.hash;
+    } else if (savedPosition) {
+      scrollTo = savedPosition.y;
+    }
+    return goTo(scrollTo);
+  }
 });

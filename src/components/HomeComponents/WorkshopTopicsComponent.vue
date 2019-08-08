@@ -4,10 +4,10 @@
       <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
         <v-col
           cols="12"
-          class="pl-3 py-6 white--text font-weight-bold headline"
+          class="pl-3 py-6 white--text font-weight-bold display-1"
         >
           <span class="volte">
-            WORKSHOP TOPICS
+            WORKSHOPS TOPICS
           </span>
         </v-col>
       </v-row>
@@ -41,6 +41,11 @@
           </swiper>
         </v-col>
       </v-row>
+    </v-col>
+    <v-col cols="6" class="text-center mb-9 mx-auto">
+      <v-btn rounded outlined block color="white" to="/workshops">
+        View All
+      </v-btn>
     </v-col>
   </v-row>
 </template>

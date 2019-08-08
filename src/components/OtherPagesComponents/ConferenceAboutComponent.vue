@@ -10,28 +10,26 @@
     </v-col>
     <v-col cols="12" class="pa-3 grey--text text--darken-1">
       <div class="mont title font-weight-bold py-3">
-        AN INTERNATIONAL PLATFORM HOSTING GLOBAL SPEAKERS, INDUSTRY LEADERS,
-        EXPERTS AND INFLUENCERS AIMING TO SHED THE LIGHT ON THE ENTERTAINMENT
-        ECOSYSTEM, ITS CHANGES AND IMPACT ON THE QUALITY OF LIFE.
+        A PIVOTAL INTERNATIONAL PLATFORM AIMING TO SHED LIGHT ON THE
+        ENTERTAINMENT ECOSYSTEM, ITS CHANGES AND IMPACT ON THE QUALITY OF LIFE.
       </div>
       <div class="mont body-1">
-        Joy conference 2019 seeks to present high quality experienced results
-        spanning from concept to applications, using cases, experiments and
-        hosting global speakers, experts, and influencers from various
-        knowledge-based entertainment sectors.
+        Joy conference 2019 is an international platform that seeks to present
+        quality, experienced results spanning from concept to applications,
+        using cases, experiments and hosting global speakers, experts, and
+        influencers from various knowledge-based entertainment sectors happiness
+        & wellbeing, making an impact & investment opportunity.
         <br /><br />
-        The conference marks a turning point for the future of entertainment
-        development in Saudi Arabia with an action agenda tackling fundamental
-        case studies subjects: entertainment strategy and design, the ability to
-        change, local economy growth, social behaviors and interaction with:
-        innovation & technology, Joy Making, entertainment business model,
-        happiness & wellbeing, making an impact & investment opportunities.
+        The conference agenda includes a variety of crucial topics that span the
+        gamut of international cases studies: entertainment strategy and design,
+        the ability to change, local economy growth, social behaviors and
+        interaction with innovation & technology, Joy Making, entertainment
+        business model.
         <br /><br />
-        In parallel to its official agenda, the Conference also provides a
-        platform to announce new strategy and partnerships in addition to
-        launching new initiatives on supporting for entertainment development.
-        These new commitments and initiatives complement the actions contained
-        in the Joy Forum 2019.
+        In parallel to the topics agenda, JOY Conference will also serve as a
+        platform to announce new strategies and partnerships in addition to
+        launching new initiatives about supporting the entertainment
+        development.
         <br /><br />
         We have the collective responsibility to ensure that our global ambition
         for entertainment development becomes a reality for all.

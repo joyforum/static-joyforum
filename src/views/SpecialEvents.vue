@@ -36,13 +36,13 @@
               </span>
               <span style="float: right;" class="hidden-sm-and-down">
                 <div class="pa-3">
-                  <v-icon large color="#ee8e0e">mdi-calendar</v-icon>
+                  <v-icon large color="#f8b615">mdi-calendar</v-icon>
                 </div>
               </span>
             </v-col>
             <v-col cols="6" class="hidden-md-and-up py-3">
               <span>
-                <v-icon large color="#ee8e0e">mdi-calendar</v-icon>
+                <v-icon large color="#f8b615">mdi-calendar</v-icon>
               </span>
               <span class="title mont">
                 Day 1
@@ -55,7 +55,7 @@
             <v-col cols="6" class="hidden-md-and-up py-3">
               <v-img
                 contain
-                max-height="150px"
+                max-height="200px"
                 src="/images/SpecialEvents_Trophy.png"
               ></v-img>
             </v-col>
@@ -88,7 +88,7 @@
         <v-col cols="12" md="3" class="my-auto hidden-sm-and-down">
           <v-img
             contain
-            max-height="150px"
+            max-height="300px"
             src="/images/SpecialEvents_Trophy.png"
           ></v-img>
         </v-col>
@@ -115,13 +115,13 @@
               </span>
               <span style="float: right;" class="hidden-sm-and-down">
                 <div class="pa-3">
-                  <v-icon large color="#ee8e0e">mdi-calendar</v-icon>
+                  <v-icon large color="#f8b615">mdi-calendar</v-icon>
                 </div>
               </span>
             </v-col>
             <v-col cols="6" class="hidden-md-and-up py-3">
               <span>
-                <v-icon large color="#ee8e0e">mdi-calendar</v-icon>
+                <v-icon large color="#f8b615">mdi-calendar</v-icon>
               </span>
               <span class="title mont">
                 Day 2
@@ -185,10 +185,10 @@ export default {
 
 <style>
 .eventsyellow-bg {
-  background-color: #ee8e0e;
+  background-color: #f8b615;
 }
 .eventsyellow-text {
-  color: #ee8e0e;
+  color: #f8b615;
 }
 .events-head-background {
   background-image: url("/images/SpecialEvents.jpg");

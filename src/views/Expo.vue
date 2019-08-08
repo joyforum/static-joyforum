@@ -16,16 +16,21 @@
       </v-card>
     </v-col>
     <v-col cols="12" class="expoblue-bg">
-      <v-row no-gutters class="mx-auto" style="max-width: 1280px;">
-        <v-col cols="9">
-          <div class="white--text title my-3 mx-3">
+      <v-row no-gutters class="mx-auto my-3" style="max-width: 1280px;">
+        <v-col cols="12" sm="9">
+          <div class="white--text title mx-3">
             <span class="mont">
               EXPLORE CUTTING-EDGE TEHNOLOGIES IN THE ENTERTAINMENT SECTOR
             </span>
           </div>
         </v-col>
-        <v-col cols="3" class="my-auto text-right">
-          <v-btn rounded small color="primary" class="mx-3">
+        <v-col cols="12" sm="3" class="my-auto text-right">
+          <v-btn
+            rounded
+            small
+            color="primary"
+            :class="$vuetify.breakpoint.xsOnly ? `mt-3 mx-3` : `mx-3`"
+          >
             Exhibit Now
           </v-btn>
         </v-col>
@@ -48,16 +53,12 @@
         </v-col>
         <v-col cols="12" class="pa-3">
           <div class="mont body-1">
-            Join more than 100 other exhibitors in Joy Expo at Ritz Carlton
-            Riyadh, where we create a welcoming atmosphere with a
-            <br />
-            comfortable food and beverage lounge in the heart of the exhibit
-            space. Exhibit types and sizes are varied, with games and other
-            <br />
-            interactive activities situated throughout. This year the Joy Forum
-            has worked to bring exhibit costs down for our partners, without
-            <br />
-            compromising on quality
+            Join more than 60 exhibitors in JOY Expo at the prestigious
+            Ritz-Carlton Hotel, Riyadh, with a comfortable food and beverage
+            lounge in the heart of the exhibit space. Exhibit types and sizes
+            are varied, with games and other interactive activities situated
+            throughout. Our exhibition packages are tailored to meet your
+            business objectives to expand and reach new territories.
           </div>
         </v-col>
         <v-col cols="6" class="pa-6">

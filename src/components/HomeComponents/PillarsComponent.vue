@@ -1,6 +1,6 @@
 <template>
   <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
-    <v-col cols="12" class="px-3 py-6 primary--text font-weight-bold headline">
+    <v-col cols="12" class="px-3 py-6 primary--text font-weight-bold display-1">
       <span class="volte">
         THE JOY FORUM PILLARS
       </span>
@@ -35,12 +35,24 @@
                 <span class="hidden-sm-and-down">
                   {{ pillar.hoverText }}
                   <br />
-                  <v-btn small outlined color="white" class="mt-1">
+                  <v-btn
+                    small
+                    outlined
+                    :to="pillar.link"
+                    color="white"
+                    class="mt-1"
+                  >
                     <span class="caption">Discover</span>
                   </v-btn>
                 </span>
                 <div class="hidden-md-and-up">
-                  <v-btn small outlined color="white" class="mt-4">
+                  <v-btn
+                    small
+                    outlined
+                    :to="pillar.link"
+                    color="white"
+                    class="mt-4"
+                  >
                     <span class="caption">Discover</span>
                   </v-btn>
                 </div>
@@ -62,25 +74,25 @@ export default {
           title: "JOY EXPO",
           bgImageUrl: `/images/pillars-expo.png`,
           hoverText: "Exhibit, Network, Discover and invest...",
-          link: ""
+          link: "/expo"
         },
         {
           title: "CONFERENCE",
           bgImageUrl: `/images/pillars-conference.png`,
           hoverText: "Global speakers and industry pioneers...",
-          link: ""
+          link: "/conference"
         },
         {
           title: "WORKSHOPS",
           bgImageUrl: `/images/pillars-workshops.png`,
           hoverText: "Over 10 workshops aiming to shape...",
-          link: ""
+          link: "/workshops"
         },
         {
           title: "EVENTS",
           bgImageUrl: `/images/pillars-events.png`,
           hoverText: "Giving Joy Back to the Joy makers...",
-          link: ""
+          link: "/specialevents"
         }
       ]
     };

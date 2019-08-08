@@ -8,8 +8,7 @@
       </div>
       <div class="white--text title pt-3">
         <span class="mont">
-          INTERNATIONAL LEADERS OF<br />
-          THE JOY MAKING
+          INTERNATIONAL PIONEERS OF JOY
         </span>
       </div>
       <div class="white--text display-2 border-left-white pl-3 mt-3">
@@ -24,17 +23,10 @@
           />
         </span>
         <div class="mont title">
-          International
-          <br />
-          Speakers
+          International Speakers
         </div>
       </div>
       <div class="py-4">
-        <v-btn rounded color="white" class="mx-3">
-          <span class="primary--text">
-            Exhibit
-          </span>
-        </v-btn>
         <v-btn rounded color="white" class="mx-3">
           <span class="primary--text">
             Attend
