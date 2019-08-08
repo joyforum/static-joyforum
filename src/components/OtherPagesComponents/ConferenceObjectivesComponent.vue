@@ -59,6 +59,10 @@
         width="150px"
         class="mx-auto border-circle primary"
         flat
+        @click="
+          dialogContent = objective;
+          dialog = true;
+        "
       >
         <div class="pt-6">
           <v-img height="30px" contain :src="objective.iconUrl"></v-img>
