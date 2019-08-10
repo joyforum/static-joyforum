@@ -5,6 +5,9 @@ import Expo from "./views/Expo.vue";
 import Conference from "./views/Conference.vue";
 import Workshops from "./views/Workshops.vue";
 import SpecialEvents from "./views/SpecialEvents.vue";
+import Exhibit from "./views/Exhibit.vue";
+import Attend from "./views/Attend.vue";
+import Success from "./views/Success.vue";
 
 import goTo from "vuetify/es5/services/goto";
 
@@ -38,6 +41,21 @@ export default new Router({
       path: "/specialevents",
       name: "specialevents",
       component: SpecialEvents
+    },
+    {
+      path: "/exhibit",
+      name: "exhibit",
+      component: Exhibit
+    },
+    {
+      path: "/attend",
+      name: "attend",
+      component: Attend
+    },
+    {
+      path: "/success",
+      name: "success",
+      component: Success
     }
   ],
   scrollBehavior: (to, from, savedPosition) => {

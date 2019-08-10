@@ -21,8 +21,8 @@
             Creating a New Economy
           </span>
         </v-card-text>
-        <v-btn rounded small color="primary" class="ml-6">Exhibit</v-btn>
-        <v-btn rounded small color="primary" class="mx-3">Attend</v-btn>
+        <v-btn rounded small color="primary" class="ml-6" router to="/exhibit">Exhibit</v-btn>
+        <v-btn rounded small color="primary" class="mx-3" router to="/attend">Attend</v-btn>
         <v-row
           no-gutters
           style="position: absolute; bottom: 0; width: 100%;"

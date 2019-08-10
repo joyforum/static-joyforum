@@ -12,8 +12,12 @@
           13 - 14 October 2019
         </span>
       </v-card-text>
-      <v-btn rounded color="primary" class="ml-3 px-6">Exhibit</v-btn>
-      <v-btn rounded color="primary" class="ml-3 px-6">Attend</v-btn>
+      <v-btn rounded color="primary" class="ml-3 px-6" router to="/exhibit"
+        >Exhibit</v-btn
+      >
+      <v-btn rounded color="primary" class="ml-3 px-6" router to="/attend"
+        >Attend</v-btn
+      >
     </v-col>
     <v-col cols="3" class="pt-12 pr-12">
       <v-img

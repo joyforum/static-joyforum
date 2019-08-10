@@ -29,12 +29,12 @@
         </div>
       </div>
       <div class="py-4">
-        <v-btn rounded color="white" class="mx-3">
+        <v-btn rounded color="white" class="mx-3" router to="/exhibit">
           <span class="expoblue-text">
             Exhibit
           </span>
         </v-btn>
-        <v-btn rounded color="white" class="mx-3">
+        <v-btn rounded color="white" class="mx-3" router to="/attend">
           <span class="expoblue-text">
             Attend
           </span>

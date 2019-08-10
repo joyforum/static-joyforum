@@ -93,7 +93,14 @@
           <div class="volte workshopcyan-text">
             JOY Workshops 2019
           </div>
-          <v-btn rounded small color="#58a9ad" class="white--text my-3 px-6">
+          <v-btn
+            rounded
+            small
+            color="#58a9ad"
+            class="white--text my-3 px-6"
+            router
+            to="/attend"
+          >
             Attend
           </v-btn>
         </v-col>

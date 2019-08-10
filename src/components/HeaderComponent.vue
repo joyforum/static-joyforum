@@ -72,7 +72,14 @@
         >
           Special Events
         </v-btn>
-        <v-btn rounded small class="px-4 mx-1 my-auto" color="primary">
+        <v-btn
+          rounded
+          small
+          class="px-4 mx-1 my-auto"
+          color="primary"
+          router
+          to="/attend"
+        >
           <span class="mont">
             Attend
           </span>

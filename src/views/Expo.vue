@@ -30,6 +30,8 @@
             small
             color="primary"
             :class="$vuetify.breakpoint.xsOnly ? `mt-3 mx-3` : `mx-3`"
+            router
+            to="/exhibit"
           >
             Exhibit Now
           </v-btn>
@@ -108,10 +110,22 @@
           <div class="pa-3 mb-6 volte expoblue-text font-weight-bold headline">
             JOY EXPO 2019
           </div>
-          <v-btn rounded color="#263475" class="ml-3 px-6 white--text">
+          <v-btn
+            rounded
+            color="#263475"
+            class="ml-3 px-6 white--text"
+            router
+            to="/exhibit"
+          >
             Exhibit
           </v-btn>
-          <v-btn rounded color="#263475" class="ml-3 px-6 white--text">
+          <v-btn
+            rounded
+            color="#263475"
+            class="ml-3 px-6 white--text"
+            router
+            to="/attend"
+          >
             Attend
           </v-btn>
         </v-col>

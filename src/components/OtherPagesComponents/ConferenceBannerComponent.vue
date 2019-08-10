@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="py-4">
-        <v-btn rounded color="white" class="mx-3">
+        <v-btn rounded color="white" class="mx-3" router to="/attend">
           <span class="primary--text">
             Attend
           </span>

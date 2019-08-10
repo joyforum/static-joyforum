@@ -15,8 +15,16 @@
           </v-card-title>
           <v-card-text class="white--text caption">
             <span class="mont">
-              Exhibit Now <br />
-              Expo Details
+              <router-link to="/exhibit">
+                <div class="white--text">
+                  Exhibit Now
+                </div>
+              </router-link>
+              <router-link to="/expo">
+                <div class="white--text">
+                  Expo Details
+                </div>
+              </router-link>
             </span>
           </v-card-text>
           <v-img
@@ -33,9 +41,21 @@
           </v-card-title>
           <v-card-text class="white--text caption">
             <span class="mont">
-              Attend the Exhibition <br />
-              Register to the Conference <br />
-              Attend the Workshops
+              <router-link to="/attend">
+                <div class="white--text">
+                  Attend the Exhibition
+                </div>
+              </router-link>
+              <router-link to="/attend">
+                <div class="white--text">
+                  Register to the Conference
+                </div>
+              </router-link>
+              <router-link to="/attend">
+                <div class="white--text">
+                  Attend the Workshops
+                </div>
+              </router-link>
             </span>
           </v-card-text>
         </v-col>
