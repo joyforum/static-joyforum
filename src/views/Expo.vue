@@ -82,6 +82,8 @@
             rounded
             :block="$vuetify.breakpoint.smAndDown"
             color="primary px-6"
+            href="/JOY_ISLAND_Ready-Built-Stands.pdf"
+            target="_blank"
           >
             <div :class="$vuetify.breakpoint.smAndDown ? `caption` : `body-1`">
               Exhibition Floor Plan
@@ -93,6 +95,8 @@
             rounded
             :block="$vuetify.breakpoint.smAndDown"
             color="primary px-6"
+            href="/JOY_FORUM_2019_Brochure.pdf"
+            target="_blank"
           >
             <div :class="$vuetify.breakpoint.smAndDown ? `caption` : `body-1`">
               Download Brochure

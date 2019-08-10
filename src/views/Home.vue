@@ -85,15 +85,18 @@
             HIGHLIGHTS
           </span>
         </v-col>
-        <v-col cols="12" class="pl-3 py-3 primary--text font-weight-bold title">
+        <v-col
+          cols="12"
+          class="pl-3 py-3 primary--text font-weight-bold title temp-hidden"
+        >
           SPEAKERS AT JOY CONFERENCE
         </v-col>
       </v-row>
     </v-col>
-    <v-col cols="12" class="white">
+    <v-col cols="12" class="white temp-hidden">
       <SpeakersComponent />
     </v-col>
-    <v-col cols="12">
+    <v-col cols="12" class="temp-hidden">
       <CelebritiesComponent />
     </v-col>
     <v-col cols="12" class="white">
@@ -167,6 +170,9 @@ export default {
 }
 .border-circle {
   border-radius: 50%;
+}
+.temp-hidden {
+  display: none;
 }
 </style>
 

@@ -6,7 +6,7 @@
   >
     <v-col cols="12" class="px-3 py-6 primary--text font-weight-bold headline">
       <span class="volte">
-        THE JOY FORUM OBJECTIVES
+        CONFERENCE OBJECTIVES
       </span>
       <v-dialog max-width="800px" v-model="dialog">
         <v-card class="pb-3">
@@ -104,7 +104,7 @@ export default {
             "To be the recognized international authority on entertainment development & the best practice platform."
         },
         {
-          title: "Deliver On Our Motto",
+          title: "Creating Joy, building an economy",
           iconUrl: `/images/objectives/Conference_Objectives_Icons-04.svg`,
           hoverText:
             "Deliver a focused understanding on all aspects of “Fostering Joyful Culture, Building Vibrant Society, Creating a New Economy”"
@@ -128,13 +128,13 @@ export default {
             "Actively promote high standards of ethics and integrity among all stakeholders involved in the development of joy & entertainment worldwide."
         },
         {
-          title: "Promote Investment Opportunities",
+          title: "Promote Global Investment Opportunities",
           iconUrl: `/images/objectives/Conference_Objectives_Icons-07.svg`,
           hoverText:
-            "Put forward Entertainment Infrastructure in relation to the present golden opportunities for global & local investors. "
+            "Put forward (Establish) Entertainment Infrastructure in relation to the present golden opportunities for global & local investors. "
         },
         {
-          title: "Position GEA Worldwide",
+          title: "GEA Globalization",
           iconUrl: `/images/objectives/Conference_Objectives_Icons-08.svg`,
           hoverText:
             "Actively position entertainment as the fastest growing industry in Saudi Arabia by “economic statistics” for the present & future Mega Ventures"
@@ -146,7 +146,7 @@ export default {
             "Knowledge transfer by observing and discussing up-to-date technologies, market trends, cases & experiments"
         },
         {
-          title: "Boost the Entertainment Sector",
+          title: "Build and Sustain the Entertainment Sector",
           iconUrl: `/images/objectives/Conference_Objectives_Icons-10.svg`,
           hoverText:
             "Maintain and promote the leading position of GEA in the entertainment sectors worldwide."
