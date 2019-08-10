@@ -5,9 +5,6 @@
         JOY CONFERENCE 2019
       </span>
     </v-col>
-    <v-col cols="12" class="hidden-sm-and-up">
-      <v-img contain src="/images/about.png"></v-img>
-    </v-col>
     <v-col cols="12" class="pa-3 grey--text text--darken-1">
       <div class="mont title font-weight-bold py-3">
         A PIVOTAL INTERNATIONAL PLATFORM AIMING TO SHED LIGHT ON THE
