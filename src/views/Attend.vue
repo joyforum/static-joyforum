@@ -182,20 +182,12 @@
               Queries
             </div>
           </v-col>
-          <v-col cols="12" sm="6" class="pa-3 text-center">
+          <v-col cols="12" class="pa-3 text-center">
             <div class="mont subtitle-1 grey--text text--darken-1">
               Registration
             </div>
             <div class="mont subtitle-1 primary--text">
-              exhibit@joyforum.com
-            </div>
-          </v-col>
-          <v-col cols="12" sm="6" class="pa-3 text-center">
-            <div class="mont subtitle-1 grey--text text--darken-1">
-              Contact
-            </div>
-            <div class="mont subtitle-1 primary--text">
-              +966 50 607 3695
+              attend@joyforum.com
             </div>
           </v-col>
         </v-row>
@@ -287,8 +279,8 @@ export default {
     submit() {
       if (this.$refs.form.validate()) {
         const payload = {
-          _after: "https://epic-torvalds-18a336.netlify.com",
-          _subject: "Joyforum.com - Exhibit Contact Form",
+          _after: "https://joyforum.com/success",
+          _subject: "Joyforum.com - Attend Contact Form",
           _replyto: this.email,
           Full_Name: this.fullName,
           Email: this.email,
@@ -311,7 +303,7 @@ export default {
         }
 
         axios
-          .post("https://mailthis.to/malkhuzayyim", payload)
+          .post("https://mailthis.to/attend@joyforum.com", payload)
           .then(function() {
             location.href = "https://mailthis.to/confirm";
           });

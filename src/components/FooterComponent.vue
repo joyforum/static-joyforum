@@ -69,7 +69,7 @@
             <a
               class="mont white--text"
               href="https://goo.gl/maps/AL5QPG4emK6naFtm8"
-              target="blank"
+              target="_blank"
               style="text-decoration: none;"
             >
               Riyadh, Kingdom of Saudi Arabia <br />
@@ -107,7 +107,7 @@
               color="white"
               class="mx-1"
               href="https://www.linkedin.com/company/joyforumksa"
-              target="blank"
+              target="_blank"
             >
               <v-icon color="primary">
                 mdi-linkedin
@@ -120,7 +120,7 @@
               color="white"
               class="mx-1"
               href="https://twitter.com/JoyForumKSA"
-              target="blank"
+              target="_blank"
             >
               <v-icon color="primary">mdi-twitter</v-icon>
             </v-btn>
@@ -131,7 +131,7 @@
               color="white"
               class="mx-1"
               href="https://instagram.com/joyforumksa/"
-              target="blank"
+              target="_blank"
             >
               <v-icon color="primary">mdi-instagram</v-icon>
             </v-btn>
@@ -142,7 +142,7 @@
               color="white"
               class="mx-1"
               href="https://www.facebook.com/JoyForumKSA/"
-              target="blank"
+              target="_blank"
             >
               <v-icon color="primary">mdi-facebook</v-icon>
             </v-btn>
@@ -153,7 +153,7 @@
               color="white"
               class="mx-1"
               href="https://www.youtube.com/channel/UCzr5f6ncQGfRkTBzEf-p06A"
-              target="blank"
+              target="_blank"
             >
               <v-icon color="primary">mdi-youtube</v-icon>
             </v-btn>

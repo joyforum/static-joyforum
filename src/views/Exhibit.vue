@@ -229,8 +229,8 @@ export default {
     submit() {
       if (this.$refs.form.validate()) {
         axios
-          .post("https://mailthis.to/malkhuzayyim", {
-            _after: "https://epic-torvalds-18a336.netlify.com",
+          .post("https://mailthis.to/exhibit@joyforum.com", {
+            _after: "https://joyforum.com/success",
             _subject: "Joyforum.com - Exhibit Contact Form",
             _replyto: this.email,
             Title: this.title,

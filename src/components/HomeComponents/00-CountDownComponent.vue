@@ -43,13 +43,6 @@
       <span class="caption mont">13 - 14 October 2019</span><br />
       <span class="caption mont">Riyadh, KSA, Ritz Carlton</span>
     </div>
-    <v-spacer />
-    <div class="white--text subtitle-1 my-auto mx-6 text-right hidden-xs-only">
-      <span class="font-weight-bold mont"> Produced by<br /> </span>
-      <span class="mont">
-        MAESTRO
-      </span>
-    </div>
   </v-row>
 </template>
 

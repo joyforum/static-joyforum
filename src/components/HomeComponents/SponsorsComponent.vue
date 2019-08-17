@@ -4,14 +4,14 @@
     class="mx-auto py-6 mb-6 justify-center"
     style="max-width: 1280px;"
   >
-    <v-col cols="12" class="pa-6">
+    <v-col cols="12" class="pa-6 temp-hidden">
       <div class="primary--text font-weight-black text-center display-1">
         <span class="volte">
           JOY FORUM SPONSORS
         </span>
       </div>
     </v-col>
-    <v-col cols="3" class="text-center">
+    <v-col cols="3" class="text-center temp-hidden">
       <v-img
         max-height="150px"
         contain
@@ -22,10 +22,10 @@
         Strategic Sponsor
       </span>
     </v-col>
-    <v-col cols="1" class="text-center">
+    <v-col cols="1" class="text-center temp-hidden">
       <v-divider vertical />
     </v-col>
-    <v-col cols="3" class="text-center">
+    <v-col cols="3" class="text-center temp-hidden">
       <v-img
         max-height="150px"
         contain
@@ -36,10 +36,10 @@
         Diamond Sponsor
       </span>
     </v-col>
-    <v-col cols="1" class="text-center">
+    <v-col cols="1" class="text-center temp-hidden">
       <v-divider vertical />
     </v-col>
-    <v-col cols="3" class="text-center">
+    <v-col cols="3" class="text-center temp-hidden">
       <v-img
         max-height="150px"
         contain
@@ -50,7 +50,7 @@
         Gold Sponsor
       </div>
     </v-col>
-    <v-col cols="12">
+    <v-col cols="12" class="text-center temp-hidden">
       <v-divider class="mx-12 my-12"> </v-divider>
     </v-col>
     <v-col cols="5" class="text-center">
@@ -59,12 +59,14 @@
           Organized by
         </span>
       </div>
-      <v-img
-        max-height="150px"
-        contain
-        class="mx-auto"
-        src="/images/gea-logo.png"
-      ></v-img>
+      <a href="https://www.gea.gov.sa/en/" target="_blank">
+        <v-img
+          max-height="150px"
+          contain
+          class="mx-auto"
+          src="/images/gea-logo.png"
+        ></v-img>
+      </a>
     </v-col>
     <v-col cols="1" class="text-center">
       <v-divider vertical />
@@ -75,12 +77,14 @@
           Produced by
         </span>
       </div>
-      <v-img
-        max-height="150px"
-        contain
-        class="mx-auto"
-        src="/images/exhibitors/Logos-16.jpg"
-      ></v-img>
+      <a href="http://www.maestrogroup.com/" target="_blank">
+        <v-img
+          max-height="150px"
+          contain
+          class="mx-auto"
+          src="/images/exhibitors/Logos-16.jpg"
+        ></v-img>
+      </a>
     </v-col>
   </v-row>
 </template>
