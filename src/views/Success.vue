@@ -16,15 +16,6 @@
             </span>
           </div>
         </v-col>
-        <v-col cols="12" sm="6" class="pa-3">
-          <div class="mont body-1">
-            You are now Registered!
-          </div>
-          <div class="mont body-1">
-            Thank you for taking part of JOY FORUM 2019, looking forward to see
-            you there, Let the Joy Begin!
-          </div>
-        </v-col>
         <v-col cols="8"></v-col>
         <v-col cols="4" class="pa-6 text-right">
           <v-img

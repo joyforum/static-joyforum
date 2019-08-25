@@ -130,8 +130,9 @@
           </v-col>
           <v-col cols="12" md="6" class="pa-3">
             <div class="mont body-1">
-              Fill up this form and a JOY Expo team member will get in touch and
-              discuss your query and the best way to present your company.
+              Upon filling this form, a JOY Expo team member will contact you to
+              discuss your query and ensure providing you with the most suitable
+              solution for your business’s best representation.
             </div>
           </v-col>
           <v-col cols="12" class="pa-3">

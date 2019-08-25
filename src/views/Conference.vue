@@ -78,7 +78,7 @@
           <v-card color="white" flat class="border-radius">
             <v-row no-gutters>
               <v-col cols="12">
-                <v-chip color="primary" class="mx-6 mb-6 pa-6 mt-n6">
+                <v-chip color="primary" class="mx-6 mb-6 py-6 px-3 mt-n6">
                   <span class="mont body-1 font-weight-bold">
                     Topic 1: Entertainment & Economy Building
                   </span>
@@ -159,7 +159,7 @@
           <v-card color="white" flat class="border-radius">
             <v-row no-gutters>
               <v-col cols="12">
-                <v-chip color="primary" class="mx-6 mb-6 pa-6 mt-n6">
+                <v-chip color="primary" class="mx-6 mb-6 py-6 px-3 mt-n6">
                   <span class="mont body-1 font-weight-bold">
                     Topic 2: Making Impact (Tech Talk – Global Experiences)
                   </span>
@@ -242,7 +242,7 @@
           <v-card color="white" flat class="border-radius">
             <v-row no-gutters>
               <v-col cols="12">
-                <v-chip color="primary" class="mx-6 mb-6 pa-6 mt-n6">
+                <v-chip color="primary" class="mx-6 mb-6 py-6 px-3 mt-n6">
                   <span class="mont body-1 font-weight-bold">
                     Topic 1: The JOY Makers
                   </span>
@@ -325,7 +325,7 @@
           <v-card color="white" flat class="border-radius">
             <v-row no-gutters>
               <v-col cols="12">
-                <v-chip color="primary" class="mx-6 mb-6 pa-6 mt-n6">
+                <v-chip color="primary" class="mx-6 mb-6 py-6 px-3 mt-n6">
                   <span class="mont body-1 font-weight-bold">
                     Topic 2: Mega Venture
                   </span>

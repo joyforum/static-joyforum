@@ -68,24 +68,6 @@
         ></v-img>
       </a>
     </v-col>
-    <v-col cols="1" class="text-center">
-      <v-divider vertical />
-    </v-col>
-    <v-col cols="5" class="text-center">
-      <div class="primary--text font-weight-black text-center headline pb-3">
-        <span class="volte">
-          Produced by
-        </span>
-      </div>
-      <a href="http://www.maestrogroup.com/" target="_blank">
-        <v-img
-          max-height="150px"
-          contain
-          class="mx-auto"
-          src="/images/exhibitors/Logos-16.jpg"
-        ></v-img>
-      </a>
-    </v-col>
   </v-row>
 </template>
 

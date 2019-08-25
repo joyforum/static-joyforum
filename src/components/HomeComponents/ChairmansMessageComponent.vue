@@ -32,7 +32,7 @@
         class="primary--text title font-weight-bold text-right hidden-xs-only"
       >
         <span class="mont">
-          H.E. Turki Al Sheikh <br />
+          H.E. Turki Al AlShikh <br />
           Chairman <br />
           General Entertainment Authority
         </span>

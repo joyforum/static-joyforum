@@ -15,7 +15,11 @@
       <v-btn rounded color="primary" class="ml-3 px-6" router to="/exhibit"
         >Exhibit</v-btn
       >
-      <v-btn rounded color="primary" class="ml-3 px-6" router to="/attend"
+      <v-btn
+        rounded
+        color="primary"
+        class="ml-3 px-6"
+        @click="$router.replace({ query: { attend: 1 } })"
         >Attend</v-btn
       >
     </v-col>

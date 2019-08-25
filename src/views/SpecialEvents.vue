@@ -100,7 +100,7 @@
           <v-row no-gutters>
             <v-col cols="12">
               <span class="volte font-weight-bold headline">
-                GEA EXCELLENCE AWARD
+                GEA CHALLENGES AWARD
               </span>
               <span style="float: right;" class="hidden-sm-and-down">
                 <div>
@@ -132,11 +132,13 @@
               </span>
             </v-col>
             <v-col cols="6" class="hidden-md-and-up py-3">
-              <v-img
-                contain
-                max-height="150px"
-                src="/images/SpecialEvents_Logo.png"
-              ></v-img>
+              <a href="https://geachallenges.com" target="_blank">
+                <v-img
+                  contain
+                  max-height="150px"
+                  src="/images/SpecialEvents_Logo.png"
+                ></v-img>
+              </a>
             </v-col>
             <v-col cols="12">
               <div class="mont title grey--text py-3">
@@ -155,11 +157,13 @@
           </v-row>
         </v-col>
         <v-col cols="12" md="3" class="my-auto hidden-sm-and-down">
-          <v-img
-            contain
-            max-height="150px"
-            src="/images/SpecialEvents_Logo.png"
-          ></v-img>
+          <a href="https://geachallenges.com" target="_blank">
+            <v-img
+              contain
+              max-height="150px"
+              src="/images/SpecialEvents_Logo.png"
+            ></v-img>
+          </a>
         </v-col>
       </v-row>
     </v-col>

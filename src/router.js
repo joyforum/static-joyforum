@@ -6,7 +6,6 @@ import Conference from "./views/Conference.vue";
 import Workshops from "./views/Workshops.vue";
 import SpecialEvents from "./views/SpecialEvents.vue";
 import Exhibit from "./views/Exhibit.vue";
-import Attend from "./views/Attend.vue";
 import Success from "./views/Success.vue";
 
 import goTo from "vuetify/es5/services/goto";
@@ -48,23 +47,22 @@ export default new Router({
       component: Exhibit
     },
     {
-      path: "/attend",
-      name: "attend",
-      component: Attend
-    },
-    {
       path: "/success",
       name: "success",
       component: Success
     }
   ],
   scrollBehavior: (to, from, savedPosition) => {
-    let scrollTo = 0;
-    if (to.hash) {
-      scrollTo = to.hash;
-    } else if (savedPosition) {
-      scrollTo = savedPosition.y;
+    if (to.name != from.name) {
+      let scrollTo = 0;
+      if (to.hash) {
+        scrollTo = to.hash;
+      } else if (savedPosition) {
+        scrollTo = savedPosition.y;
+      }
+      return goTo(scrollTo);
+    } else {
+      return;
     }
-    return goTo(scrollTo);
   }
 });

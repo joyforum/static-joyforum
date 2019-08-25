@@ -2,12 +2,15 @@
   <v-row no-gutters class="primary">
     <v-col cols="12">
       <v-row no-gutters class="mx-auto py-3" style="max-width: 1280px;">
-        <v-col cols="12" sm="3">
+        <v-col cols="12" class="hidden-sm-and-up">
           <v-img
-            class="ma-6 hidden-sm-and-up"
+            class="ma-6"
             contain
+            max-height="100px"
             src="/images/footer-logo.png"
           ></v-img>
+        </v-col>
+        <v-col cols="12" sm="3">
           <v-card-title class="white--text font-weight-medium body-2">
             <span class="mont">
               EXHIBITION
@@ -27,11 +30,6 @@
               </router-link>
             </span>
           </v-card-text>
-          <v-img
-            class="ma-6 hidden-xs-only"
-            contain
-            src="/images/footer-logo.png"
-          ></v-img>
         </v-col>
         <v-col cols="12" sm="3">
           <v-card-title class="white--text font-weight-medium body-2">
@@ -41,17 +39,17 @@
           </v-card-title>
           <v-card-text class="white--text caption">
             <span class="mont">
-              <router-link to="/attend">
+              <router-link :to="{ query: { attend: '1' } }">
                 <div class="white--text">
                   Attend the Exhibition
                 </div>
               </router-link>
-              <router-link to="/attend">
+              <router-link :to="{ query: { attend: '1' } }">
                 <div class="white--text">
                   Register to the Conference
                 </div>
               </router-link>
-              <router-link to="/attend">
+              <router-link :to="{ query: { attend: '1' } }">
                 <div class="white--text">
                   Attend the Workshops
                 </div>
@@ -92,6 +90,32 @@
               Exhibit@joyforum.com
             </span>
           </v-card-text>
+        </v-col>
+        <v-col cols="12" sm="3">
+          <div class="white--text caption pl-4">
+            <span class="mont">
+              Event Produced by
+            </span>
+          </div>
+          <a href="http://www.maestrogroup.com/" target="_blank">
+            <v-img
+              class="ml-2"
+              contain
+              max-height="20px"
+              max-width="120px"
+              src="/images/MaestroLogo-white.png"
+            ></v-img>
+          </a>
+        </v-col>
+        <v-col cols="6" class="hidden-xs-only">
+          <v-img
+            class="ma-6"
+            contain
+            max-height="100px"
+            src="/images/footer-logo.png"
+          ></v-img>
+        </v-col>
+        <v-col cols="12" sm="3">
           <div
             :class="$vuetify.breakpoint.xsOnly ? `text-center pb-6` : `pl-2`"
           >

@@ -34,7 +34,12 @@
             Exhibit
           </span>
         </v-btn>
-        <v-btn rounded color="white" class="mx-3" router to="/attend">
+        <v-btn
+          rounded
+          color="white"
+          class="mx-3"
+          @click="$router.replace({ query: { attend: 1 } })"
+        >
           <span class="expoblue-text">
             Attend
           </span>

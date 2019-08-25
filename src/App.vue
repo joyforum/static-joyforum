@@ -6,13 +6,14 @@
       <v-content class="grey lighten-3">
         <v-row no-gutters>
           <v-col cols="12">
-            <router-view :key="$route.fullPath"></router-view>
+            <router-view></router-view>
           </v-col>
           <v-col cols="12">
             <FooterComponent />
           </v-col>
         </v-row>
       </v-content>
+      <AttendDialog />
     </v-container>
   </v-app>
 </template>
@@ -20,11 +21,13 @@
 <script>
 import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
+import AttendDialog from "./components/AttendDialog";
 export default {
   name: "App",
   components: {
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AttendDialog
   },
   data() {
     return {

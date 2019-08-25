@@ -17,12 +17,20 @@
         <v-card-text class="white--text title pt-3 pl-6">
           <span class="mont">
             Fostering a Joyful Culture, <br />
-            Building a Vibrant Economy, <br />
-            Creating a New Economy
+            Building a Vibrant Society
           </span>
         </v-card-text>
-        <v-btn rounded small color="primary" class="ml-6" router to="/exhibit">Exhibit</v-btn>
-        <v-btn rounded small color="primary" class="mx-3" router to="/attend">Attend</v-btn>
+        <v-btn rounded small color="primary" class="ml-6" router to="/exhibit"
+          >Exhibit</v-btn
+        >
+        <v-btn
+          rounded
+          small
+          color="primary"
+          class="mx-3"
+          @click="$router.replace({ query: { attend: 1 } })"
+          >Attend</v-btn
+        >
         <v-row
           no-gutters
           style="position: absolute; bottom: 0; width: 100%;"

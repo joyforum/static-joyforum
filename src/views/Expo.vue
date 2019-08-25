@@ -127,8 +127,7 @@
             rounded
             color="#263475"
             class="ml-3 px-6 white--text"
-            router
-            to="/attend"
+            @click="$router.replace({ query: { attend: 1 } })"
           >
             Attend
           </v-btn>

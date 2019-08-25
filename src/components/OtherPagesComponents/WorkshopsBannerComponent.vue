@@ -28,7 +28,10 @@
       </div>
       <div class="py-4">
         <v-btn rounded color="white" class="mx-3">
-          <span class="workshopcyan-text" router to="/attend">
+          <span
+            class="workshopcyan-text"
+            @click="$router.replace({ query: { attend: 1 } })"
+          >
             Attend
           </span>
         </v-btn>

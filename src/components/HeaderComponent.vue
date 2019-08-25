@@ -77,8 +77,7 @@
           small
           class="px-4 mx-1 my-auto"
           color="primary"
-          router
-          to="/attend"
+          @click="$router.replace({ query: { attend: 1 } })"
         >
           <span class="mont">
             Attend
