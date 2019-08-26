@@ -2,6 +2,11 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import vuetify from "./plugins/vuetify";
+import VueAnalytics from "vue-analytics";
+
+Vue.config.productionTip = false;
+
+const isProd = process.env.NODE_ENV == "production";
 
 //VueNumberAnimation
 import VueNumber from "vue-number-animation";
@@ -12,7 +17,15 @@ import VueAwesomeSwiper from "vue-awesome-swiper";
 import "swiper/dist/css/swiper.css";
 Vue.use(VueAwesomeSwiper);
 
-Vue.config.productionTip = false;
+// analytics
+Vue.use(VueAnalytics, {
+  id: "UA-146433089-1",
+  router,
+  debug: {
+    enabled: !isProd,
+    sendHitTask: isProd
+  }
+});
 
 new Vue({
   router,
