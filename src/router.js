@@ -8,7 +8,7 @@ import SpecialEvents from "./views/SpecialEvents.vue";
 import Exhibit from "./views/Exhibit.vue";
 import Success from "./views/Success.vue";
 
-import goTo from "vuetify/es5/services/goto";
+import goTo from "vuetify/lib/services/goto";
 
 Vue.use(Router);
 
