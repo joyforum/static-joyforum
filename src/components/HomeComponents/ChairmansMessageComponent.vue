@@ -51,7 +51,12 @@
     </v-col>
     <v-col cols="12" class="hidden-sm-and-up">
       <v-card-text class="title font-italic">
-        <span class="mont">
+        <span class="mont" v-if="isArabic">
+          "بُنيت هذه الصناعة الواعدة لتلبي تطلعات الشعب السعودي وتفتح آفاق
+          استثمارية أجنبية ومحلية من أجل تعزيز التطور المتنامي والترفيهي
+          والصناعي"
+        </span>
+        <span class="mont" v-else>
           “This promising industry has been formulated to meet the aspirations
           of the Saudi people and open the horizons of internal and external
           investments to create a growing, recreational and industrial
@@ -59,8 +64,13 @@
         </span>
       </v-card-text>
       <v-card-text class="primary--text title font-weight-bold text-right">
-        <span class="mont">
-          H.E. Turki Al Sheikh <br />
+        <span class="mont" v-if="isArabic">
+          معالي الأستاذ تركي بن عبد المحسن آل الشيخ <br />
+          رئيس مجلس الإدارة <br />
+          الهيئة العامة للترفيه
+        </span>
+        <span class="mont" v-else>
+          H.E. Turki Al AlShikh <br />
           Chairman <br />
           General Entertainment Authority
         </span>

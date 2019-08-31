@@ -21,7 +21,7 @@
     <v-col cols="12" class="white">
       <ConferenceObjectivesComponent />
     </v-col>
-    <v-col cols="12">
+    <v-col cols="12" v-if="!isArabic">
       <v-row
         no-gutters
         class="mx-auto py-6 px-3 justify-space-around"

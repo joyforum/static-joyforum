@@ -5,7 +5,10 @@
     style="max-width: 1280px;"
   >
     <v-col cols="12" class="px-3 py-6 primary--text font-weight-bold headline">
-      <span class="volte">
+      <span class="volte" v-if="isArabic">
+        أهداف المؤتمر
+      </span>
+      <span class="volte" v-else>
         CONFERENCE OBJECTIVES
       </span>
       <v-dialog max-width="800px" v-model="dialog">
