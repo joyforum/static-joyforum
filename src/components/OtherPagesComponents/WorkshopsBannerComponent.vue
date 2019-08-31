@@ -2,36 +2,50 @@
   <v-row no-gutters class="mx-auto" style="max-width: 1280px;">
     <v-col cols="12" class="px-6">
       <div class="display-2 white--text pt-6">
-        <span class="volte font-weight-bold">
+        <span class="volte font-weight-bold" v-if="isArabic">
+          ورش عمل صناعة الترفيه 2019
+        </span>
+        <span class="volte font-weight-bold" v-else>
           JOY WORKSHOPS 2019
         </span>
       </div>
       <div class="white--text title pt-3">
-        <span class="mont">
+        <span class="mont" v-if="isArabic">
+          التعلم من أهم خبراء صناعة الترفيه
+        </span>
+        <span class="mont" v-else>
           Learn from Leading Industry Experts
         </span>
       </div>
-      <div class="white--text display-2 border-left-white pl-3 mt-3">
+      <div class="white--text display-2 border-left-white px-3 mt-3">
         <span class="volte font-weight-bold">
           <number
             ref="number1"
             :from="0"
-            :to="16"
+            :to="12"
             :duration="2"
             :delay="1"
             easing="Power1.easeOut"
           />
         </span>
-        <div class="mont title">
+        <div class="mont title" v-if="isArabic">
+          ورش العمل
+        </div>
+        <div class="mont title" v-else>
           Workshops
         </div>
       </div>
       <div class="py-4">
-        <v-btn rounded color="white" class="mx-3">
-          <span
-            class="workshopcyan-text"
-            @click="$router.replace({ query: { attend: 1 } })"
-          >
+        <v-btn
+          rounded
+          color="white"
+          class="mx-3"
+          href="http://www.cvent.com/d/ryqdbb" target="_blank"
+        >
+          <span class="workshopcyan-text" v-if="isArabic">
+            لحضور المنتدى
+          </span>
+          <span class="workshopcyan-text" v-else>
             Attend
           </span>
         </v-btn>
@@ -41,7 +55,24 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    isArabic() {
+      if (this.$route.params.lang == "ar") {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    langKey() {
+      if (this.isArabic) {
+        return "ar";
+      } else {
+        return "en";
+      }
+    }
+  }
+};
 </script>
 
 <style>

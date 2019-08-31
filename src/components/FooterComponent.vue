@@ -12,19 +12,28 @@
         </v-col>
         <v-col cols="12" sm="3">
           <v-card-title class="white--text font-weight-medium body-2">
-            <span class="mont">
+            <span class="mont" v-if="isArabic">
+              المعرض
+            </span>
+            <span class="mont" v-else>
               EXHIBITION
             </span>
           </v-card-title>
           <v-card-text class="white--text caption">
             <span class="mont">
-              <router-link to="/exhibit">
-                <div class="white--text">
+              <router-link :to="isArabic ? `/exhibit/ar` : `/exhibit/en`">
+                <div class="white--text" v-if="isArabic">
+                  شارك الآن في المعرض
+                </div>
+                <div class="white--text" v-else>
                   Exhibit Now
                 </div>
               </router-link>
               <router-link to="/expo">
-                <div class="white--text">
+                <div class="white--text" v-if="isArabic">
+                  تفاصيل المعرض
+                </div>
+                <div class="white--text" v-else>
                   Expo Details
                 </div>
               </router-link>
@@ -33,24 +42,36 @@
         </v-col>
         <v-col cols="12" sm="3">
           <v-card-title class="white--text font-weight-medium body-2">
-            <span class="mont">
+            <span class="mont" v-if="isArabic">
+              التسجيل
+            </span>
+            <span class="mont" v-else>
               REGISTRATION
             </span>
           </v-card-title>
           <v-card-text class="white--text caption">
             <span class="mont">
               <router-link :to="{ query: { attend: '1' } }">
-                <div class="white--text">
+                <div class="white--text" v-if="isArabic">
+                  لحضور المعرض
+                </div>
+                <div class="white--text" v-else>
                   Attend the Exhibition
                 </div>
               </router-link>
               <router-link :to="{ query: { attend: '1' } }">
-                <div class="white--text">
+                <div class="white--text" v-if="isArabic">
+                  سجّل في المؤتمر
+                </div>
+                <div class="white--text" v-else>
                   Register to the Conference
                 </div>
               </router-link>
               <router-link :to="{ query: { attend: '1' } }">
-                <div class="white--text">
+                <div class="white--text" v-if="isArabic">
+                  لحضور ورش العمل
+                </div>
+                <div class="white--text" v-else>
                   Attend the Workshops
                 </div>
               </router-link>
@@ -59,7 +80,10 @@
         </v-col>
         <v-col cols="12" sm="3">
           <v-card-title class="white--text font-weight-medium body-2">
-            <span class="mont">
+            <span class="mont" v-if="isArabic">
+              الموقع
+            </span>
+            <span class="mont" v-else>
               LOCATION
             </span>
           </v-card-title>
@@ -70,20 +94,36 @@
               target="_blank"
               style="text-decoration: none;"
             >
-              Riyadh, Kingdom of Saudi Arabia <br />
-              Ritz-Carlton Hotel
-              <v-icon small class="white--text">mdi-open-in-new</v-icon>
+              <span v-if="isArabic">
+                الرياض – المملكة العربية السعودية <br />
+                فندق الريتز كارلتون
+                <v-icon small class="white--text">mdi-open-in-new</v-icon>
+              </span>
+              <span v-else>
+                Riyadh, Kingdom of Saudi Arabia <br />
+                Ritz-Carlton Hotel
+                <v-icon small class="white--text">mdi-open-in-new</v-icon>
+              </span>
             </a>
           </v-card-text>
         </v-col>
         <v-col cols="12" sm="3">
           <v-card-title class="white--text font-weight-medium body-2">
-            <span class="mont">
+            <span class="mont" v-if="isArabic">
+              للتواصل
+            </span>
+            <span class="mont" v-else>
               CONTACTS
             </span>
           </v-card-title>
           <v-card-text class="white--text caption">
-            <span class="mont">
+            <span class="mont" v-if="isArabic">
+              مدير المعرض <br />
+              أحمد مفتي <br />
+              00966506073695 <br />
+              Exhibit@joyforum.com
+            </span>
+            <span class="mont" v-else>
               Expo Manager <br />
               Ahmed Mufti <br />
               +966 50 607 3695 <br />
@@ -92,14 +132,17 @@
           </v-card-text>
         </v-col>
         <v-col cols="12" sm="3">
-          <div class="white--text caption pl-4">
-            <span class="mont">
+          <div class="white--text caption px-4">
+            <span class="mont" v-if="isArabic">
+              إنتاج
+            </span>
+            <span class="mont" v-else>
               Event Produced by
             </span>
           </div>
           <a href="http://www.maestrogroup.com/" target="_blank">
             <v-img
-              class="ml-2"
+              class="mx-2"
               contain
               max-height="20px"
               max-width="120px"
@@ -117,9 +160,9 @@
         </v-col>
         <v-col cols="12" sm="3">
           <div
-            :class="$vuetify.breakpoint.xsOnly ? `text-center pb-6` : `pl-2`"
+            :class="$vuetify.breakpoint.xsOnly ? `text-center pb-6` : `px-2`"
           >
-            <div class="pl-1 white--text pt-3 font-weight-bold subtitle-1">
+            <div class="px-1 white--text pt-3 font-weight-bold subtitle-1">
               <span class="mont">
                 JoyForumKSA
               </span>
@@ -194,6 +237,15 @@ export default {
     return {
       //
     };
+  },
+  computed: {
+    isArabic() {
+      if (this.$route.params.lang == "ar") {
+        return true;
+      } else {
+        return false;
+      }
+    }
   }
 };
 </script>

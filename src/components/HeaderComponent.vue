@@ -20,8 +20,9 @@
         <img
           height="100%"
           src="/images/headerlogo.png"
-          class="pl-2"
-          @click="$router.push(`/`)"
+          :class="isArabic ? `pr-2` : `px-2`"
+          @click="isArabic ? $router.push(`/ar`) : $router.push(`/`)"
+          style="cursor: pointer;"
         />
         <v-spacer></v-spacer>
         <v-btn
@@ -31,10 +32,10 @@
           class="px-4 mx-1 my-auto"
           color="primary"
           router
-          to="/expo"
+          :to="isArabic ? `/expo/ar` : `/expo/en`"
           v-show="$vuetify.breakpoint.mdAndUp"
         >
-          Expo
+          {{ isArabic ? `المعرض` : `Expo` }}
         </v-btn>
         <v-btn
           text
@@ -43,10 +44,10 @@
           class="px-4 mx-1 my-auto"
           color="primary"
           router
-          to="/conference"
+          :to="isArabic ? `/conference/ar` : `/conference/en`"
           v-show="$vuetify.breakpoint.mdAndUp"
         >
-          Conference
+          {{ isArabic ? `المؤتمر` : `Conference` }}
         </v-btn>
         <v-btn
           text
@@ -55,10 +56,10 @@
           class="px-4 mx-1 my-auto"
           color="primary"
           router
-          to="/workshops"
+          :to="isArabic ? `/workshops/ar` : `/workshops/en`"
           v-show="$vuetify.breakpoint.mdAndUp"
         >
-          Workshops
+          {{ isArabic ? `ورش العمل` : `Workshops` }}
         </v-btn>
         <v-btn
           text
@@ -67,20 +68,33 @@
           class="px-4 mx-1 my-auto"
           color="primary"
           router
-          to="/specialevents"
+          :to="isArabic ? `/specialevents/ar` : `/specialevents/en`"
           v-show="$vuetify.breakpoint.mdAndUp"
         >
-          Special Events
+          {{ isArabic ? `أحداث خاصة` : `Special Events` }}
         </v-btn>
         <v-btn
           rounded
           small
           class="px-4 mx-1 my-auto"
           color="primary"
-          @click="$router.replace({ query: { attend: 1 } })"
+          href="http://www.cvent.com/d/ryqdbb"
+          target="_blank"
         >
           <span class="mont">
-            Attend
+            {{ isArabic ? `لحضور المنتدى` : `Attend` }}
+          </span>
+        </v-btn>
+        <v-btn
+          text
+          fab
+          small
+          class="px-4 mx-1 my-auto"
+          color="primary"
+          @click="switchLanguage()"
+        >
+          <span class="font-weight-bold">
+            {{ $route.params.lang == "ar" ? `E` : `ع` }}
           </span>
         </v-btn>
       </v-row>
@@ -92,42 +106,51 @@
       v-model="navDrawer"
       disable-resize-watcher
       mobile-break-point="3000"
+      :right="isArabic"
     >
-      <div class="px-4 headline pa-4">Navigation</div>
+      <div class="px-4 headline pa-4">
+        {{ isArabic ? `الصفحات` : `Navigation` }}
+      </div>
       <v-divider></v-divider>
       <v-list>
-        <v-list-item router to="/">
+        <v-list-item router :to="isArabic ? `/ar` : `/en`">
           <v-list-item-content>
-            <v-list-item-title class="font-weight-bold font-italic">
-              Home Page
+            <v-list-item-title class="font-weight-bold mont">
+              {{ isArabic ? `الصفحة الرئيسية` : `Home Page` }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item router to="/expo">
+        <v-list-item router :to="isArabic ? `/expo/ar` : `/expo/en`">
           <v-list-item-content>
-            <v-list-item-title class="font-weight-bold font-italic">
-              Expo
+            <v-list-item-title class="font-weight-bold mont">
+              {{ isArabic ? `المعرض` : `Expo` }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item router to="/conference">
+        <v-list-item
+          router
+          :to="isArabic ? `/conference/ar` : `/conference/en`"
+        >
           <v-list-item-content>
-            <v-list-item-title class="font-weight-bold font-italic">
-              Conference
+            <v-list-item-title class="font-weight-bold mont">
+              {{ isArabic ? `المؤتمر` : `Conference` }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item router to="/workshops">
+        <v-list-item router :to="isArabic ? `/workshops/ar` : `/workshops/en`">
           <v-list-item-content>
-            <v-list-item-title class="font-weight-bold font-italic">
-              Workshops
+            <v-list-item-title class="font-weight-bold mont">
+              {{ isArabic ? `ورش العمل` : `Workshops` }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item router to="/specialevents">
+        <v-list-item
+          router
+          :to="isArabic ? `/specialevents/ar` : `/specialevents/en`"
+        >
           <v-list-item-content>
-            <v-list-item-title class="font-weight-bold font-italic">
-              Special Events
+            <v-list-item-title class="font-weight-bold mont">
+              {{ isArabic ? `أحداث خاصة` : `Special Events` }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -142,6 +165,30 @@ export default {
     return {
       navDrawer: false
     };
+  },
+  methods: {
+    switchLanguage() {
+      if (this.$route.params.lang == "ar") {
+        this.$router.push({ params: { lang: `en` } });
+      } else if (this.$route.params.lang == "en") {
+        this.$router.push({ params: { lang: `ar` } });
+      } else {
+        if (this.$route.path.slice(-1) == "/") {
+          this.$router.push(`${this.$route.path}ar`);
+        } else {
+          this.$router.push(`${this.$route.path}/ar`);
+        }
+      }
+    }
+  },
+  computed: {
+    isArabic() {
+      if (this.$route.params.lang == "ar") {
+        return true;
+      } else {
+        return false;
+      }
+    }
   }
 };
 </script>

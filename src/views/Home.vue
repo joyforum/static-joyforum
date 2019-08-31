@@ -50,7 +50,10 @@
       </v-icon>
       <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
         <v-col cols="12" class="pa-3 primary--text font-weight-bold display-1">
-          <span class="volte">
+          <span class="volte" v-if="isArabic">
+            هدف المنتدى
+          </span>
+          <span class="volte" v-else>
             PURPOSE
           </span>
         </v-col>
@@ -59,7 +62,10 @@
           cols="12"
           class="pa-3 headline font-weight-bold white--text"
         >
-          <span class="mont">
+          <span class="mont" v-if="isArabic">
+            تطوير واستدامة قطاع الترفيه في المملكة، لتكون مركزاً عالمياً للترفيه
+          </span>
+          <span class="mont" v-else>
             FOUNDING, DEVELOPING AND SUSTAINING THE ENTERTAINMENT ECOSYSTEM IN
             THE KINGDOM, GIVING BIRTH TO A GLOBAL ENTERTAINMENT HUB.
           </span>
@@ -79,15 +85,18 @@
       <v-row no-gutters class="mx-auto pt-6 px-3" style="max-width: 1280px;">
         <v-col
           cols="12"
-          class="pl-3 py-3 primary--text font-weight-bold display-1"
+          class="px-3 py-3 primary--text font-weight-bold display-1"
         >
-          <span class="volte">
+          <span class="volte" v-if="isArabic">
+            أهم الأخبار
+          </span>
+          <span class="volte" v-else>
             HIGHLIGHTS
           </span>
         </v-col>
         <v-col
           cols="12"
-          class="pl-3 py-3 primary--text font-weight-bold title temp-hidden"
+          class="px-3 py-3 primary--text font-weight-bold title temp-hidden"
         >
           SPEAKERS AT JOY CONFERENCE
         </v-col>
@@ -144,6 +153,15 @@ export default {
     return {
       //dialog: false,
     };
+  },
+  computed: {
+    isArabic() {
+      if (this.$route.params.lang == "ar") {
+        return true;
+      } else {
+        return false;
+      }
+    }
   }
 };
 </script>

@@ -8,7 +8,7 @@
       >
         <v-col
           cols="12"
-          class="pl-3 py-6 font-weight-bold title"
+          class="px-3 py-6 font-weight-bold title"
           style="color: #F7B717;"
         >
           CELEBRITIES AT JOY SPECIAL EVENTS

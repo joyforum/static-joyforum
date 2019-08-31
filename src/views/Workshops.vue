@@ -22,12 +22,29 @@
         style="max-width: 1280px;"
       >
         <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
-          <span class="volte workshopcyan-text">
+          <span class="volte workshopcyan-text" v-if="isArabic">
+            عن ورش عمل صناعة الترفيه
+          </span>
+          <span class="volte workshopcyan-text" v-else>
             ABOUT JOY WORKSHOPS
           </span>
         </v-col>
         <v-col cols="12" class="pa-3 grey--text text--darken-1">
-          <div class="mont body-1">
+          <div class="mont body-1" v-if="isArabic">
+            تهدف ورش عمل صناعة الترفيه إلى نشر ثقافة الترفيه وتعزيزها في المملكة
+            على درجة عالية من المهنية. وسيتولى تقديم ورش العمل روّاد صناعة
+            الترفيه وخبراء متخصصون على مستوى العالم
+            <br /><br />
+            تناقش ورش العمل جميع مراحل العمل ابتداءً من تطوير الفكرة الأولية في
+            مختلف نماذج العمل، وصولاًإلى مرحلة دعم العمل وتحفيز نموّه، بالإضافة
+            إلى أن الورش تغطي الكثير من المحاور التي تتنوع بين تطوير الألعاب
+            وصناعة الأفلام
+            <br /><br />
+            تجمع ورش عمل صناعة الترفيه باحثين ومصممين ومطورين ورجال أعمال مهتمين
+            بمجال التصميم والتطوير والتقييم والتسويق وتطوير الفعاليات والترفيه
+            في السوق السعودي
+          </div>
+          <div class="mont body-1" v-else>
             Taking place over the course of two days during JOY Forum 2019 and
             delivered by international industry leaders and subject matter
             experts, JOY workshops aim to spread and enrich the entertainment
@@ -46,7 +63,10 @@
         </v-col>
         <v-col cols="8" class="py-6 mt-6 text-center">
           <div class="speech-bubble-cyan pa-3">
-            <span class="subtitle-1 mont white--text">
+            <span class="subtitle-1 mont white--text" v-if="isArabic">
+              المعرفة البنّاءة بالازدهار التجاري
+            </span>
+            <span class="subtitle-1 mont white--text" v-else>
               Constructive Knowledge For Business Prosperity
             </span>
           </div>
@@ -56,7 +76,10 @@
     <v-col cols="12" class="white">
       <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
         <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
-          <span class="volte workshopcyan-text">
+          <span class="volte workshopcyan-text" v-if="isArabic">
+            المحاور
+          </span>
+          <span class="volte workshopcyan-text" v-else>
             TOPICS
           </span>
         </v-col>
@@ -80,7 +103,7 @@
             >
               <div
                 class="mont body-2 font-weight-bold px-2"
-                v-html="topic.title"
+                v-html="topic.title[langKey]"
               ></div>
             </div>
           </v-card>
@@ -90,7 +113,10 @@
     <v-col cols="12" class="white">
       <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
         <v-col cols="12" class="pa-3 primary--text font-weight-bold title">
-          <div class="volte workshopcyan-text">
+          <div class="volte workshopcyan-text" v-if="isArabic">
+            ورش عمل صناعة الترفيه 2019
+          </div>
+          <div class="volte workshopcyan-text" v-else>
             JOY Workshops 2019
           </div>
           <v-btn
@@ -98,9 +124,14 @@
             small
             color="#58a9ad"
             class="white--text my-3 px-6"
-            @click="$router.replace({ query: { attend: 1 } })"
+            href="http://www.cvent.com/d/ryqdbb" target="_blank"
           >
-            Attend
+            <span v-if="isArabic">
+              لحضور المنتدى
+            </span>
+            <span v-else>
+              Attend
+            </span>
           </v-btn>
         </v-col>
       </v-row>
@@ -121,50 +152,86 @@ export default {
     return {
       workshopTopics: [
         {
-          title: "Start your Event<br>Management Business",
+          title: {
+            en: "Start your Event<br>Management Business",
+            ar: "أطلق مشروع إدارة الفعاليات الخاص بك"
+          },
           imgSrc: "/images/Workshops_Topics-01.png"
         },
         {
-          title: "Establishing Your<br>Company",
+          title: { en: "Establishing Your<br>Company", ar: "أسس شركتك" },
           imgSrc: "/images/Workshops_Topics-02.png"
         },
         {
-          title: "Valuations & Pitching Methods<br>For New Projects",
+          title: {
+            en: "Valuations & Pitching Methods<br>For New Projects",
+            ar: "أساليب التقييم والعرض للمشاريع الجديدة"
+          },
           imgSrc: "/images/Workshops_Topics-03.png"
         },
         {
-          title: "Crowd Management<br>& Safety",
+          title: {
+            en: "Crowd Management<br>& Safety",
+            ar: "إدارة الحشود والسلامة"
+          },
           imgSrc: "/images/Workshops_Topics-04.png"
         },
-
         {
-          title: "Applying Design Thinking<br>to Event Design",
+          title: {
+            en: "Applying Design Thinking<br>to Event Design",
+            ar: "تطبيق التفكير التصميمي"
+          },
           imgSrc: "/images/Workshops_Topics-05.png"
         },
         {
-          title: "Service & Experience<br>Design",
+          title: {
+            en: "Service & Experience<br>Design",
+            ar: "تصميم الخدمات والتجارب"
+          },
           imgSrc: "/images/Workshops_Topics-06.png"
         },
 
         {
-          title: "Customer Journey<br>Mapping",
+          title: {
+            en: "Customer Journey<br>Mapping",
+            ar: "تخطيط تجربة العملاء"
+          },
           imgSrc: "/images/Workshops_Topics-07.png"
         },
         {
-          title: "Content<br>Localization",
+          title: { en: "Content<br>Localization", ar: "توطين المحتوى" },
           imgSrc: "/images/Workshops_Topics-08.png"
         },
 
         {
-          title: "Content<br>Curation",
+          title: { en: "Content<br>Curation", ar: "إنشاء المحتوى" },
           imgSrc: "/images/Workshops_Topics-09.png"
         },
         {
-          title: "Theme Park<br>(Getting Started)",
+          title: {
+            en: "Theme Park<br>(Getting Started)",
+            ar: "المدن الترفيهية - الانطلاق"
+          },
           imgSrc: "/images/Workshops_Topics-10.png"
         }
       ]
     };
+  },
+  computed: {
+    isArabic() {
+      if (this.$route.params.lang == "ar") {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    langKey() {
+      if (this.isArabic) {
+        return "ar";
+      } else {
+        return "en";
+      }
+    }
   }
 };
 </script>

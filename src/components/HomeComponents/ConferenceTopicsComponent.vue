@@ -1,14 +1,17 @@
 <template>
   <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
-    <v-col cols="12" class="pl-3 py-6 primary--text font-weight-bold display-1">
-      <span class="volte">
+    <v-col cols="12" class="px-3 py-6 primary--text font-weight-bold display-1">
+      <span class="volte" v-if="isArabic">
+        حلقات النقاش
+      </span>
+      <span class="volte" v-else>
         CONFERENCE TOPICS
       </span>
     </v-col>
     <v-col
       cols="6"
       v-for="topic in topicsArray"
-      :key="topic.title"
+      :key="topic[langKey].title"
       class="pa-1"
     >
       <v-hover v-slot:default="{ hover }">
@@ -28,13 +31,13 @@
                   class="white--text text-center title hidden-sm-and-down"
                   style="padding-top: 80px;"
                 >
-                  <span class="mont" v-html="topic.title"></span>
+                  <span class="mont" v-html="topic[langKey].title"></span>
                 </div>
                 <div
                   class="white--text text-center subtitle-2 hidden-md-and-up"
                   style="padding-top: 40px;"
                 >
-                  <span class="mont" v-html="topic.titleShort"></span>
+                  <span class="mont" v-html="topic[langKey].titleShort"></span>
                 </div>
               </div>
             </v-fade-transition>
@@ -47,11 +50,11 @@
                       : `title mont`
                   "
                 >
-                  {{ topic.hoverTitle }}
+                  {{ topic[langKey].hoverTitle }}
                 </div>
                 <ul class="hidden-xs-only">
                   <li
-                    v-for="(point, index) in topic.bulletPoints"
+                    v-for="(point, index) in topic[langKey].bulletPoints"
                     :key="point"
                     v-show="index < 3 || !$vuetify.breakpoint.smAndDown"
                   >
@@ -74,7 +77,9 @@
                     class="mt-6"
                     to="/conference"
                   >
-                    <span class="caption">Discover</span>
+                    <span class="caption">
+                      {{ isArabic ? `اعرف أكثر` : `Discover` }}
+                    </span>
                   </v-btn>
                 </div>
               </div>
@@ -85,7 +90,7 @@
     </v-col>
     <v-col cols="6" class="text-center mb-3 mt-9 mx-auto">
       <v-btn rounded outlined block color="primary" to="/conference">
-        View All
+        {{ isArabic ? `المزيد` : `View All` }}
       </v-btn>
     </v-col>
   </v-row>
@@ -97,57 +102,127 @@ export default {
     return {
       topicsArray: [
         {
-          title: "Entertainment<br>& Economy Building",
-          titleShort: "Entertainment<br>& Economy Building",
           bgImageUrl: `/images/topics-entertainment.jpg`,
-          hoverTitle: "ENTERTAINMENT & ECONOMY BUILDING:",
-          bulletPoints: [
-            "Entertainment & Saudi Vision 2030 ",
-            "Enriching Lives & Improving Quality of Life",
-            "Diversifying Economy",
-            "Economic transition and entertainment growth"
-          ]
+          en: {
+            title: "Entertainment<br>& Economy Building",
+            titleShort: "Entertainment<br>& Economy Building",
+            hoverTitle: "ENTERTAINMENT & ECONOMY BUILDING:",
+            bulletPoints: [
+              "Entertainment & Saudi Vision 2030 ",
+              "Enriching Lives & Improving Quality of Life",
+              "Diversifying Economy",
+              "Economic transition and entertainment growth"
+            ]
+          },
+          ar: {
+            title: "الترفيه والاقتصاد",
+            titleShort: "الترفيه والاقتصاد",
+            hoverTitle: "الترفيه والاقتصاد:",
+            bulletPoints: [
+              "الترفيه ورؤية المملكة 2030",
+              "إثراء الحياة وتعزيز جودتها",
+              "تنويع الاقتصاد",
+              "التحول الاقتصادي ونمو قطاع الترفيه"
+            ]
+          }
         },
         {
-          title: "Making Impact<br> (Tech Talk Global Experiences)",
-          titleShort: "Making Impact<br> (Tech Talk)",
           bgImageUrl: `/images/topics-makingimpact.jpg`,
-          hoverTitle: "MAKING IMPACT (TECH TALK – GLOBAL EXPERIENCES):",
-          bulletPoints: [
-            "Technology Impact on Entertainment",
-            "The Future of Digital Games",
-            "The Impact of VR – AR – MR (Virtual entertainment)",
-            "Digital Transformation (Big data – Blockchain)",
-            "Empowering the Entertainment industry"
-          ]
+          en: {
+            title: "Making Impact<br> (Tech Talk Global Experiences)",
+            titleShort: "Making Impact<br> (Tech Talk)",
+            hoverTitle: "MAKING IMPACT (TECH TALK – GLOBAL EXPERIENCES):",
+            bulletPoints: [
+              "Technology Impact on Entertainment",
+              "The Future of Digital Games",
+              "The Impact of VR – AR – MR (Virtual entertainment)",
+              "Digital Transformation (Big data – Blockchain)",
+              "Empowering the Entertainment industry"
+            ]
+          },
+          ar: {
+            title: "صناعة التأثير – خبراء تقنيون",
+            titleShort: "صناعة التأثير – خبراء تقنيون",
+            hoverTitle: "صناعة التأثير – خبراء تقنيون:",
+            bulletPoints: [
+              "تأثير التكنولوجيا على الترفيه",
+              "مستقبل الألعاب الرقمية",
+              "تأثير الواقع الافتراضي- الترفيه الافتراضي – تأثير المحتوى الحي",
+              "التحول الرقمي (البيانات الضخمة وسلاسل العملات الرقمية)",
+              "تمكين صناعة الترفيه"
+            ]
+          }
         },
         {
-          title: "The Joy Makers",
-          titleShort: "The Joy Makers",
           bgImageUrl: `/images/topics-joymakers.jpg`,
-          hoverTitle: "THE JOY MAKERS:",
-          bulletPoints: [
-            "Seizing Joy",
-            "The Joy Makers of Films",
-            "The Joy Makers of Theme Parks",
-            "The Joy Makers of Performing Arts",
-            "The Joy Makers of Digital Entertainment",
-            "The Joy Makers of Competitive Sports"
-          ]
+          en: {
+            title: "The Joy Makers",
+            titleShort: "The Joy Makers",
+            hoverTitle: "THE JOY MAKERS:",
+            bulletPoints: [
+              "Seizing Joy",
+              "The Joy Makers of Films",
+              "The Joy Makers of Theme Parks",
+              "The Joy Makers of Performing Arts",
+              "The Joy Makers of Digital Entertainment",
+              "The Joy Makers of Competitive Sports"
+            ]
+          },
+          ar: {
+            title: "صنّاع البهجة",
+            titleShort: "صنّاع البهجة",
+            hoverTitle: "صنّاع البهجة:",
+            bulletPoints: [
+              "اغتنام لحظات البهجة ",
+              "صنّاع البهجة للأفلام",
+              "صنّاع البهجة لمدن الترفيه",
+              "صنّاع البهجة للفنون الاستعراضية",
+              "صنّاع البهجة للترفيه الرقمي",
+              "صنّاع البهجة للرياضات التنافسية"
+            ]
+          }
         },
         {
-          title: "Mega Ventures",
-          titleShort: "Mega Ventures",
           bgImageUrl: `/images/topics-mega.jpg`,
-          hoverTitle: "MEGA VENTURES:",
-          bulletPoints: [
-            "An Expanding Infrastructure",
-            "Investment Opportunities in Entertainment Sector",
-            "Mega Venture Projects"
-          ]
+          en: {
+            title: "Mega Ventures",
+            titleShort: "Mega Ventures",
+            hoverTitle: "MEGA VENTURES:",
+            bulletPoints: [
+              "An Expanding Infrastructure",
+              "Investment Opportunities in Entertainment Sector",
+              "Mega Venture Projects"
+            ]
+          },
+          ar: {
+            title: "المشاريع الضخمة",
+            titleShort: "المشاريع الضخمة",
+            hoverTitle: "المشاريع الضخمة:",
+            bulletPoints: [
+              "توسيع البنية التحتية",
+              "فرص استثمارية في قطاع الترفيه",
+              "مشاريع ضخمة"
+            ]
+          }
         }
       ]
     };
+  },
+  computed: {
+    isArabic() {
+      if (this.$route.params.lang == "ar") {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    langKey() {
+      if (this.isArabic) {
+        return "ar";
+      } else {
+        return "en";
+      }
+    }
   }
 };
 </script>

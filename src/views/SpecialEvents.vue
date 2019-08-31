@@ -19,40 +19,33 @@
       <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
         <v-col cols="12" md="9" class="pa-3 mb-6 eventsyellow-text">
           <v-row no-gutters>
-            <v-col cols="12">
-              <span class="volte font-weight-bold headline">
+            <v-col cols="6">
+              <span class="volte font-weight-bold headline" v-if="isArabic">
+                حفل جائزة صنّاع الترفيه
+              </span>
+              <span class="volte font-weight-bold headline" v-else>
                 JOY EXCELLENCE AWARD
               </span>
-              <span style="float: right;" class="hidden-sm-and-down">
-                <div>
-                  <span class="title mont">
-                    Day 1
-                  </span>
-                  <br />
-                  <span class="mont caption">
-                    Sunday, October 13th
-                  </span>
-                </div>
-              </span>
-              <span style="float: right;" class="hidden-sm-and-down">
-                <div class="pa-3">
-                  <v-icon large color="#f8b615">mdi-calendar</v-icon>
-                </div>
-              </span>
             </v-col>
-            <v-col cols="6" class="hidden-md-and-up py-3">
+            <v-col cols="6" class="py-3 text-end">
               <span>
                 <v-icon large color="#f8b615">mdi-calendar</v-icon>
               </span>
-              <span class="title mont">
+              <span class="title mont" v-if="isArabic">
+                يوم 1
+              </span>
+              <span class="title mont" v-else>
                 Day 1
               </span>
               <br />
-              <span class="mont caption">
+              <span class="mont caption" v-if="isArabic">
+                الأحد - 13 أكتوبر
+              </span>
+              <span class="mont caption" v-else>
                 Sunday, October 13th
               </span>
             </v-col>
-            <v-col cols="6" class="hidden-md-and-up py-3">
+            <v-col cols="12" class="hidden-md-and-up py-3">
               <v-img
                 contain
                 max-height="200px"
@@ -60,10 +53,30 @@
               ></v-img>
             </v-col>
             <v-col cols="12">
-              <div class="mont title grey--text py-3">
+              <div class="mont title grey--text py-3" v-if="isArabic">
+                عن الجائزة
+              </div>
+              <div class="mont title grey--text py-3" v-else>
                 ABOUT THE AWARD
               </div>
-              <div class="mont body-1 grey--text">
+              <div class="mont body-1 grey--text" v-if="isArabic">
+                سيقام حفل عشاء فاخر احتفالًا بمنتدى صناعة الترفيه 2019 حيث
+                سيتسنى للضيوف الاستمتاع بعشاء من المطعمين الدولي والسعودي، كما
+                سيستمتعون ببرنامج يضم مختلف العروض الترفيهية
+                <br />
+                <br />
+                تعد جائزة صنّاع الترفيه المتميزة جائزةً مرموقة تستند إلى الرأي
+                العام ومخصصة للجهات والأشخاص الذين ينشرون البهجة والسعادة في
+                العالم وفي المملكة العربية السعودية <br />
+                <br />
+                سيشهد الحفل حضوراً لافتاً لمجموعة كبيرة من وسائل الإعلام المحلية
+                والدولية، بالإضافة إلى شخصيات عالمية مشهورة ستحل بصفتها ضيوفاً
+                أو مرشحين للفوز بالجوائز
+                <br /><br />
+                سيتألق الضيوف على السجادة الحمراء قبل دخولهم إلى قاعة الحفل
+                الساحرة
+              </div>
+              <div class="mont body-1 grey--text" v-else>
                 In honor of Joy forum 2019, a lavish Gala dinner will be held in
                 a spectacular setting, guests will enjoy a unique international
                 and traditional dinner menu while enjoying an exciting
@@ -98,40 +111,33 @@
       <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
         <v-col cols="12" md="9" class="pa-3 mb-6 eventsyellow-text">
           <v-row no-gutters>
-            <v-col cols="12">
-              <span class="volte font-weight-bold headline">
+            <v-col cols="6">
+              <span class="volte font-weight-bold headline" v-if="isArabic">
+                جائزة الهيئة العامة للترفيه للتميز
+              </span>
+              <span class="volte font-weight-bold headline" v-else>
                 GEA CHALLENGES AWARD
               </span>
-              <span style="float: right;" class="hidden-sm-and-down">
-                <div>
-                  <span class="title mont">
-                    Day 2
-                  </span>
-                  <br />
-                  <span class="mont caption">
-                    Monday, October 14th
-                  </span>
-                </div>
-              </span>
-              <span style="float: right;" class="hidden-sm-and-down">
-                <div class="pa-3">
-                  <v-icon large color="#f8b615">mdi-calendar</v-icon>
-                </div>
-              </span>
             </v-col>
-            <v-col cols="6" class="hidden-md-and-up py-3">
+            <v-col cols="6" class="py-3 text-end">
               <span>
                 <v-icon large color="#f8b615">mdi-calendar</v-icon>
               </span>
-              <span class="title mont">
+              <span class="title mont" v-if="isArabic">
+                يوم 2
+              </span>
+              <span class="title mont" v-else>
                 Day 2
               </span>
               <br />
-              <span class="mont caption">
+              <span class="mont caption" v-if="isArabic">
+                الإثنين - 14 أكتوبر
+              </span>
+              <span class="mont caption" v-else>
                 Monday, October 14th
               </span>
             </v-col>
-            <v-col cols="6" class="hidden-md-and-up py-3">
+            <v-col cols="12" class="hidden-md-and-up py-3">
               <a href="https://geachallenges.com" target="_blank">
                 <v-img
                   contain
@@ -141,10 +147,22 @@
               </a>
             </v-col>
             <v-col cols="12">
-              <div class="mont title grey--text py-3">
+              <div class="mont title grey--text py-3" v-if="isArabic">
+                عن الجائزة
+              </div>
+              <div class="mont title grey--text py-3" v-else>
                 ABOUT THE AWARD
               </div>
-              <div class="mont body-1 grey--text">
+              <div class="mont body-1 grey--text" v-if="isArabic">
+                تُمنح جائزة الهيئة لتحدي الترفيه إلى المواهب التي تتنافس على
+                جميع فئات الترفيه، وذلك بالتعاون مع البرنامج الوطني لاكتشاف
+                المواهب الترفيهية
+                <br /><br />
+                خلال اليوم الثاني من منتدى صناعة الترفيه 2019، سيُعلن عن
+                الفائزينويتم تكريمهم في حفل خاص بحضور شخصيات مشهورة ووسائل إعلام
+                محلية ودولية
+              </div>
+              <div class="mont body-1 grey--text" v-else>
                 GEA Challenge Award will be awarded in collaboration with the
                 national talent discovery program where talents will compete in
                 all the industry’s categories.
@@ -183,6 +201,22 @@ export default {
     return {
       //dialog: false,
     };
+  },
+  computed: {
+    isArabic() {
+      if (this.$route.params.lang == "ar") {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    langKey() {
+      if (this.isArabic) {
+        return "ar";
+      } else {
+        return "en";
+      }
+    }
   }
 };
 </script>

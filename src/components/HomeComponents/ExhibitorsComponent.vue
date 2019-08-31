@@ -8,14 +8,21 @@
       >
         <v-col
           cols="12"
-          class="pl-3 py-6 font-weight-bold title"
+          class="px-3 py-6 font-weight-bold title"
           style="color: #263475;"
         >
-          GLOBAL EXHIBITORS AT JOY EXPO
+          <span v-if="isArabic">
+            عارضون عالميون في معرض صناعة الترفيه
+          </span>
+          <span v-else>
+            GLOBAL EXHIBITORS AT JOY EXPO
+          </span>
         </v-col>
         <v-col cols="1" class="my-auto text-right hidden-xs-only">
           <v-btn icon @click="thisSwiper.slidePrev()">
-            <v-icon x-large color="primary">mdi-chevron-left</v-icon>
+            <v-icon x-large color="primary">
+              {{ isArabic ? `mdi-chevron-right` : `mdi-chevron-left` }}
+            </v-icon>
           </v-btn>
         </v-col>
         <v-col cols="12" sm="10">
@@ -35,7 +42,9 @@
         </v-col>
         <v-col cols="1" class="my-auto hidden-xs-only">
           <v-btn icon @click="thisSwiper.slideNext()">
-            <v-icon x-large color="primary">mdi-chevron-right</v-icon>
+            <v-icon x-large color="primary">
+              {{ isArabic ? `mdi-chevron-left` : `mdi-chevron-right` }}
+            </v-icon>
           </v-btn>
         </v-col>
       </v-row>
@@ -102,6 +111,13 @@ export default {
   computed: {
     thisSwiper() {
       return this.$refs.exhibitorsSwiper.swiper;
+    },
+    isArabic() {
+      if (this.$route.params.lang == "ar") {
+        return true;
+      } else {
+        return false;
+      }
     }
   }
 };

@@ -55,7 +55,10 @@
     </v-col>
     <v-col cols="5" class="text-center">
       <div class="primary--text font-weight-black text-center headline pb-3">
-        <span class="volte">
+        <span class="volte" v-if="isArabic">
+          تنظيم
+        </span>
+        <span class="volte" v-else>
           Organized by
         </span>
       </div>
@@ -72,7 +75,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    isArabic() {
+      if (this.$route.params.lang == "ar") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+};
 </script>
 
 <style>

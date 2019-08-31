@@ -4,9 +4,12 @@
       <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
         <v-col
           cols="12"
-          class="pl-3 py-6 white--text font-weight-bold display-1"
+          class="px-3 py-6 white--text font-weight-bold display-1"
         >
-          <span class="volte">
+          <span class="volte" v-if="isArabic">
+            ورش العمل
+          </span>
+          <span class="volte" v-else>
             WORKSHOPS TOPICS
           </span>
         </v-col>
@@ -16,7 +19,10 @@
       <v-row no-gutters class="pb-12">
         <v-col cols="12">
           <swiper :options="swiperOption">
-            <swiper-slide v-for="topic in workshopTopics" :key="topic.title">
+            <swiper-slide
+              v-for="topic in workshopTopics"
+              :key="topic.title[langKey]"
+            >
               <v-hover v-slot:default="{ hover }">
                 <v-card
                   tile
@@ -31,7 +37,7 @@
                       style="padding-top: 40%;"
                     >
                       <span class="mont">
-                        {{ topic.title }}
+                        {{ topic.title[langKey] }}
                       </span>
                     </div>
                   </v-img>
@@ -44,7 +50,7 @@
     </v-col>
     <v-col cols="6" class="text-center mb-9 mx-auto">
       <v-btn rounded outlined block color="white" to="/workshops">
-        View All
+        {{ isArabic ? `المزيد` : `View All` }}
       </v-btn>
     </v-col>
   </v-row>
@@ -56,43 +62,61 @@ export default {
     return {
       workshopTopics: [
         {
-          title: "Start your Event Management Business",
+          title: {
+            en: "Start your Event Management Business",
+            ar: "أطلق مشروع إدارة الفعاليات الخاص بك"
+          },
           imgSrc: "/images/workshops-start.jpg"
         },
         {
-          title: "Establishing Your Company",
+          title: { en: "Establishing Your Company", ar: "أسس شركتك" },
           imgSrc: "/images/workshops-establishing.jpg"
         },
         {
-          title: "Valuations & Pitching Methods",
+          title: {
+            en: "Valuations & Pitching Methods",
+            ar: "أساليب التقييم والعرض"
+          },
           imgSrc: "/images/workshops-valuation.jpg"
         },
         {
-          title: "Customer Journey Mapping",
+          title: { en: "Customer Journey Mapping", ar: "تخطيط رحلة العملاء" },
           imgSrc: "/images/workshops-customerjourney.jpg"
         },
         {
-          title: "Content Curation",
+          title: { en: "Content Curation", ar: "إنشاء المحتوى" },
           imgSrc: "/images/workshops-contentcuration.jpg"
         },
         {
-          title: "Theme Park (Getting Started)",
+          title: {
+            en: "Theme Park (Getting Started)",
+            ar: "المدن الترفيهية - الانطلاق"
+          },
           imgSrc: "/images/workshops-themepark.jpg"
         },
         {
-          title: "Crowd Management & Safety",
+          title: {
+            en: "Crowd Management & Safety",
+            ar: "إدارة الحشود والسلامة"
+          },
           imgSrc: "/images/workshops-crowdmanagement.jpg"
         },
         {
-          title: "Content Localization",
+          title: { en: "Content Localization", ar: "توطين المحتوى" },
           imgSrc: "/images/workshops-contentlocalization.jpg"
         },
         {
-          title: "Service & Experience Design",
+          title: {
+            en: "Service & Experience Design",
+            ar: "تصميم الخدمات والتجارب"
+          },
           imgSrc: "/images/workshops-serviceexperience.jpg"
         },
         {
-          title: "Applying Design Thinking to Event Design",
+          title: {
+            en: "Applying Design Thinking to Event Design",
+            ar: "تطبيق التفكير التصميمي "
+          },
           imgSrc: "/images/workshops-designthinking.jpg"
         }
       ],
@@ -112,6 +136,22 @@ export default {
         }
       }
     };
+  },
+  computed: {
+    isArabic() {
+      if (this.$route.params.lang == "ar") {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    langKey() {
+      if (this.isArabic) {
+        return "ar";
+      } else {
+        return "en";
+      }
+    }
   }
 };
 </script>

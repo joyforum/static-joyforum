@@ -40,10 +40,9 @@
             height="120px"
             width="120px"
             @click="isDayOne = true"
-            class="mr-12 border-circle"
+            class="border-circle mx-auto"
             flat
             :color="isDayOne ? `primary` : `grey`"
-            style="float: right;"
           >
             <div class="white--text mont body-2 font-weight-bold pt-6">
               Day 1
@@ -60,7 +59,7 @@
             height="120px"
             width="120px"
             @click="isDayOne = false"
-            class="ml-12 border-circle"
+            class="border-circle mx-auto"
             :color="isDayOne ? `grey` : `primary`"
             flat
           >
@@ -103,7 +102,7 @@
                   <li>Economic transition and entertainment growth</li>
                 </ul>
               </v-col>
-              <v-col cols="12" class="pl-8 pt-4 temp-hidden">
+              <v-col cols="12" class="px-8 pt-4 temp-hidden">
                 <span
                   class="title font-weight-bold mont grey--text text--darken-1"
                 >
@@ -142,7 +141,7 @@
                   show.
                 </span>
               </v-col>
-              <v-col cols="12" class="pl-8 pt-3 temp-hidden">
+              <v-col cols="12" class="px-8 pt-3 temp-hidden">
                 <span
                   class="title font-weight-bold mont grey--text text--darken-1"
                 >
@@ -186,7 +185,7 @@
                   <li>Empowering the Entertainment industry</li>
                 </ul>
               </v-col>
-              <v-col cols="12" class="pl-8 pt-4 temp-hidden">
+              <v-col cols="12" class="px-8 pt-4 temp-hidden">
                 <span
                   class="title font-weight-bold mont grey--text text--darken-1"
                 >
@@ -225,7 +224,7 @@
                   show.
                 </span>
               </v-col>
-              <v-col cols="12" class="pl-8 pt-3 temp-hidden">
+              <v-col cols="12" class="px-8 pt-3 temp-hidden">
                 <span
                   class="title font-weight-bold mont grey--text text--darken-1"
                 >
@@ -269,7 +268,7 @@
                   <li>The Joy Makers of Competitive sports</li>
                 </ul>
               </v-col>
-              <v-col cols="12" class="pl-8 pt-4 temp-hidden">
+              <v-col cols="12" class="px-8 pt-4 temp-hidden">
                 <span
                   class="title font-weight-bold mont grey--text text--darken-1"
                 >
@@ -308,7 +307,7 @@
                   show.
                 </span>
               </v-col>
-              <v-col cols="12" class="pl-8 pt-3 temp-hidden">
+              <v-col cols="12" class="px-8 pt-3 temp-hidden">
                 <span
                   class="title font-weight-bold mont grey--text text--darken-1"
                 >
@@ -349,7 +348,7 @@
                   <li>Q &amp; A</li>
                 </ul>
               </v-col>
-              <v-col cols="12" class="pl-8 pt-4 temp-hidden">
+              <v-col cols="12" class="px-8 pt-4 temp-hidden">
                 <span
                   class="title font-weight-bold mont grey--text text--darken-1"
                 >
@@ -388,7 +387,7 @@
                   show.
                 </span>
               </v-col>
-              <v-col cols="12" class="pl-8 pt-3 temp-hidden">
+              <v-col cols="12" class="px-8 pt-3 temp-hidden">
                 <span
                   class="title font-weight-bold mont grey--text text--darken-1"
                 >
@@ -425,6 +424,22 @@ export default {
     return {
       isDayOne: true
     };
+  },
+  computed: {
+    isArabic() {
+      if (this.$route.params.lang == "ar") {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    langKey() {
+      if (this.isArabic) {
+        return "ar";
+      } else {
+        return "en";
+      }
+    }
   }
 };
 </script>

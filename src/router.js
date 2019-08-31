@@ -18,38 +18,98 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
-      component: Home
+      component: Home,
+      children: [
+        {
+          path: "",
+          name: "home"
+        },
+        {
+          path: ":lang(ar|en)"
+        }
+      ]
     },
     {
       path: "/expo",
-      name: "expo",
-      component: Expo
+      component: Expo,
+      children: [
+        {
+          path: "",
+          name: "expo"
+        },
+        {
+          path: ":lang(ar|en)"
+        }
+      ]
     },
     {
       path: "/conference",
-      name: "conference",
-      component: Conference
+      component: Conference,
+      children: [
+        {
+          path: "",
+          name: "conference"
+        },
+        {
+          path: ":lang(ar|en)"
+        }
+      ]
     },
     {
       path: "/workshops",
-      name: "workshops",
-      component: Workshops
+      component: Workshops,
+      children: [
+        {
+          path: "",
+          name: "workshops"
+        },
+        {
+          path: ":lang(ar|en)"
+        }
+      ]
     },
     {
       path: "/specialevents",
-      name: "specialevents",
-      component: SpecialEvents
+      component: SpecialEvents,
+      children: [
+        {
+          path: "",
+          name: "specialevents"
+        },
+        {
+          path: ":lang(ar|en)"
+        }
+      ]
     },
     {
       path: "/exhibit",
-      name: "exhibit",
-      component: Exhibit
+      component: Exhibit,
+      children: [
+        {
+          path: "",
+          name: "exhibit"
+        },
+        {
+          path: ":lang(ar|en)"
+        }
+      ]
     },
     {
       path: "/success",
-      name: "success",
-      component: Success
+      component: Success,
+      children: [
+        {
+          path: "",
+          name: "success"
+        },
+        {
+          path: ":lang(ar|en)"
+        }
+      ]
+    },
+    {
+      path: "*",
+      redirect: "/"
     }
   ],
   scrollBehavior: (to, from, savedPosition) => {

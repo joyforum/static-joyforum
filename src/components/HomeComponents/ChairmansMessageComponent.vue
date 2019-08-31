@@ -16,12 +16,18 @@
     </v-col>
     <v-col cols="9" class="pa-3">
       <v-card-title class="primary--text font-weight-black display-1">
-        <span class="volte">
+        <span class="volte" v-if="isArabic"> رسالة رئيس مجلس الإدارة </span>
+        <span class="volte" v-else>
           CHAIRMAN'S MESSAGE
         </span>
       </v-card-title>
       <v-card-text class="title font-italic hidden-xs-only">
-        <span class="mont">
+        <span class="mont" v-if="isArabic">
+          "بُنيت هذه الصناعة الواعدة لتلبي تطلعات الشعب السعودي وتفتح آفاق
+          استثمارية أجنبية ومحلية من أجل تعزيز التطور المتنامي والترفيهي
+          والصناعي"
+        </span>
+        <span class="mont" v-else>
           “This promising industry has been formulated to meet the aspirations
           of the Saudi people and open the horizons of internal and external
           investments to create a growing, recreational and industrial
@@ -31,7 +37,12 @@
       <v-card-text
         class="primary--text title font-weight-bold text-right hidden-xs-only"
       >
-        <span class="mont">
+        <span class="mont" v-if="isArabic">
+          معالي الأستاذ تركي بن عبد المحسن آل الشيخ <br />
+          رئيس مجلس الإدارة <br />
+          الهيئة العامة للترفيه
+        </span>
+        <span class="mont" v-else>
           H.E. Turki Al AlShikh <br />
           Chairman <br />
           General Entertainment Authority
@@ -59,7 +70,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    isArabic() {
+      if (this.$route.params.lang == "ar") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+};
 </script>
 
 <style>

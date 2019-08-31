@@ -50,8 +50,8 @@
           </div>
         </v-col>
         <v-col cols="9">
-          <div class="pl-3" style="max-width: 160px;">
-            <div class="pl-1 white--text pt-3 font-weight-bold body-1">
+          <div class="px-3" style="max-width: 160px;">
+            <div class="px-1 white--text pt-3 font-weight-bold body-1">
               <span class="mont">
                 JoyForumKSA
               </span>

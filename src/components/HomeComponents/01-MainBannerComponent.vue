@@ -9,28 +9,49 @@
         flat
         color="rgba(0,0,0,0)"
       >
-        <v-card-title class="display-2 white--text pt-6 pl-6">
+        <v-card-title class="display-2 white--text pt-6 px-6">
           <span class="volte font-weight-bold">
-            Joy Forum 2019
+            {{ isArabic ? `منتدى صناعة الترفيه 2019` : `Joy Forum 2019` }}
           </span>
         </v-card-title>
-        <v-card-text class="white--text title pt-3 pl-6">
+        <v-card-text class="white--text title pt-3 px-6">
           <span class="mont">
-            Fostering a Joyful Culture, <br />
-            Building a Vibrant Society
+            {{
+              isArabic ? `تعزيز ثقافة البهجة` : `Fostering a Joyful Culture,`
+            }}
+            <br />
+            {{ isArabic ? `بناء مجتمع حيوي` : `Building a Vibrant Society` }}
           </span>
         </v-card-text>
-        <v-btn rounded small color="primary" class="ml-6" router to="/exhibit"
-          >Exhibit</v-btn
-        >
         <v-btn
           rounded
           small
           color="primary"
-          class="mx-3"
-          @click="$router.replace({ query: { attend: 1 } })"
-          >Attend</v-btn
+          class="mx-6"
+          router
+          :to="isArabic ? `/exhibit/ar` : `/exhibit/en`"
         >
+          <span v-if="isArabic">
+            شارك في العرض
+          </span>
+          <span v-else>
+            Exhibit
+          </span>
+        </v-btn>
+        <v-btn
+          rounded
+          small
+          color="primary"
+          class="mx-1"
+          href="http://www.cvent.com/d/ryqdbb" target="_blank"
+        >
+          <span v-if="isArabic">
+            لحضور المنتدى
+          </span>
+          <span v-else>
+            Attend
+          </span>
+        </v-btn>
         <v-row
           no-gutters
           style="position: absolute; bottom: 0; width: 100%;"
@@ -51,7 +72,8 @@
               <sup class="white--text">+</sup>
             </div>
             <div class="overline mont text-uppercase white--text">
-              International<br />Speakers
+              {{ isArabic ? `متحدثين` : `International` }}<br />
+              {{ isArabic ? `دوليين` : `Speakers` }}
             </div>
           </v-col>
           <v-col cols="4" sm="1" class="pa-3">
@@ -70,7 +92,8 @@
             <div
               class="overline mont text-uppercase font-weight-bold white--text"
             >
-              Special<br />Events
+              {{ isArabic ? `فعاليتان` : `Special` }}<br />
+              {{ isArabic ? `مميزتان` : `Events` }}
             </div>
           </v-col>
           <v-col cols="4" sm="1" class="pa-3">
@@ -90,7 +113,8 @@
             <div
               class="overline mont text-uppercase font-weight-bold white--text"
             >
-              International<br />Celebrities
+              {{ isArabic ? `شخصية عالمية` : `International` }}<br />
+              {{ isArabic ? `مشهورة` : `Celebrities` }}
             </div>
           </v-col>
           <v-col cols="4" sm="1" class="pa-3">
@@ -99,7 +123,7 @@
                 <number
                   ref="number1"
                   :from="0"
-                  :to="16"
+                  :to="12"
                   :duration="2"
                   :delay="1"
                   easing="Power1.easeOut"
@@ -109,7 +133,7 @@
             <div
               class="overline mont text-uppercase font-weight-bold white--text"
             >
-              Workshops
+              {{ isArabic ? `ورشة عمل` : `Workshops` }}
             </div>
           </v-col>
           <v-col cols="4" sm="1" class="pa-3">
@@ -129,7 +153,8 @@
             <div
               class="overline mont text-uppercase font-weight-bold white--text"
             >
-              International<br />Exhibitors
+              {{ isArabic ? `جهة دولية` : `International` }}<br />
+              {{ isArabic ? `عارضة` : `Exhibitors` }}
             </div>
           </v-col>
           <v-col cols="4" sm="1" class="pa-3">
@@ -149,7 +174,7 @@
             <div
               class="overline mont text-uppercase font-weight-bold white--text"
             >
-              Investors
+              {{ isArabic ? `مستثمر` : `Investors` }}
             </div>
           </v-col>
         </v-row>
@@ -159,7 +184,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    isArabic() {
+      if (this.$route.params.lang == "ar") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+};
 </script>
 
 <style>

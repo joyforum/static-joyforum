@@ -18,7 +18,7 @@
                 </v-icon>
               </v-btn>
               <span class="white--text title mont pa-6 font-weight-bold">
-                {{ dialogContent.title }}
+                {{ dialogContent[langKey].title }}
               </span>
             </v-col>
           </v-row>
@@ -39,7 +39,7 @@
             </v-col>
             <v-col cols="12" sm="9" class="my-auto">
               <div class="body-1 mont pa-6">
-                {{ dialogContent.hoverText }}
+                {{ dialogContent[langKey].hoverText }}
               </div>
             </v-col>
           </v-row>
@@ -51,7 +51,7 @@
       sm="3"
       md="2"
       v-for="objective in objectivesArray"
-      :key="objective.title"
+      :key="objective[langKey].title"
       :class="$vuetify.breakpoint.mdAndUp ? `pa-3 mx-1` : `pa-2`"
     >
       <v-card
@@ -68,19 +68,10 @@
           <v-img height="30px" contain :src="objective.iconUrl"></v-img>
           <div class="white--text pt-3 px-6 text-center caption">
             <span class="mont">
-              {{ objective.title }}
+              {{ objective[langKey].title }}
             </span>
           </div>
         </div>
-        <!-- 
-          <v-fade-transition hide-on-leave>
-            <div class="white--text text-center caption px-6 pt-8" v-if="hover">
-              <span>
-                {{ objective.hoverText }}
-              </span>
-            </div>
-          </v-fade-transition>
-          -->
       </v-card>
     </v-col>
   </v-row>
@@ -92,67 +83,150 @@ export default {
     return {
       dialog: false,
       dialogContent: {
-        title: "",
         iconUrl: "",
-        hoverText: ""
+        en: {
+          title: "",
+          hoverText: ""
+        },
+        ar: {
+          title: "",
+          hoverText: ""
+        }
       },
       objectivesArray: [
         {
-          title: "Entertainment Innovators",
           iconUrl: `/images/objectives/Conference_Objectives_Icons-05.svg`,
-          hoverText:
-            "To be the recognized international authority on entertainment development & the best practice platform."
+          en: {
+            title: "Entertainment Innovators",
+            hoverText:
+              "To be the recognized international authority on entertainment development & the best practice platform."
+          },
+          ar: {
+            title: "مبتكرو الترفيه",
+            hoverText:
+              "التحول إلى هيئة دولية معترف بها في مجال تطوير الترفيه وأفضل منصة للتطوير ونشر أحدث الممارسات"
+          }
         },
         {
-          title: "Creating Joy, building an economy",
           iconUrl: `/images/objectives/Conference_Objectives_Icons-04.svg`,
-          hoverText:
-            "Deliver a focused understanding on all aspects of “Fostering Joyful Culture, Building Vibrant Society, Creating a New Economy”"
+          en: {
+            title: "Creating Joy, building an economy",
+            hoverText:
+              "Deliver a focused understanding on all aspects of “Fostering Joyful Culture, Building Vibrant Society, Creating a New Economy”"
+          },
+          ar: {
+            title: "خلق البهجة وبناء الاقتصاد",
+            hoverText: `تعريف الحضور بكل ما يتعلق بـ"تعزيز ثقافة البهجة وبناء مجتمع حيوي وخلق اقتصاد جديد"`
+          }
         },
         {
-          title: "Empower Young Professionals",
           iconUrl: `/images/objectives/Conference_Objectives_Icons-03.svg`,
-          hoverText:
-            "To promote and encourage the development of young professionals in the entertainment & events sectors"
+          en: {
+            title: "Empower Young Professionals",
+            hoverText:
+              "To promote and encourage the development of young professionals in the entertainment & events sectors"
+          },
+          ar: {
+            title: "تمكين المهنيين الشباب",
+            hoverText:
+              "التشجيع على تطوير المهنيين الشباب في قطاع الترفيه والفعاليات"
+          }
         },
         {
-          title: "Global Networking",
           iconUrl: `/images/objectives/Conference_Objectives_Icons-02.svg`,
-          hoverText:
-            "Build and develop relationships with influential high-level entertainment leaders, business figures and government bodies. "
+          en: {
+            title: "Global Networking",
+            hoverText:
+              "Build and develop relationships with influential high-level entertainment leaders, business figures and government bodies. "
+          },
+          ar: {
+            title: "شبكة عالمية",
+            hoverText:
+              "بناء وتطوير علاقات مع القادة المؤثرين في قطاع الترفيه ورجال الأعمال والهيئات الحكومية"
+          }
         },
         {
-          title: "Advocate Ethics & Integrity",
           iconUrl: `/images/objectives/Conference_Objectives_Icons-01.svg`,
-          hoverText:
-            "Actively promote high standards of ethics and integrity among all stakeholders involved in the development of joy & entertainment worldwide."
+          en: {
+            title: "Advocate Ethics & Integrity",
+            hoverText:
+              "Actively promote high standards of ethics and integrity among all stakeholders involved in the development of joy & entertainment worldwide."
+          },
+          ar: {
+            title: "الترويج للعمل بأخلاق ونزاهة",
+            hoverText:
+              "التركيز على أهمية العمل بأخلاق عالية ونزاهة بين جميع الجهات المعنية بتطوير قطاع الترفيه والبهجة في العالم"
+          }
         },
         {
-          title: "Promote Global Investment Opportunities",
           iconUrl: `/images/objectives/Conference_Objectives_Icons-07.svg`,
-          hoverText:
-            "Put forward (Establish) Entertainment Infrastructure in relation to the present golden opportunities for global & local investors. "
+          en: {
+            title: "Promote Global Investment Opportunities",
+            hoverText:
+              "Put forward (Establish) Entertainment Infrastructure in relation to the present golden opportunities for global & local investors. "
+          },
+          ar: {
+            title: "تعزيز الفرص الاستثمارية العالمية",
+            hoverText:
+              "تأسيس بنية تحتية للترفيه من أجل تسهيل اقتناص الفرص الاستثمارية للمستثمرين المحليين والعالميين"
+          }
         },
         {
-          title: "GEA Globalization",
           iconUrl: `/images/objectives/Conference_Objectives_Icons-08.svg`,
-          hoverText:
-            "Actively position entertainment as the fastest growing industry in Saudi Arabia by “economic statistics” for the present & future Mega Ventures"
+          en: {
+            title: "GEA Globalization",
+            hoverText:
+              "Actively position entertainment as the fastest growing industry in Saudi Arabia by “economic statistics” for the present & future Mega Ventures"
+          },
+          ar: {
+            title: "عولمة الهيئة العامة للترفيه",
+            hoverText: `جعل قطاع الترفيه الأسرع نمواً في المملكة من خلال "الاحصاءات الاقتصادية" للمشاريع الحالية والمستقبلية الضخمة`
+          }
         },
         {
-          title: "Knowledge Transfer",
           iconUrl: `/images/objectives/Conference_Objectives_Icons-09.svg`,
-          hoverText:
-            "Knowledge transfer by observing and discussing up-to-date technologies, market trends, cases & experiments"
+          en: {
+            title: "Knowledge Transfer",
+            hoverText:
+              "Knowledge transfer by observing and discussing up-to-date technologies, market trends, cases & experiments"
+          },
+          ar: {
+            title: "نقل المعرفة",
+            hoverText:
+              "نقل المعرفة من خلال مراقبة ومناقشة التقنيات الحديثة واتجاهات السوق والحالات والتجارب"
+          }
         },
         {
-          title: "Build and Sustain the Entertainment Sector",
           iconUrl: `/images/objectives/Conference_Objectives_Icons-10.svg`,
-          hoverText:
-            "Maintain and promote the leading position of GEA in the entertainment sectors worldwide."
+          en: {
+            title: "Build and Sustain the Entertainment Sector",
+            hoverText:
+              "Maintain and promote the leading position of GEA in the entertainment sectors worldwide."
+          },
+          ar: {
+            title: "بناء قطاع الترفيه مستدام",
+            hoverText:
+              "الحفاظ على دور الهيئة العامة للترفيه في قطاع الترفيه العالمي والترويج له"
+          }
         }
       ]
     };
+  },
+  computed: {
+    isArabic() {
+      if (this.$route.params.lang == "ar") {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    langKey() {
+      if (this.isArabic) {
+        return "ar";
+      } else {
+        return "en";
+      }
+    }
   }
 };
 </script>

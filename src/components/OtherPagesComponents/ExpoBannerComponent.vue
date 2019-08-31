@@ -2,17 +2,23 @@
   <v-row no-gutters class="mx-auto" style="max-width: 1280px;">
     <v-col cols="12" class="px-6">
       <div class="display-2 white--text pt-6">
-        <span class="volte font-weight-bold">
+        <span class="volte font-weight-bold" v-if="isArabic">
+          معرض صناعة الترفيه
+        </span>
+        <span class="volte font-weight-bold" v-else>
           JOY EXPO 2019
         </span>
       </div>
       <div class="white--text title pt-3">
-        <span class="mont">
+        <span class="mont" v-if="isArabic">
+          ملتقى الفرص وصناعة الترفيه
+        </span>
+        <span class="mont" v-else>
           Where Business Opportunities <br />
           & Entertainment Intertwine
         </span>
       </div>
-      <div class="white--text display-2 border-left-white pl-3 mt-3">
+      <div class="white--text display-2 border-left-white px-3 mt-3">
         <span class="volte font-weight-bold">
           <number
             ref="number1"
@@ -24,13 +30,25 @@
           />
         </span>
         <sup class="white--text">+</sup>
-        <div class="mont title">
+        <div class="mont title" v-if="isArabic">
+          العارضون الدوليّون
+        </div>
+        <div class="mont title" v-else>
           International Exhibitors
         </div>
       </div>
       <div class="py-4">
-        <v-btn rounded color="white" class="mx-3" router to="/exhibit">
-          <span class="expoblue-text">
+        <v-btn
+          rounded
+          color="white"
+          class="mx-3"
+          router
+          :to="isArabic ? `/exhibit/ar` : `/exhibit/en`"
+        >
+          <span class="expoblue-text" v-if="isArabic">
+            شارك في العرض
+          </span>
+          <span class="expoblue-text" v-else>
             Exhibit
           </span>
         </v-btn>
@@ -38,9 +56,12 @@
           rounded
           color="white"
           class="mx-3"
-          @click="$router.replace({ query: { attend: 1 } })"
+          href="http://www.cvent.com/d/ryqdbb" target="_blank"
         >
-          <span class="expoblue-text">
+          <span class="expoblue-text" v-if="isArabic">
+            لحضور المنتدى
+          </span>
+          <span class="expoblue-text" v-else>
             Attend
           </span>
         </v-btn>
@@ -50,7 +71,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    isArabic() {
+      if (this.$route.params.lang == "ar") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+};
 </script>
 
 <style>
