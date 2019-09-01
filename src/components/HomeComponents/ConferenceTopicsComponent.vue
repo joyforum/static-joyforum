@@ -75,7 +75,7 @@
                     outlined
                     color="white"
                     class="mt-6"
-                    to="/conference"
+                    :to="isArabic ? `/conference/ar` : `/conference/en`"
                   >
                     <span class="caption">
                       {{ isArabic ? `اعرف أكثر` : `Discover` }}
@@ -89,7 +89,13 @@
       </v-hover>
     </v-col>
     <v-col cols="6" class="text-center mb-3 mt-9 mx-auto">
-      <v-btn rounded outlined block color="primary" to="/conference">
+      <v-btn
+        rounded
+        outlined
+        block
+        color="primary"
+        :to="isArabic ? `/conference/ar` : `/conference/en`"
+      >
         {{ isArabic ? `المزيد` : `View All` }}
       </v-btn>
     </v-col>

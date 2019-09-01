@@ -50,7 +50,7 @@
                 <v-btn
                   small
                   outlined
-                  :to="pillar.link"
+                  :to="isArabic ? `${pillar.link}/ar` : `${pillar.link}/en`"
                   color="white"
                   class="mt-1"
                 >
@@ -63,7 +63,7 @@
                 <v-btn
                   small
                   outlined
-                  :to="pillar.link"
+                  :to="isArabic ? `${pillar.link}/ar` : `${pillar.link}/en`"
                   color="white"
                   class="mt-4"
                 >

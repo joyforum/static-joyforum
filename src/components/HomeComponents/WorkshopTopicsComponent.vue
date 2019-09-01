@@ -49,7 +49,13 @@
       </v-row>
     </v-col>
     <v-col cols="6" class="text-center mb-9 mx-auto">
-      <v-btn rounded outlined block color="white" to="/workshops">
+      <v-btn
+        rounded
+        outlined
+        block
+        color="white"
+        :to="isArabic ? `/workshops/ar` : `/workshops/en`"
+      >
         {{ isArabic ? `المزيد` : `View All` }}
       </v-btn>
     </v-col>

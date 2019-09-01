@@ -51,30 +51,30 @@
           </v-card-title>
           <v-card-text class="white--text caption">
             <span class="mont">
-              <router-link :to="{ query: { attend: '1' } }">
+              <a href="http://www.cvent.com/d/ryqdbb" target="_blank">
                 <div class="white--text" v-if="isArabic">
                   لحضور المعرض
                 </div>
                 <div class="white--text" v-else>
                   Attend the Exhibition
                 </div>
-              </router-link>
-              <router-link :to="{ query: { attend: '1' } }">
+              </a>
+              <a href="http://www.cvent.com/d/ryqdbb" target="_blank">
                 <div class="white--text" v-if="isArabic">
                   سجّل في المؤتمر
                 </div>
                 <div class="white--text" v-else>
                   Register to the Conference
                 </div>
-              </router-link>
-              <router-link :to="{ query: { attend: '1' } }">
+              </a>
+              <a href="http://www.cvent.com/d/ryqdbb" target="_blank">
                 <div class="white--text" v-if="isArabic">
                   لحضور ورش العمل
                 </div>
                 <div class="white--text" v-else>
                   Attend the Workshops
                 </div>
-              </router-link>
+              </a>
             </span>
           </v-card-text>
         </v-col>
