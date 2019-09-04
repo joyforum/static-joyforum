@@ -32,7 +32,9 @@
           :to="isArabic ? `/exhibit/ar` : `/exhibit/en`"
         >
           <span v-if="isArabic">
-            شارك في العرض
+            <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+              شارك في المعرض
+            </span>
           </span>
           <span v-else>
             Exhibit
@@ -43,10 +45,13 @@
           small
           color="primary"
           class="mx-1"
-          href="http://www.cvent.com/d/ryqdbb" target="_blank"
+          href="http://www.cvent.com/d/ryqdbb"
+          target="_blank"
         >
           <span v-if="isArabic">
-            لحضور المنتدى
+            <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+              حضور المنتدى
+            </span>
           </span>
           <span v-else>
             Attend
@@ -72,8 +77,10 @@
               <sup class="white--text">+</sup>
             </div>
             <div class="overline mont text-uppercase white--text">
-              {{ isArabic ? `متحدثين` : `International` }}<br />
-              {{ isArabic ? `دوليين` : `Speakers` }}
+              <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+                {{ isArabic ? `متحدثين` : `International` }}<br />
+                {{ isArabic ? `دوليين` : `Speakers` }}
+              </span>
             </div>
           </v-col>
           <v-col cols="4" sm="1" class="pa-3">
@@ -92,8 +99,10 @@
             <div
               class="overline mont text-uppercase font-weight-bold white--text"
             >
-              {{ isArabic ? `فعاليتان` : `Special` }}<br />
-              {{ isArabic ? `مميزتان` : `Events` }}
+              <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+                {{ isArabic ? `فعاليتان` : `Special` }}<br />
+                {{ isArabic ? `مميزتان` : `Events` }}
+              </span>
             </div>
           </v-col>
           <v-col cols="4" sm="1" class="pa-3">
@@ -113,8 +122,10 @@
             <div
               class="overline mont text-uppercase font-weight-bold white--text"
             >
-              {{ isArabic ? `شخصية عالمية` : `International` }}<br />
-              {{ isArabic ? `مشهورة` : `Celebrities` }}
+              <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+                {{ isArabic ? `شخصية عالمية` : `International` }}<br />
+                {{ isArabic ? `` : `Celebrities` }}
+              </span>
             </div>
           </v-col>
           <v-col cols="4" sm="1" class="pa-3">
@@ -133,7 +144,9 @@
             <div
               class="overline mont text-uppercase font-weight-bold white--text"
             >
-              {{ isArabic ? `ورشة عمل` : `Workshops` }}
+              <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+                {{ isArabic ? `ورشة عمل` : `Workshops` }}
+              </span>
             </div>
           </v-col>
           <v-col cols="4" sm="1" class="pa-3">
@@ -153,8 +166,10 @@
             <div
               class="overline mont text-uppercase font-weight-bold white--text"
             >
-              {{ isArabic ? `جهة دولية` : `International` }}<br />
-              {{ isArabic ? `عارضة` : `Exhibitors` }}
+              <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+                {{ isArabic ? `جهة دولية` : `International` }}<br />
+                {{ isArabic ? `عارضة` : `Exhibitors` }}
+              </span>
             </div>
           </v-col>
           <v-col cols="4" sm="1" class="pa-3">
@@ -174,7 +189,9 @@
             <div
               class="overline mont text-uppercase font-weight-bold white--text"
             >
-              {{ isArabic ? `مستثمر` : `Investors` }}
+              <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+                {{ isArabic ? `مستثمر` : `Investors` }}
+              </span>
             </div>
           </v-col>
         </v-row>

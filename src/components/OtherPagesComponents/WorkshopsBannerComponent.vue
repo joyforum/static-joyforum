@@ -40,10 +40,13 @@
           rounded
           color="white"
           class="mx-3"
-          href="http://www.cvent.com/d/ryqdbb" target="_blank"
+          href="http://www.cvent.com/d/ryqdbb"
+          target="_blank"
         >
           <span class="workshopcyan-text" v-if="isArabic">
-            لحضور المنتدى
+            <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+              حضور المنتدى
+            </span>
           </span>
           <span class="workshopcyan-text" v-else>
             Attend

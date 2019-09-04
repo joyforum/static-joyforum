@@ -127,7 +127,7 @@
             href="http://www.cvent.com/d/ryqdbb" target="_blank"
           >
             <span v-if="isArabic">
-              لحضور المنتدى
+              حضور المنتدى
             </span>
             <span v-else>
               Attend

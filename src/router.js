@@ -113,16 +113,12 @@ export default new Router({
     }
   ],
   scrollBehavior: (to, from, savedPosition) => {
-    if (to.name != from.name) {
-      let scrollTo = 0;
-      if (to.hash) {
-        scrollTo = to.hash;
-      } else if (savedPosition) {
-        scrollTo = savedPosition.y;
-      }
-      return goTo(scrollTo);
-    } else {
-      return;
+    let scrollTo = 0;
+    if (to.hash) {
+      scrollTo = to.hash;
+    } else if (savedPosition) {
+      scrollTo = savedPosition.y;
     }
+    return goTo(scrollTo);
   }
 });

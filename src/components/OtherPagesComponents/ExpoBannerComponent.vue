@@ -46,7 +46,9 @@
           :to="isArabic ? `/exhibit/ar` : `/exhibit/en`"
         >
           <span class="expoblue-text" v-if="isArabic">
-            شارك في العرض
+            <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+              شارك في المعرض
+            </span>
           </span>
           <span class="expoblue-text" v-else>
             Exhibit
@@ -56,10 +58,13 @@
           rounded
           color="white"
           class="mx-3"
-          href="http://www.cvent.com/d/ryqdbb" target="_blank"
+          href="http://www.cvent.com/d/ryqdbb"
+          target="_blank"
         >
           <span class="expoblue-text" v-if="isArabic">
-            لحضور المنتدى
+            <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+              حضور المنتدى
+            </span>
           </span>
           <span class="expoblue-text" v-else>
             Attend

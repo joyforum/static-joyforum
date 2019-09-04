@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import vuetify from "./plugins/vuetify";
 import VueAnalytics from "vue-analytics";
+import VueGtm from "vue-gtm";
 
 Vue.config.productionTip = false;
 
@@ -25,6 +26,14 @@ Vue.use(VueAnalytics, {
     enabled: false,
     sendHitTask: isProd
   }
+});
+
+// GTM
+Vue.use(VueGtm, {
+  id: "GTM-W6KNLGD", // Your GTM single container ID or array of container ids ['GTM-xxxxxxx', 'GTM-yyyyyyy']
+  enabled: isProd, // defaults to true. Plugin can be disabled by setting this to false for Ex: enabled: !!GDPR_Cookie (optional)
+  debug: !isProd, // Whether or not display console logs debugs (optional)
+  vueRouter: router // Pass the router instance to automatically sync with router (optional)
 });
 
 new Vue({

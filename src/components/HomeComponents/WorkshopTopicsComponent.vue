@@ -56,7 +56,9 @@
         color="white"
         :to="isArabic ? `/workshops/ar` : `/workshops/en`"
       >
-        {{ isArabic ? `المزيد` : `View All` }}
+        <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+          {{ isArabic ? `المزيد` : `View All` }}
+        </span>
       </v-btn>
     </v-col>
   </v-row>

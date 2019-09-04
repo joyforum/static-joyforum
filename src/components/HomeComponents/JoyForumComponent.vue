@@ -19,9 +19,15 @@
           13 - 14 October 2019
         </span>
       </v-card-text>
-      <v-btn rounded color="primary" class="mx-3 px-6" router :to="isArabic ? `/exhibit/ar` : `/exhibit/en`">
+      <v-btn
+        rounded
+        color="primary"
+        class="mx-3 px-3"
+        router
+        :to="isArabic ? `/exhibit/ar` : `/exhibit/en`"
+      >
         <span v-if="isArabic">
-          شارك في العرض
+          شارك في المعرض
         </span>
         <span v-else>
           Exhibit
@@ -30,11 +36,12 @@
       <v-btn
         rounded
         color="primary"
-        class="mx-3 px-6"
-        href="http://www.cvent.com/d/ryqdbb" target="_blank"
+        class="mx-3 px-3"
+        href="http://www.cvent.com/d/ryqdbb"
+        target="_blank"
       >
         <span v-if="isArabic">
-          لحضور المنتدى
+          {{ $vuetify.breakpoint.xsOnly ? `للحضور` : `حضور المنتدى` }}
         </span>
         <span v-else>
           Attend
@@ -46,7 +53,7 @@
         max-height="100px"
         contain
         src="/images/yellow-smile.png"
-        class="mt-6"
+        :class="isArabic ? `mt-6 flip-smile` : `mt-6`"
       ></v-img>
     </v-col>
   </v-row>
@@ -67,4 +74,8 @@ export default {
 </script>
 
 <style>
+.flip-smile {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 </style>

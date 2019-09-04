@@ -35,7 +35,9 @@
           :to="isArabic ? `/expo/ar` : `/expo/en`"
           v-show="$vuetify.breakpoint.mdAndUp"
         >
-          {{ isArabic ? `المعرض` : `Expo` }}
+          <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+            {{ isArabic ? `المعرض` : `Expo` }}
+          </span>
         </v-btn>
         <v-btn
           text
@@ -47,7 +49,9 @@
           :to="isArabic ? `/conference/ar` : `/conference/en`"
           v-show="$vuetify.breakpoint.mdAndUp"
         >
-          {{ isArabic ? `المؤتمر` : `Conference` }}
+          <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+            {{ isArabic ? `المؤتمر` : `Conference` }}
+          </span>
         </v-btn>
         <v-btn
           text
@@ -59,7 +63,9 @@
           :to="isArabic ? `/workshops/ar` : `/workshops/en`"
           v-show="$vuetify.breakpoint.mdAndUp"
         >
-          {{ isArabic ? `ورش العمل` : `Workshops` }}
+          <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+            {{ isArabic ? `ورش العمل` : `Workshops` }}
+          </span>
         </v-btn>
         <v-btn
           text
@@ -71,7 +77,9 @@
           :to="isArabic ? `/specialevents/ar` : `/specialevents/en`"
           v-show="$vuetify.breakpoint.mdAndUp"
         >
-          {{ isArabic ? `أحداث خاصة` : `Special Events` }}
+          <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+            {{ isArabic ? `أحداث خاصة` : `Special Events` }}
+          </span>
         </v-btn>
         <v-btn
           rounded
@@ -81,8 +89,8 @@
           href="http://www.cvent.com/d/ryqdbb"
           target="_blank"
         >
-          <span class="mont">
-            {{ isArabic ? `لحضور المنتدى` : `Attend` }}
+          <span :class="isArabic ? `mont font-weight-bold body-1` : ``">
+            {{ isArabic ? `حضور المنتدى` : `Attend` }}
           </span>
         </v-btn>
         <v-btn

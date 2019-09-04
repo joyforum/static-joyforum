@@ -169,12 +169,12 @@
           <v-btn
             rounded
             color="#263475"
-            class="mx-3 px-6 white--text"
+            class="mx-3 px-3 white--text"
             router
             :to="isArabic ? `/exhibit/ar` : `/exhibit/en`"
           >
             <span v-if="isArabic">
-              شارك في العرض
+              شارك في المعرض
             </span>
             <span v-else>
               Exhibit
@@ -183,11 +183,12 @@
           <v-btn
             rounded
             color="#263475"
-            class="mx-3 px-6 white--text"
-            href="http://www.cvent.com/d/ryqdbb" target="_blank"
+            class="mx-3 px-3 white--text"
+            href="http://www.cvent.com/d/ryqdbb"
+            target="_blank"
           >
             <span v-if="isArabic">
-              لحضور المنتدى
+              {{ $vuetify.breakpoint.xsOnly ? `للحضور` : `حضور المنتدى` }}
             </span>
             <span v-else>
               Attend

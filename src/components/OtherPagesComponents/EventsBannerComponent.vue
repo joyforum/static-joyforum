@@ -11,11 +11,11 @@
       </div>
       <div class="white--text title pt-3">
         <span class="mont" v-if="isArabic">
-          AWARDING THE BEST<br />
-          JOY MAKERS
+          تكريم صنّاع البهجة
         </span>
         <span class="mont" v-else>
-          تكريم صنّاع البهجة
+          AWARDING THE BEST<br />
+          JOY MAKERS
         </span>
       </div>
       <div class="white--text display-2 border-left-white px-3 mt-3">
