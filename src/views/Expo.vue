@@ -206,16 +206,12 @@
                 ></v-img>
               </v-col>
               <v-col cols="8" class="pa-3">
-                <div class="mont primary--text body-1" v-if="isArabic">
-                  أحمد مفتي
-                </div>
-                <div class="mont primary--text body-1" v-else>Ahmed Mufti</div>
                 <div class="mont expoblue-text body-1" v-if="isArabic">
-                  مدير المعرض
+                  فريق دعم المعرض
                 </div>
-                <div class="mont expoblue-text body-1" v-else>Expo Manager</div>
-                <div class="mont caption" v-if="isArabic">00966506073695</div>
-                <div class="mont caption" v-else>+966 50 607 3695</div>
+                <div class="mont expoblue-text body-1" v-else>
+                  Expo Support Team
+                </div>
                 <div class="mont caption">exhibit@joyforum.com</div>
               </v-col>
             </v-row>

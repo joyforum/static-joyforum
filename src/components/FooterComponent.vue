@@ -118,15 +118,17 @@
           </v-card-title>
           <v-card-text class="white--text caption">
             <span class="mont" v-if="isArabic">
-              مدير المعرض <br />
-              أحمد مفتي <br />
-              00966506073695 <br />
+              فريق دعم الحضور <br />
+              00966563475438 <br />
+              Attend@joyforum.com <br />
+              فريق دعم المعرض <br />
               Exhibit@joyforum.com
             </span>
             <span class="mont" v-else>
-              Expo Manager <br />
-              Ahmed Mufti <br />
-              +966 50 607 3695 <br />
+              Attendee Support Team <br />
+              +966 56 347 5438 <br />
+              Attend@joyforum.com <br />
+              Expo Support Team <br />
               Exhibit@joyforum.com
             </span>
           </v-card-text>
