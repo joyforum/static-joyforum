@@ -19,6 +19,12 @@ export default new Router({
     {
       path: "/",
       component: Home,
+      beforeEnter: (to, from, next) => {
+        if (to.redirectedFrom == "/attend") {
+          window.open("https://www.cvent.com/d/tyqfty/4W", "_blank");
+        }
+        next();
+      },
       children: [
         {
           path: "",
