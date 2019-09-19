@@ -1,6 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
+import store from "./store";
 import vuetify from "./plugins/vuetify";
 import VueAnalytics from "vue-analytics";
 import VueGtm from "vue-gtm";
@@ -39,5 +40,6 @@ Vue.use(VueGtm, {
 new Vue({
   router,
   vuetify,
+  store,
   render: (h) => h(App)
 }).$mount("#app");

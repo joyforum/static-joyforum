@@ -152,12 +152,28 @@
             ></v-img>
           </a>
         </v-col>
-        <v-col cols="6" class="hidden-xs-only">
+        <v-col cols="2" class="hidden-xs-only">
           <v-img
             class="ma-6"
             contain
             max-height="100px"
             src="/images/footer-logo.png"
+          ></v-img>
+        </v-col>
+        <v-col cols="12" sm="2">
+          <v-img
+            class="ma-6"
+            contain
+            max-height="100px"
+            src="/images/footer-qol-logo.png"
+          ></v-img>
+        </v-col>
+        <v-col cols="12" sm="2">
+          <v-img
+            class="ma-6"
+            contain
+            max-height="100px"
+            src="/images/footer-ss-logo.png"
           ></v-img>
         </v-col>
         <v-col cols="12" sm="3">
