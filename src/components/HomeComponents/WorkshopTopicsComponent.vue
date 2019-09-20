@@ -20,7 +20,7 @@
         <v-col cols="12">
           <swiper :options="swiperOption">
             <swiper-slide
-              v-for="topic in workshopTopics"
+              v-for="(topic, index) in workshopsArray"
               :key="topic.title[langKey]"
             >
               <v-hover v-slot:default="{ hover }">
@@ -29,18 +29,23 @@
                   flat
                   color="#58a9ad"
                   :raised="hover"
-                  @click.stop="null"
+                  width="300px"
+                  height="300px"
+                  @click="
+                    workshopsDialogShow = true;
+                    workshopsDialogIndex = index;
+                  "
+                  :style="
+                    `background-image: url('${topic.imgSrc}'); background-size: cover; background-position: center center;`
+                  "
                 >
-                  <v-img contain :src="topic.imgSrc">
-                    <div
-                      class="white--text body-2 font-weight-bold text-center px-6"
-                      style="padding-top: 40%;"
-                    >
-                      <span class="mont">
-                        {{ topic.title[langKey] }}
-                      </span>
+                  <div
+                    class="white--text body-2 font-weight-bold text-center px-6 pt-12"
+                  >
+                    <div class="mont pt-12">
+                      {{ topic.title[langKey] }}
                     </div>
-                  </v-img>
+                  </div>
                 </v-card>
               </v-hover>
             </swiper-slide>
@@ -68,66 +73,6 @@
 export default {
   data() {
     return {
-      workshopTopics: [
-        {
-          title: {
-            en: "Start your Event Management Business",
-            ar: "أطلق مشروع إدارة الفعاليات الخاص بك"
-          },
-          imgSrc: "/images/workshops-start.jpg"
-        },
-        {
-          title: { en: "Establishing Your Company", ar: "أسس شركتك" },
-          imgSrc: "/images/workshops-establishing.jpg"
-        },
-        {
-          title: {
-            en: "Valuations & Pitching Methods",
-            ar: "أساليب التقييم والعرض"
-          },
-          imgSrc: "/images/workshops-valuation.jpg"
-        },
-        {
-          title: { en: "Customer Journey Mapping", ar: "تخطيط رحلة العملاء" },
-          imgSrc: "/images/workshops-customerjourney.jpg"
-        },
-        {
-          title: { en: "Content Curation", ar: "إنشاء المحتوى" },
-          imgSrc: "/images/workshops-contentcuration.jpg"
-        },
-        {
-          title: {
-            en: "Theme Park (Getting Started)",
-            ar: "المدن الترفيهية - الانطلاق"
-          },
-          imgSrc: "/images/workshops-themepark.jpg"
-        },
-        {
-          title: {
-            en: "Crowd Management & Safety",
-            ar: "إدارة الحشود والسلامة"
-          },
-          imgSrc: "/images/workshops-crowdmanagement.jpg"
-        },
-        {
-          title: { en: "Content Localization", ar: "توطين المحتوى" },
-          imgSrc: "/images/workshops-contentlocalization.jpg"
-        },
-        {
-          title: {
-            en: "Service & Experience Design",
-            ar: "تصميم الخدمات والتجارب"
-          },
-          imgSrc: "/images/workshops-serviceexperience.jpg"
-        },
-        {
-          title: {
-            en: "Applying Design Thinking to Event Design",
-            ar: "تطبيق التفكير التصميمي "
-          },
-          imgSrc: "/images/workshops-designthinking.jpg"
-        }
-      ],
       swiperOption: {
         slidesPerView: 5,
         spaceBetween: 3,
@@ -158,6 +103,25 @@ export default {
         return "ar";
       } else {
         return "en";
+      }
+    },
+    workshopsArray() {
+      return this.$store.state.workshopsArray;
+    },
+    workshopsDialogShow: {
+      get() {
+        return this.$store.state.workshopsDialogShow;
+      },
+      set(value) {
+        this.$store.state.workshopsDialogShow = value;
+      }
+    },
+    workshopsDialogIndex: {
+      get() {
+        return this.$store.state.workshopsDialogIndex;
+      },
+      set(value) {
+        this.$store.state.workshopsDialogIndex = value;
       }
     }
   }

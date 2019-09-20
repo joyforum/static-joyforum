@@ -6,8 +6,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     // Workshops
-    workshopDialogIndex: 0,
-    workshopDialogShow: false,
+    workshopsDialogIndex: 0,
+    workshopsDialogShow: false,
     workshopsArray: [
       // Workshop 1
       {
@@ -831,7 +831,7 @@ Entertainment in fitness is usually thought of in terms of audio and visual, esp
         },
         speakers: [
           {
-            avatar: "/images/riham-sara.jpg",
+            avatar: "/images/workshops/avatars/riham-sara.jpg",
             companyLogo: "/images/workshops/companies/kore.png",
             name: {
               en: "Sara AlModaimigh",
@@ -862,7 +862,7 @@ Entertainment in fitness is usually thought of in terms of audio and visual, esp
             ]
           },
           {
-            avatar: "/images/riham-sara.jpg",
+            avatar: "/images/workshops/avatars/riham-sara.jpg",
             companyLogo: "/images/workshops/companies/kore.png",
             name: {
               en: "Riham AlAwaji",
@@ -1030,8 +1030,7 @@ Entertainment in fitness is usually thought of in terms of audio and visual, esp
           }
         ]
       }
-    ],
-    lecturers: []
+    ]
   },
   getters: {},
   mutations: {},

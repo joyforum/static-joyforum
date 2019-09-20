@@ -86,11 +86,15 @@
         <v-col
           cols="6"
           sm="4"
-          v-for="(topic, index) in workshopTopics"
+          v-for="(topic, index) in workshopsArray"
           :key="index"
           class="pa-2"
         >
           <v-card
+            @click="
+              workshopsDialogShow = true;
+              workshopsDialogIndex = index;
+            "
             height="200px"
             class="border-radius"
             :style="
@@ -124,7 +128,8 @@
             small
             color="#58a9ad"
             class="white--text my-3 px-6"
-            href="http://www.cvent.com/d/ryqdbb" target="_blank"
+            href="http://www.cvent.com/d/ryqdbb"
+            target="_blank"
           >
             <span v-if="isArabic">
               حضور المنتدى
@@ -148,75 +153,6 @@ export default {
     CountDownComponent,
     WorkshopsBannerComponent
   },
-  data() {
-    return {
-      workshopTopics: [
-        {
-          title: {
-            en: "Start your Event<br>Management Business",
-            ar: "أطلق مشروع إدارة الفعاليات الخاص بك"
-          },
-          imgSrc: "/images/Workshops_Topics-01.png"
-        },
-        {
-          title: { en: "Establishing Your<br>Company", ar: "أسس شركتك" },
-          imgSrc: "/images/Workshops_Topics-02.png"
-        },
-        {
-          title: {
-            en: "Valuations & Pitching Methods<br>For New Projects",
-            ar: "أساليب التقييم والعرض للمشاريع الجديدة"
-          },
-          imgSrc: "/images/Workshops_Topics-03.png"
-        },
-        {
-          title: {
-            en: "Crowd Management<br>& Safety",
-            ar: "إدارة الحشود والسلامة"
-          },
-          imgSrc: "/images/Workshops_Topics-04.png"
-        },
-        {
-          title: {
-            en: "Applying Design Thinking<br>to Event Design",
-            ar: "تطبيق التفكير التصميمي"
-          },
-          imgSrc: "/images/Workshops_Topics-05.png"
-        },
-        {
-          title: {
-            en: "Service & Experience<br>Design",
-            ar: "تصميم الخدمات والتجارب"
-          },
-          imgSrc: "/images/Workshops_Topics-06.png"
-        },
-
-        {
-          title: {
-            en: "Customer Journey<br>Mapping",
-            ar: "تخطيط تجربة العملاء"
-          },
-          imgSrc: "/images/Workshops_Topics-07.png"
-        },
-        {
-          title: { en: "Content<br>Localization", ar: "توطين المحتوى" },
-          imgSrc: "/images/Workshops_Topics-08.png"
-        },
-
-        {
-          title: { en: "Content<br>Curation", ar: "إنشاء المحتوى" },
-          imgSrc: "/images/Workshops_Topics-09.png"
-        },
-        {
-          title: {
-            en: "Theme Park<br>(Getting Started)",
-            ar: "المدن الترفيهية - الانطلاق"
-          },
-          imgSrc: "/images/Workshops_Topics-10.png"
-        }
-      ]
-    };
-  },
   computed: {
     isArabic() {
       if (this.$route.params.lang == "ar") {
@@ -230,6 +166,25 @@ export default {
         return "ar";
       } else {
         return "en";
+      }
+    },
+    workshopsArray() {
+      return this.$store.state.workshopsArray;
+    },
+    workshopsDialogShow: {
+      get() {
+        return this.$store.state.workshopsDialogShow;
+      },
+      set(value) {
+        this.$store.state.workshopsDialogShow = value;
+      }
+    },
+    workshopsDialogIndex: {
+      get() {
+        return this.$store.state.workshopsDialogIndex;
+      },
+      set(value) {
+        this.$store.state.workshopsDialogIndex = value;
       }
     }
   }

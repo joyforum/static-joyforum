@@ -13,7 +13,7 @@
           </v-col>
         </v-row>
       </v-content>
-      <AttendDialog />
+      <WorkshopDialogComponent />
     </v-container>
   </v-app>
 </template>
@@ -21,13 +21,13 @@
 <script>
 import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
-import AttendDialog from "./components/AttendDialog";
+import WorkshopDialogComponent from "./components/WorkshopDialogComponent";
 export default {
   name: "App",
   components: {
     HeaderComponent,
     FooterComponent,
-    AttendDialog
+    WorkshopDialogComponent
   },
   data() {
     return {

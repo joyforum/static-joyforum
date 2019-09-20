@@ -18,7 +18,9 @@
           JOY MAKERS
         </span>
       </div>
-      <div class="white--text display-2 border-left-white px-3 mt-3">
+      <div
+        :class="`white--text display-2 sideborder-${langKey}-white px-3 mt-3`"
+      >
         <span class="volte font-weight-bold">
           <number
             ref="number1"
@@ -62,7 +64,4 @@ export default {
 </script>
 
 <style>
-.border-left-white {
-  border-left: 2px white solid;
-}
 </style>

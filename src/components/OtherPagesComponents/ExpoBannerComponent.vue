@@ -18,7 +18,9 @@
           & Entertainment Intertwine
         </span>
       </div>
-      <div class="white--text display-2 border-left-white px-3 mt-3">
+      <div
+        :class="`white--text display-2 sideborder-${langKey}-white px-3 mt-3`"
+      >
         <span class="volte font-weight-bold">
           <number
             ref="number1"
@@ -84,13 +86,23 @@ export default {
       } else {
         return false;
       }
+    },
+    langKey() {
+      if (this.isArabic) {
+        return "ar";
+      } else {
+        return "en";
+      }
     }
   }
 };
 </script>
 
 <style>
-.border-left-white {
+.sideborder-en-white {
   border-left: 2px white solid;
+}
+.sideborder-ar-white {
+  border-right: 2px white solid;
 }
 </style>
