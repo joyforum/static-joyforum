@@ -114,6 +114,19 @@
         </v-col>
       </v-row>
     </v-col>
+    <v-col cols="12" class="pa-3 primary--text font-weight-bold headline mb-2">
+      <v-row no-gutters class="mx-auto pa-3" style="max-width: 1280px;">
+        <span class="volte workshopcyan-text" v-if="isArabic">
+          المحاضرين في ورش العمل
+        </span>
+        <span class="volte workshopcyan-text" v-else>
+          WORKSHOP LECTURERS
+        </span>
+      </v-row>
+    </v-col>
+    <v-col cols="12">
+      <LecturersComponent />
+    </v-col>
     <v-col cols="12" class="white">
       <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
         <v-col cols="12" class="pa-3 primary--text font-weight-bold title">
@@ -147,11 +160,13 @@
 <script>
 import CountDownComponent from "@/components/HomeComponents/00-CountDownComponent.vue";
 import WorkshopsBannerComponent from "@/components/OtherPagesComponents/WorkshopsBannerComponent.vue";
+import LecturersComponent from "@/components/HomeComponents/LecturersComponent.vue";
 
 export default {
   components: {
     CountDownComponent,
-    WorkshopsBannerComponent
+    WorkshopsBannerComponent,
+    LecturersComponent
   },
   computed: {
     isArabic() {

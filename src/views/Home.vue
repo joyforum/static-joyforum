@@ -96,17 +96,34 @@
         </v-col>
         <v-col
           cols="12"
-          class="px-3 py-3 primary--text font-weight-bold title temp-hidden"
+          class="px-3 py-3 primary--text font-weight-bold title"
+          v-if="false"
         >
           SPEAKERS AT JOY CONFERENCE
         </v-col>
       </v-row>
     </v-col>
-    <v-col cols="12" class="white temp-hidden">
+    <v-col cols="12" class="white" v-if="false">
       <SpeakersComponent />
     </v-col>
-    <v-col cols="12" class="temp-hidden">
+    <v-col cols="12" v-if="false">
       <CelebritiesComponent />
+    </v-col>
+    <v-col
+      cols="12"
+      class="white pa-3 primary--text font-weight-bold title pb-6"
+    >
+      <v-row no-gutters class="mx-auto pa-3" style="max-width: 1280px;">
+        <span class="mont workshopcyan-text" v-if="isArabic">
+          المحاضرين في ورش العمل
+        </span>
+        <span class="mont workshopcyan-text" v-else>
+          WORKSHOP LECTURERS
+        </span>
+      </v-row>
+    </v-col>
+    <v-col cols="12" class="white">
+      <LecturersComponent />
     </v-col>
     <v-col cols="12" class="white">
       <ExhibitorsComponent />
@@ -130,6 +147,7 @@ import ConferenceTopicsComponent from "@/components/HomeComponents/ConferenceTop
 import WorkshopTopicsComponent from "@/components/HomeComponents/WorkshopTopicsComponent.vue";
 import SpeakersComponent from "@/components/HomeComponents/SpeakersComponent.vue";
 import CelebritiesComponent from "@/components/HomeComponents/CelebritiesComponent.vue";
+import LecturersComponent from "@/components/HomeComponents/LecturersComponent.vue";
 import ExhibitorsComponent from "@/components/HomeComponents/ExhibitorsComponent.vue";
 import JoyForumComponent from "@/components/HomeComponents/JoyForumComponent.vue";
 import SponsorsComponent from "@/components/HomeComponents/SponsorsComponent.vue";
@@ -145,6 +163,7 @@ export default {
     WorkshopTopicsComponent,
     SpeakersComponent,
     CelebritiesComponent,
+    LecturersComponent,
     ExhibitorsComponent,
     JoyForumComponent,
     SponsorsComponent

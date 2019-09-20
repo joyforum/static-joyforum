@@ -1032,7 +1032,22 @@ Entertainment in fitness is usually thought of in terms of audio and visual, esp
       }
     ]
   },
-  getters: {},
+  getters: {
+    lecturers(state) {
+      let lecturersArray = [];
+      for (let i = 1; i < state.workshopsArray.length; i++) {
+        for (let lecturer of state.workshopsArray[i].speakers) {
+          lecturersArray.push({
+            avatar: lecturer.avatar,
+            name: lecturer.name,
+            title: lecturer.title,
+            workshopIndex: i
+          });
+        }
+      }
+      return lecturersArray;
+    }
+  },
   mutations: {},
   actions: {}
 });

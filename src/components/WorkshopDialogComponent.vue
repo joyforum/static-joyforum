@@ -26,8 +26,8 @@
         <v-col
           :cols="12 / targetWorkshop.speakers.length"
           style="margin-top: -70px; z-index: 100;"
-          v-for="speaker in targetWorkshop.speakers"
-          :key="speaker.avatar"
+          v-for="(speaker, index) in targetWorkshop.speakers"
+          :key="index"
         >
           <v-row no-gutters>
             <v-col cols="12" md="4" class="text-center">
