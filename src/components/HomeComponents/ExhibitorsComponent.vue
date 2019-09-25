@@ -32,13 +32,15 @@
               :key="exhibitor.company"
             >
               <v-card tile flat color="#00000000" class="my-auto">
-                <v-img
-                  max-height="150px"
-                  contain
-                  class="my-auto"
-                  :src="exhibitor.logo"
-                >
-                </v-img>
+                <a :href="exhibitor.website" target="_blank">
+                  <v-img
+                    max-height="150px"
+                    contain
+                    class="my-auto"
+                    :src="exhibitor.logo"
+                  >
+                  </v-img>
+                </a>
               </v-card>
             </swiper-slide>
           </swiper>
@@ -77,7 +79,7 @@
             v-for="exhibitor in exhibitorsArray"
             :key="exhibitor.company"
           >
-            <div style="border: 1px solid black;">
+            <div class="fill-height py-3" style="border: 1px solid black;">
               <a :href="exhibitor.website" target="_blank">
                 <v-img contain :src="exhibitor.logo" max-height="150px"></v-img>
               </a>
@@ -113,12 +115,7 @@ export default {
           website: "https://www.tagitgames.com",
           logo: "/images/exhibitors/tagit.jpg"
         },
-        {
-          company: "MEMCO",
-          location: "B12",
-          website: "https://www.memco-int.com/",
-          logo: "/images/exhibitors/memco.jpg"
-        },
+
         {
           company: "PlatinumList",
           location: "C3",
@@ -143,12 +140,7 @@ export default {
           website: "http://www.othaimleisure.com/index.php/en/",
           logo: "/images/exhibitors/othaim.jpg"
         },
-        {
-          company: "Alhokair Group",
-          location: "B5",
-          website: "https://www.alhokair.com/",
-          logo: "/images/exhibitors/hokair.jpg"
-        },
+
         {
           company: "Heights",
           location: "A4,A5",
@@ -161,13 +153,6 @@ export default {
           location: "C26",
           website: "",
           logo: "/images/exhibitors/passion.jpg"
-        },
-
-        {
-          company: "Creative Technology",
-          location: "C28",
-          website: "https://www.ct-group.com/me/en",
-          logo: "/images/exhibitors/creativetech.jpg"
         },
         {
           company: "D&B Audiotechnik",
@@ -216,12 +201,6 @@ export default {
           location: "B1",
           website: "https://www.martin.com/en",
           logo: "/images/exhibitors/martin.jpg"
-        },
-        {
-          company: "HQ Worldwide Shows",
-          location: "C24",
-          website: "https://www.hqws.com/",
-          logo: "/images/exhibitors/hqworldwide.jpg"
         },
         {
           company: "Stage Fx",
@@ -348,13 +327,6 @@ export default {
           logo: "/images/exhibitors/mci.jpg"
         },
         {
-          company: "Diriyah Gate",
-          location: "F7",
-          website: "https://dgda.gov.sa/DGDA-en.aspx",
-          logo: "/images/exhibitors/diriyahgate.jpg"
-        },
-
-        {
           company: "Lune Rouge",
           location: "A10,A11",
           website: "https://lunerouge.com/en/",
@@ -406,12 +378,6 @@ export default {
           logo: "/images/exhibitors/maestro.jpg"
         },
         {
-          company: "Fractal Systems",
-          location: "L1,L2",
-          website: "http://fractal.ae/",
-          logo: "/images/exhibitors/fractal.jpg"
-        },
-        {
           company: "DOF Robotics",
           location: "L1,L2",
           website: "http://www.dof.com.tr/",
@@ -423,7 +389,128 @@ export default {
           website: "https://www.oneo7.com/",
           logo: "/images/exhibitors/one07.jpg"
         },
+        // new exhibitors
         {
+          company: "Sparky's",
+          location: "B5",
+          website: "",
+          logo: "/images/exhibitors/z-sparky.jpg"
+        },
+        {
+          company: "C Block",
+          location: "B7",
+          website: "",
+          logo: "/images/exhibitors/z-c-block.jpg"
+        },
+        {
+          company: "ProLab",
+          location: "B6",
+          website: "",
+          logo: "/images/exhibitors/z-prolab.jpg"
+        },
+        {
+          company: "Eclipse",
+          location: "A6",
+          website: "",
+          logo: "/images/exhibitors/z-eclipse.jpg"
+        },
+        {
+          company: "Awaan",
+          location: "C4",
+          website: "",
+          logo: "/images/exhibitors/z-awaan.jpg"
+        },
+        {
+          company: "Fekra Events",
+          location: "C7",
+          website: "",
+          logo: "/images/exhibitors/hokair.jpg"
+        },
+        {
+          company: "ACT",
+          location: "A3",
+          website: "",
+          logo: "/images/exhibitors/z-act.jpg"
+        },
+        {
+          company: "Insomania",
+          location: "A2",
+          website: "",
+          logo: "/images/exhibitors/z-insomnia.jpg"
+        },
+        {
+          company: "The Gathering",
+          location: "B12",
+          website: "",
+          logo: "/images/exhibitors/z-thegathering.jpg"
+        },
+        {
+          company: "Optimum events",
+          location: "C28",
+          website: "",
+          logo: "/images/exhibitors/z-optimum.jpg"
+        },
+        {
+          company: "SM Productions",
+          location: "D16",
+          website: "",
+          logo: "/images/exhibitors/z-smproductions.jpg"
+        },
+        {
+          company: "Monster Jam",
+          location: "A12",
+          website: "",
+          logo: "/images/exhibitors/z-monster.jpg"
+        },
+        {
+          company: "Ferrari",
+          location: "C13 - C15",
+          website: "",
+          logo: "/images/exhibitors/z-ferrari.jpg"
+        },
+        {
+          company: "Cone zone",
+          location: "D1",
+          website: "",
+          logo: "/images/exhibitors/z-conezone.jpg"
+        },
+        {
+          company: "Coco",
+          location: "D14",
+          website: "",
+          logo: "/images/exhibitors/z-coco.jpeg"
+        },
+        {
+          company: "Ledeca",
+          location: "C24",
+          website: "",
+          logo: "/images/exhibitors/z-ledeca.jpeg"
+        },
+        {
+          company: "Mint Creative",
+          location: "C14",
+          website: "",
+          logo: "/images/exhibitors/z-mint.jpeg"
+        },
+        {
+          company: "Camel Club",
+          location: "F8, F9",
+          website: "",
+          logo: "/images/exhibitors/z-camel.jpeg"
+        },
+        {
+          company: "Amaala",
+          location: "F4",
+          website: "",
+          logo: "/images/exhibitors/z-amaala.jpg"
+        },
+        {
+          company: "Local Content Authority",
+          location: "E3, E4",
+          website: "",
+          logo: "/images/exhibitors/z-localcontent.jpeg"
+        }
+        /* {
           company: "Havas",
           location: "D7",
           website: "https://havas.com/",
@@ -500,7 +587,38 @@ export default {
           location: "B10",
           website: "",
           logo: "/images/exhibitors/maestro.jpg" // temp logo
-        }
+                {
+          company: "MEMCO",
+          location: "B12",
+          website: "https://www.memco-int.com/",
+          logo: "/images/exhibitors/memco.jpg"
+        },
+        // deleted
+                {
+          company: "Creative Technology",
+          location: "C28",
+          website: "https://www.ct-group.com/me/en",
+          logo: "/images/exhibitors/creativetech.jpg"
+        },
+                {
+          company: "HQ Worldwide Shows",
+          location: "C24",
+          website: "https://www.hqws.com/",
+          logo: "/images/exhibitors/hqworldwide.jpg"
+        },
+                {
+          company: "Fractal Systems",
+          location: "L1,L2",
+          website: "http://fractal.ae/",
+          logo: "/images/exhibitors/fractal.jpg"
+        },
+                {
+          company: "Diriyah Gate",
+          location: "F7",
+          website: "https://dgda.gov.sa/DGDA-en.aspx",
+          logo: "/images/exhibitors/diriyahgate.jpg"
+        },
+        */
       ],
       swiperOption: {
         slidesPerView: 5,

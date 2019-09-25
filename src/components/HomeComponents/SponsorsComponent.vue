@@ -16,7 +16,7 @@
         max-height="150px"
         contain
         class="mx-auto pt-6"
-        src="/images/exhibitors/Logos-22.jpg"
+        src="/images/gea-logo.png"
       ></v-img>
       <span class="mont">
         Strategic Sponsor
@@ -30,7 +30,7 @@
         max-height="150px"
         contain
         class="mx-auto pt-6"
-        src="/images/exhibitors/Logos-08.jpg"
+        src="/images/gea-logo.png"
       ></v-img>
       <span class="mont">
         Diamond Sponsor
@@ -44,7 +44,7 @@
         max-height="150px"
         contain
         class="mx-auto pt-6"
-        src="/images/exhibitors/Logos-09.jpg"
+        src="/images/gea-logo.png"
       ></v-img>
       <div class="mont">
         Gold Sponsor

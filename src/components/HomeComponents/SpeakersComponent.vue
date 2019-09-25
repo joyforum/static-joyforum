@@ -40,27 +40,27 @@ export default {
         {
           name: "Speaker Name",
           title: "Speaker Title 1",
-          imgSrc: "/images/workshops-start.jpg"
+          imgSrc: "/images/gea-logo.png"
         },
         {
           name: "Speaker Name",
           title: "Speaker Title 2",
-          imgSrc: "/images/workshops-establishing.jpg"
+          imgSrc: "/images/gea-logo.png"
         },
         {
           name: "Speaker Name",
           title: "Speaker Title 3",
-          imgSrc: "/images/workshops-valuation.jpg"
+          imgSrc: "/images/gea-logo.png"
         },
         {
           name: "Speaker Name",
           title: "Speaker Title 4",
-          imgSrc: "/images/workshops-customerjourney.jpg"
+          imgSrc: "/images/gea-logo.png"
         },
         {
           name: "Speaker Name",
           title: "Speaker Title 5",
-          imgSrc: "/images/workshops-contentcuration.jpg"
+          imgSrc: "/images/gea-logo.png"
         }
       ],
       speakersSwiper: {},
