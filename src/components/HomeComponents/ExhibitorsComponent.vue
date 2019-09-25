@@ -200,7 +200,7 @@ export default {
           company: "Martin by Harman",
           location: "B1",
           website: "https://www.martin.com/en",
-          logo: "/images/exhibitors/martin.jpg"
+          logo: "/images/exhibitors/martin.jpeg"
         },
         {
           company: "Stage Fx",
@@ -424,7 +424,7 @@ export default {
           company: "Fekra Events",
           location: "C7",
           website: "",
-          logo: "/images/exhibitors/hokair.jpg"
+          logo: "/images/exhibitors/z-fekra.jpg"
         },
         {
           company: "ACT",
@@ -487,7 +487,7 @@ export default {
           logo: "/images/exhibitors/z-ledeca.jpeg"
         },
         {
-          company: "Mint Creative",
+          company: "Mint Creative Production",
           location: "C14",
           website: "",
           logo: "/images/exhibitors/z-mint.jpeg"
@@ -505,7 +505,7 @@ export default {
           logo: "/images/exhibitors/z-amaala.jpg"
         },
         {
-          company: "Local Content Authority",
+          company: "LCGPA",
           location: "E3, E4",
           website: "",
           logo: "/images/exhibitors/z-localcontent.jpeg"
