@@ -5,6 +5,9 @@ import store from "./store";
 import vuetify from "./plugins/vuetify";
 import VueAnalytics from "vue-analytics";
 import VueGtm from "vue-gtm";
+import vmodal from 'vue-js-modal';
+
+
 
 Vue.config.productionTip = false;
 
@@ -18,6 +21,8 @@ Vue.use(VueNumber);
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import "swiper/dist/css/swiper.css";
 Vue.use(VueAwesomeSwiper);
+
+Vue.use(vmodal, {componentName: "Modal"});
 
 // analytics
 Vue.use(VueAnalytics, {

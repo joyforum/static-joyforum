@@ -23,6 +23,10 @@ export default new Router({
         if (to.redirectedFrom == "/attend") {
           window.open("https://www.cvent.com/d/tyqfty/4W", "_blank");
         }
+        if (to.redirectedFrom == "/attendexpo") {
+          window.open("http://www.cvent.com/d/dyqvh8/4W", "_blank");
+        }
+
         next();
       },
       children: [
