@@ -2,7 +2,17 @@
     <v-row no-gutters class="mx-auto py-6 px-3" style="max-width: 1280px;">
         <v-col cols="12" class="pa-3 primary--text font-weight-bold headline">
             <a href="javascript:void(0);" @click="aboutConfContent = !aboutConfContent">
-                <span class="volte v-chip theme--light v-size--default primary about-conference" v-if="isArabic"> 
+                <span class="volte theme--light v-size--default primary about-conference"
+                      style="align-items: center;
+                            display: -webkit-inline-flex;
+                            padding: 0px 12px;
+                            text-decoration: none;
+                            transition-duration: 0.28s;
+                            transition-property: box-shadow, opacity;
+                            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                            border-radius: 50px;
+                            color: white;"
+                      v-if="isArabic">
                     <span class="arrow-circle">
                         <template v-if="aboutConfContent == false">
                             <span class="arrow"></span>
@@ -13,7 +23,16 @@
                     </span>
                     مؤتمر صناعة الترفيه 2019
                 </span>
-                <span class="volte  v-chip theme--light v-size--default primary about-conference" v-else>
+                <div class="volte theme--light v-size--default primary about-conference"
+                     style="align-items: center;
+                            display: -webkit-inline-flex;
+                            padding: 0px 12px;
+                            text-decoration: none;
+                            transition-duration: 0.28s;
+                            transition-property: box-shadow, opacity;
+                            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                            border-radius: 50px;
+                            color: white;" v-else>
                     <span class="arrow-circle">
                         <template v-if="aboutConfContent == false">
                             <span class="arrow"></span>
@@ -23,7 +42,7 @@
                         </template>
                     </span>
                     ABOUT JOY CONFERENCE 2019
-                </span>
+                </div>
             </a>  
         </v-col>
         <v-col cols="12" class="pa-3 grey--text text--darken-1" v-if="aboutConfContent">
@@ -90,7 +109,7 @@
 export default {
     data() {
         return {
-            aboutConfContent: false
+            aboutConfContent: true
         };
     },
     computed: {
@@ -147,7 +166,7 @@ export default {
     height: 20px; 
     margin: 0 5px;
 } 
-.about-conference>.arrow-circle>.arrow{  
+.about-conference .arrow-circle .arrow{
     width: 0px;
     height: 0px;
     border-left: 5px solid transparent;
@@ -156,7 +175,7 @@ export default {
     display: block;  
     margin: -2px 0 0 -5px !important;
 }
-.about-conference>.arrow-circle>.arrow-up{  
+.about-conference .arrow-circle .arrow-up{
     width: 0px;
     height: 0px;
     border-left: 5px solid transparent;
@@ -165,10 +184,10 @@ export default {
     display: block;  
     margin: -2px 0 0 -5px !important;
 } 
-.v-application--is-rtl .about-conference>.arrow-circle>.arrow{
+.v-application--is-rtl .about-conference .arrow-circle .arrow{
     margin: -2px -5px 0 0 !important;
 } 
-.v-application--is-rtl .about-conference>.arrow-circle>.arrow-up{
+.v-application--is-rtl .about-conference .arrow-circle .arrow-up{
     margin: -2px -5px 0 0 !important;
 }
 </style>
